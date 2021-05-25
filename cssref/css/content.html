@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>content</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>content</h1>
+		 <p>Свойство <span class="attribute">content</span> позволяет вставлять генерируемое 
+    содержание в текст веб-страницы, которое первоначально в тексте отсутствует. 
+    Применяется совместно с псевдоэлементами <span class="attribute">::after</span> 
+    и <span class="attribute">::before</span>, они соответственно указывают отображать 
+    новое содержимое после или до элемента, к которому добавляются.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>Пустая строка </td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К псевдоэлементам <span class="attribute">:before</span> и <span class="attribute">:after</span></td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>content: &lt;строка&gt; | attr(параметр) | open-quote | close-quote 
+    | no-open-quote | no-close-quote | url | counter | normal | none</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>&lt;строка&gt;</dt>
+  <dd>Текст, который добавляется на веб-страницу, строка при этом должна браться 
+    в двойные или одинарные кавычки. Допускается использовать юникод для вставки 
+    спецсимволов. Спецсимволы HTML которые начинаются с амперсанда (&amp;sect; например), будут отображаться как есть, т.е. простым текстом (&amp;sect;, 
+    а не &sect;). </dd>
+
+  <dt>attr(параметр)</dt>
+  <dd><br>
+    Возвращает строку, которая является значением параметра тега указанного в скобках. 
+      Например, <span class="var">a:after&nbsp;{content:attr(href)} </span>добавит 
+      после ссылки её адрес, т.е. значение атрибута <span class="value">href</span>. 
+      Если указанного атрибута нет,  вернется пустая строка.  </dd>
+  <dt>open-quote</dt>
+  <dd>Вставляет открывающую кавычку, тип которой устанавливается с помощью стилевого 
+    свойства <span class="attribute">quotes</span>. </dd>
+
+  <dt>close-quote</dt>
+  <dd>Вставляет закрывающую кавычку. </dd>
+  <dt>no-open-quotes</dt>
+  <dd><br>
+   Отменяет добавление открывающей кавычки.</dd>
+
+  <dt>no-close-quote</dt>
+  <dd><br>
+Отменяет добавление закрывающей кавычки.</dd>
+  <dt>url</dt>
+  <dd>Абсолютный или относительный адрес вставляемого объекта. Если указанный 
+    файл браузер не может отобразить, то значение игнорируется. </dd>
+  <dt>counter</dt>
+  <dd>Выводит значение счетчика, заданного свойством <span class="attribute">counter-reset</span>.</dd>
+  <dt>none</dt>
+  <dd>Не добавляет никакое содержание. </dd>
+  <dt>normal</dt>
+  <dd>Задаётся как <span class="value">none</span> для псевдоэлементов <span class="attribute">::before</span> и <span class="attribute">::after</span>. </dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;content&lt;/title&gt;
+  &lt;style&gt;
+   .tag {
+    color: navy; /* Цвет текста */
+    font-family: monospace; /* Моноширинный шрифт */
+    quotes: &quot;&lt;&quot; &quot;&gt;&quot;; /* Устанавливаем вид кавычек */
+   } 
+   .tag::before {
+    content: open-quote; /* Добавляем перед текстом открывающую кавычку */
+  }
+   .tag::after {
+    content: close-quote; /* Добавляем после текста закрывающую кавычку */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Тег &lt;span class=&quot;tag&quot;&gt;DEL&lt;/span&gt; используется 
+  для выделения текста, который был удален в новой версии документа.&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат данного примера показан на рис. 1.</p>
+  <p class="fig"><img src="../assets/images/css/css_content.png" alt="Применение свойства content" width="401" height="179"></p>
+  <p class="figsign">Рис. 1. Применение свойства content </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.content</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Firefox до  версии 2.0 включительно и Opera до версии 9.2 включительно  не поддерживают значение <span class="value">none</span>.  Safari до версии 3.1 не поддерживает значение <span class="value">none</span>  и <span class="value">normal</span>.</p>
+<p>Chrome и Safari поддерживают свойство <span class="attribute">quotes</span> для добавления кавычек с версии 11 и 5.1 соответственно.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/generate.html#content" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9.5</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

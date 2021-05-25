@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>background-size</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>background-size</h1>
+		<p>Масштабирует фоновое изображение согласно заданным размерам.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">auto</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>background-size: [ &lt;размер&gt; | &lt;проценты&gt; | auto ]{1,2} | cover | contain </code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>&lt;размер&gt;</dt>
+  <dd>Задаёт размер в любых доступных для CSS  единицах&nbsp;— пикселях (px), сантиметрах (cm), em и др. </dd>
+  <dt>&lt;проценты&gt;</dt>
+  <dd> Задаёт размер фоновой картинки в процентах от ширины или  высоты элемента. </dd>
+  <dt>auto</dt>
+  <dd> Если задано одновременно для ширины и высоты (auto auto), размеры фона остаются  исходными; если только для одной стороны картинки (100px auto), то размер вычисляется  автоматически исходя из пропорций картинки.</dd>
+  <dt>cover</dt>
+  <dd>Масштабирует изображение с сохранением пропорций так, чтобы его  ширина или высота равнялась ширине или высоте блока.</dd>
+  <dt>contain</dt>
+  <dd>Масштабирует изображение с сохранением пропорций таким  образом, чтобы картинка целиком поместилась внутрь блока. </dd>
+</dl>
+<p>Если установлено одно значение, оно устанавливает ширину фона, второе  значение принимается за <span class="value">auto</span>. Пропорции картинки при этом сохраняются. Использование  двух значений через пробел задаёт ширину и высоту фоновой картинки.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;background-size&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    height: 200px; /* Высота блока */
+    border: 2px solid #000; /* Параметры рамки */
+    background: url(images/mybg.png) 100% 100% no-repeat; /* Добавляем фон */
+    background-size: cover; /* Масштабируем фон */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;...&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.backgroundSize</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Safari до версии 4.1, Chrome до версии 3.0 и Android используют свойство <span class="attribute">-webkit-background-size</span>.</p>
+<p>Opera до версии 10.53 использует свойство <span class="attribute">-o-background-size</span>.</p>
+<p>Firefox до версии 4 использует свойство <span class="attribute">-moz-background-size</span>.</p>
+<p>Opera 9.5 некорректно устанавливает положение фиксированного фона.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#the-background-size" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>3</span></td>
+      <td class="warn"><span>9</span></td>
+      <td class="yes"><span>10.53</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="yes"><span>4.1</span></td>
+      <td class="warn"><span>3.6</span></td>
+      <td class="yes"><span>4</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2.3</span></td>
+			<td class="warn"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>11</span></td>
+			<td class="yes"><span>5.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

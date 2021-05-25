@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдокласс :optional</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдокласс :optional</h1>
+		<p>Применяет стилевые правила к элементу <span class="tag">&lt;input&gt;</span>, у которого не задан атрибут  <span class="attribute">required</span>. Он позволяет  выделять поля обязательные к заполнению перед отправкой формы. Таким образом <span class="attribute">:optional</span> применяется к необязательным полям формы.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>input:optional  {  ...  }</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;:optional&lt;/title&gt;
+  &lt;style&gt;
+   input:optional {
+    opacity: 0.5; /* Полупрозрачность */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form&gt;
+   &lt;p&gt;Пожалуйста, укажите ваше имя и возраст.&lt;/p&gt;
+   &lt;p&gt;Имя: &lt;input name=&quot;name&quot;&gt;&lt;/p&gt;
+   &lt;p&gt;Возраст: &lt;input type=&quot;number&quot; min=&quot;18&quot; required name=&quot;old&quot;&gt;&lt;/p&gt;
+   &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Отправить&quot;&gt;&lt;/p&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+  <p>В данном примере необязательное текстовое поле делается полупрозрачным с помощью свойства <span class="attribute">opacity</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/#selector-optional" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/#selector-optional" lang="en">HTML5</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors4/#opt-pseudos" lang="en">Selectors Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-ui/#pseudo-required-value" lang="en">CSS Basic User Interface Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>4</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>4</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>5</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

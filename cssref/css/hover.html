@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдокласс :hover</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдокласс :hover</h1>
+		 <p>Определяет стиль элемента при наведении на него курсора мыши, но при этом элемент еще не активирован, иными словами кнопка мыши не нажата. </p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code><i>Селектор</i>:hover  {  ...  }</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+ <pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;title&gt;hover&lt;/title&gt;
+  &lt;style&gt;
+   a:link {
+    color: #0000d0; /* Цвет ссылок */
+    padding: 2px; /* Поля вокруг текста */ 
+   }
+   a:hover {
+    background: #786b59; /* Цвет фона под ссылкой */ 
+    color: #ffe; /* Цвет ссылки */ 
+   } 
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;1.html&quot;&gt;Ссылка 1&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;2.html&quot;&gt;Ссылка 2&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;3.html&quot;&gt;Ссылка 3&lt;/a&gt;&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>В данном примере псевдокласс <span class="attribute">:hover</span> применяется  к ссылке (тегу <span class="tag">&lt;a&gt;</span>), при этом меняется цвет ссылки и фона под ней. Результат примера показан на рис.&nbsp;1.</p>
+  <p class="fig"><img src="../assets/images/css/css_hover_1.png" alt="Результат использования псевдокласса :hover для ссылок" width="400" height="216"> </p>
+  <p class="figsign">Рис. 1. Результат использования псевдокласса :hover для ссылок </p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;hover&lt;/title&gt;
+  &lt;style&gt;
+   ul {
+    width: 180px; /* Ширина меню */
+    list-style: none; /* Для списка убираем маркеры */
+    margin: 0; /* Нет отступов вокруг */
+    padding: 0; /* Убираем поля вокруг текста */
+    font-family: Arial, sans-serif; /* Рубленый шрифт для текста меню */
+    font-size: 10pt; /* Размер названий в пункте меню */
+   }
+   li ul {
+    position: absolute; /* Подменю позиционируются абсолютно */
+    display: none; /* Скрываем подменю */
+    margin-left: 165px; /* Сдвигаем подменю вправо */
+    margin-top: -2em; /* Сдвигаем подменю вверх */
+   }
+   li a {
+    display: block; /* Ссылка как блочный элемент */
+    padding: 5px; /* Поля вокруг надписи */
+    text-decoration: none; /* Подчеркивание у ссылок убираем */
+    color: #666; /* Цвет текста */
+    border: 1px solid #ccc;/* Рамка вокруг пунктов меню */
+    background-color: #f0f0f0; /* Цвет фона */
+    border-bottom: none; /* Границу снизу не проводим */
+   }
+   li a:hover {
+    color: #ffe; /* Цвет текста активного пункта */
+    background-color: #5488af; /* Цвет фона активного пункта */
+   }
+   li:hover ul { 
+    display: block; /* При выделении пункта курсором мыши отображается подменю */
+   }
+   .brd {
+    border-bottom: 1px solid #ccc; /* Линия снизу */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;ul class=&quot;menu&quot;&gt;
+   &lt;li&gt;&lt;a href=&quot;russian.html&quot;&gt;Русская кухня&lt;/a&gt;
+    &lt;ul&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkr1.html&quot;&gt;Бефстроганов&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkr2.html&quot;&gt;Гусь с яблоками&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkr3.html&quot;&gt;Крупеник новгородский&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkr4.html&quot; class=&quot;brd&quot;&gt;Раки по-русски&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+   &lt;/li&gt; 
+   &lt;li&gt;&lt;a href=&quot;ukrainian.html&quot;&gt;Украинская кухня&lt;/a&gt; 
+    &lt;ul&gt; 
+     &lt;li&gt;&lt;a href=&quot;linku1.html&quot;&gt;Вареники&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linku2.html&quot;&gt;Жаркое по-харьковски&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linku3.html&quot;&gt;Капустняк черниговский&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linku4.html&quot; class=&quot;brd&quot;&gt;Потапцы с помидорами&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+   &lt;/li&gt;
+   &lt;li&gt;&lt;a href=&quot;caucasus.html&quot;&gt;Кавказская кухня&lt;/a&gt; 
+    &lt;ul&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkc1.html&quot;&gt;Суп-харчо&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkc2.html&quot;&gt;Лилибдж&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkc3.html&quot;&gt;Чихиртма&lt;/a&gt;&lt;/li&gt; 
+     &lt;li&gt;&lt;a href=&quot;linkc4.html&quot; class=&quot;brd&quot;&gt;Шашлык&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+   &lt;/li&gt; 
+   &lt;li&gt;&lt;a href=&quot;asia.html&quot; class=&quot;brd&quot;&gt;Кухня Средней Азии&lt;/a&gt;&lt;/li&gt; 
+  &lt;/ul&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>В данном примере псевдокласс <span class="attribute">:hover</span> добавляется  к элементу списка (тег <span class="tag">&lt;li&gt;</span>)  для создания двухуровневого меню. Результат примера показан на рис.&nbsp;2.</p>
+  <p class="fig"><img src="../assets/images/css/css_hover_2.png" alt="Использование :hover для создания меню" width="400" height="273"> </p>
+  <p class="figsign">Рис. 2. Использование :hover для создания меню</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+  <p>В браузере Internet Explorer&nbsp;до версии&nbsp;7.0 псевдокласс <span class="attribute">:hover</span> работает только для ссылок. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors4/#hover" hreflang="en" lang="en">Selectors Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors3/#the-user-action-pseudo-classes-hover-act" hreflang="en" lang="en">Selectors Level 3</td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>2</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

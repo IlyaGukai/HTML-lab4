@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>animation-direction</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>animation-direction</h1>
+		  <p>Устанавливает направление движения анимации.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">normal</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам, к псевдоэлементам <span class="attribute">::before</span> и <span class="attribute">::after</span></td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>animation-direction: normal | alternate | reverse | alternate-reverse</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>normal</dt>
+  <dd>Анимация идёт с самого начала, после завершения цикла возвращается к исходному состоянию.</dd>
+  <dt>alternate</dt>
+  <dd>Анимация идёт с начала до конца, затем плавно возвращается в исходное положение.</dd>
+  <dt>reverse</dt>
+  <dd>Анимация идёт с конца цикла, после его завершения возвращается к исходному состоянию.</dd>
+  <dt>alternate-reverse</dt><br>
+  <dd>Анимация идёт с конца до начала, затем плавно возвращается в исходное положение.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;animation-direction&lt;/title&gt;
+  &lt;style&gt;
+   .box {
+    background: #fc0;
+    width: 100px; height: 100px; 
+    text-align: center;
+    position: absolute;
+    animation: move 5s infinite;
+    -webkit-animation: move 5s infinite;
+   }
+   .normal {
+    animation-direction: normal;
+    -webkit-animation-direction: normal;
+   }
+   .alternate {
+     top: 150px;
+     animation-direction: alternate;
+     -webkit-animation-direction: alternate;
+   }
+   .reverse {
+    top: 300px;
+    animation-direction: reverse;
+    -webkit-animation-direction: reverse;
+   }
+   .alternate-reverse {
+    top: 450px;
+    animation-direction: alternate-reverse;
+    -webkit-animation-direction: alternate-reverse;
+   }
+   @-webkit-keyframes move {
+    from { left: 0; }
+    to { left: calc(100% - 100px); }
+   }
+   @keyframes move {
+    from { left: 0; }
+    to { left: calc(100% - 100px); }
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;box normal&quot;&gt;normal&lt;/div&gt;
+  &lt;div class=&quot;box alternate&quot;&gt;alternate&lt;/div&gt;
+  &lt;div class=&quot;box reverse&quot;&gt;reverse&lt;/div&gt;
+  &lt;div class=&quot;box alternate-reverse&quot;&gt;alternate-reverse&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере показано разное движение квадратов от одного края окна браузера до другого.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>объект</i>.style.animationDirection</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome, Safari и Android поддерживают свойство <span class="attribute">-webkit-animation-direction</span>.</p>
+<p>Opera до версии 12.10 поддерживает свойство <span class="attribute">-o-animation-direction</span>.</p>
+  <p>Firefox  до версии 16 поддерживает свойство <span class="attribute">-moz-animation-direction</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-animations/#animation-direction" lang="en">CSS Animations</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>normal, alternate</td>
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="warn"><span>12</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+    <tr class="sp">
+      <td>reverse, alternate-reverse</td>
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>19</span></td>
+      <td colspan="2" class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td colspan="2" class="warn"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td colspan="2"><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>normal, alternate</td>
+		    <td class="warn"><span>2</span></td>
+		    <td class="warn"><span>5</span></td>
+		    <td class="yes"><span>16</span></td>
+		    <td class="warn"><span>12</span></td>
+		    <td class="yes"><span>12.10</span></td>
+			<td class="warn"><span>4</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>reverse, alternate-reverse</td>
+		    <td class="no"><span></span></td>
+		    <td colspan="2" class="warn"><span>16</span></td>
+		    <td colspan="2" class="no"><span></span></td>
+		    <td class="no"><span></span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

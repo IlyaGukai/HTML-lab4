@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>@import</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>@import</h1>
+		 <p>Правило <span class="attribute">@import</span> позволяет импортировать содержимое CSS-файла в текущую стилевую таблицу. <span class="attribute">@import</span> не разрешается вставлять после любых объявлений кроме <span class="attribute">@charset</span> или другого <span class="attribute">@import</span>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code data-language="css">@import url(&quot;имя файла&quot;) [типы носителей];
+@import &quot;имя файла&quot; [типы носителей];</code></pre>
+
+<p>В качестве типа носителя выступают различные устройства, например, принтер, КПК, монитор и др. В табл. 1 перечислены некоторые из них.</p>
+  <table class="data">
+    <caption>
+      Табл. 1. Типы носителей и их описание
+    </caption>
+    <tr>
+      <th>Тип</th>
+      <th>Описание</th>
+    </tr>
+    <tr>
+      <td class="sel">all<br></td>
+      <td>Все типы. Это значение используется по умолчанию.</td>
+    </tr>
+    <tr>
+      <td class="sel">aural</td>
+      <td>Речевые синтезаторы, а также программы для воспроизведения текста вслух. Сюда, например, можно отнести речевые браузеры.</td>
+    </tr>
+    <tr>
+      <td class="sel">braille</td>
+      <td>Устройства, основанные на системе Брайля, которые предназначены для слепых людей.</td>
+    </tr>
+    <tr>
+      <td class="sel">handheld</td>
+      <td>Наладонные компьютеры и аналогичные им аппараты. </td>
+    </tr>
+    <tr>
+      <td class="sel">print</td>
+      <td>Печатающие устройства вроде принтера.</td>
+    </tr>
+    <tr>
+      <td class="sel">projection</td>
+      <td>Проектор.</td>
+    </tr>
+    <tr>
+      <td class="sel">screen</td>
+      <td>Экран монитора.</td>
+    </tr>
+    <tr>
+      <td class="sel">tv</td>
+      <td>Телевизор.</td>
+    </tr>
+  </table>
+  <p>Использование типов носителей совместно с импортом файла дает возможность указывать стиль только для определенных устройств.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>В качестве значения используется путь к стилевому файлу, который указывается 
+  внутри необязательной конструкции <span class="value">url()</span>.  Путь к файлу при этом 
+  можно писать как в кавычках (двойных или одинарных), так и без них. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Импорт стиля&lt;/title&gt;
+  &lt;style&gt;
+    @import &quot;/style/main.css&quot; screen; /* Стиль для вывода результата на монитор */
+    @import &quot;/style/palm.css&quot; handheld, print; /* Стиль для печати */
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;...&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer до  версии 7.0 включительно не поддерживает типы носителей при импорте стилевого файла. Более того, при добавлении типа носителя стилевой файл вообще не загружается.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-mediaqueries/#media0" lang="en">Media Queries</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/cascade.html#at-import" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#the-cascade" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>5.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>5</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

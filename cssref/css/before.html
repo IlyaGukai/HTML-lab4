@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдоэлемент ::before</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдоэлемент ::before</h1>
+		<p>Псевдоэлемент <span class="attribute">::before</span> применяется для отображения желаемого  контента до содержимого элемента, к которому он добавляется. Работает совместно со свойством <span class="attribute">content</span>. </p>
+  <p>Для <span class="attribute">::before</span> характерны следующие особенности.</p>
+  <ol>
+    <li>При  добавлении <span class="attribute">::before</span> к блочному элементу, значение свойства <span class="attribute">display</span> может быть только: <span class="value">block</span>, <span class="value">inline</span>, <span class="value">none</span>, <span class="value">marker</span>. Все остальные значения будут трактоваться как <span class="value">block</span>.</li>
+    <li>При  добавлении <span class="attribute">::before</span> к встроенному элементу, <span class="attribute">display</span> ограничен значениями <span class="value">inline</span> и <span class="value">none</span>. Все остальные  будут восприниматься как <span class="value">inline</span>.</li>
+    <li><span class="attribute">::before</span> наследует стиль от элемента, к которому он добавляется.</li>
+  </ol>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<table class="syntax">
+  <tr>
+    <td class="html">CSS2.1</td>
+    <td><pre><code><i>Селектор</i>:before { content: &quot;текст&quot; }</code></pre>
+</td>
+  </tr>
+  <tr>
+    <td class="xhtml">CSS3</td>
+    <td><pre><code><i>Селектор</i>::before { content: &quot;текст&quot; }</code></pre></td>
+  </tr>
+</table>
+<p>В CSS3 псевдоэлементы стали обозначаться двумя двоеточиями, чтобы синтаксис отличался от псевдоклассов.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;before&lt;/title&gt;
+  &lt;style&gt;
+   li::before {
+     content: &quot;¶ &quot;; /* Добавляем желаемый символ перед элементом списка */ 
+   }
+   li {
+     list-style: none; /* Убираем исходные маркеры */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;ul&gt;
+     &lt;li&gt;Альфа&lt;/li&gt;
+     &lt;li&gt;Бета&lt;/li&gt;
+     &lt;li&gt;Гамма&lt;/li&gt;
+   &lt;/ul&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <p>В данном примере вместо стандартных маркеров списка с помощью псевдоэлемента <span class="attribute">::before</span> выводится символ ¶. Результат примера продемонстрирован на рис.&nbsp;1. </p>
+  <p class="fig"><img src="../assets/images/css/css_before.png" alt="Использование псевдоэлемента ::before в списках" width="398" height="176"></p>
+  <p class="figsign">Рис. 1. Использование псевдоэлемента ::before в списках </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-properties" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-animations/" hreflang="en" lang="en">CSS Animations</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors3/#gen-content" hreflang="en" lang="en">Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/generate.html#before-after-content" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>:before</td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>::before</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1.5</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>:before</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>::before</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>7</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>radial-gradient()</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Функция radial-gradient()</h1>
+		<p>Функция <span class="var">radial-gradient()</span> добавляет радиальный градиент к фону элемента. Радиальные по своему принципу похожи на линейные градиенты, но один цвет переходит в другой не вдоль прямой линии, а словно круги по воде вокруг точки. На рис. 1 представлено для сравнения одновременно два разных градиента: радиальный (рис. 1а) и линейный (рис. 1б). </p>
+
+<table style="width: 200px; margin: auto">
+  <tr>
+    <td><img src="../../assets/images/css/radial-gradient-1a.png" width="100" height="100" alt="Радиальный градиент"></td>
+    <td><img src="../../assets/images/css/radial-gradient-1b.png" width="100" height="100" alt="Линейный градиент"></td>
+  </tr>
+  <tr class="figsign">
+    <td>а</td>
+    <td>б</td>
+  </tr>
+</table>
+<p class="figsign">Рис. 1. Радиальный и линейный градиент </p><!--break-->
+
+<p>Радиальный градиент создаётся с помощью свойства <span class="attribute">background</span> или <span class="attribute">background-image</span>.
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>background-image: radial-gradient([ circle || &lt;радиус&gt; ] [ at &lt;позиция&gt; ]? ,
+   | [ ellipse || [&lt;радиус&gt; | &lt;проценты&gt; ]{2}] [ at &lt;позиция&gt; ]? ,
+   | [ [ circle | ellipse ] || &lt;размер&gt; ] [ at &lt;позиция&gt; ]? ,
+   | at &lt;позиция&gt; ,
+     &lt;цвет&gt; [ , &lt;цвет&gt; ]*)</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+    <dt>cicle</dt>
+    <dd>Радиальный градиент круглой формы.</dd>
+    <dt>ellipse</dt>
+    <dd> Создаёт градиент эллиптической формы. Эта форма установлена по умолчанию.</dd>
+    <dt>&lt;радиус&gt;</dt>
+    <dd>Радиус градиента в доступных для CSS единицах. Одно значение указывает радиус круга, два значения — радиус эллипса по оси x и его же радиус по оси y. Если радиус явно не указан, градиент будет заполнять собой весь фон элемента.</dd>
+    <dt>&lt;позиция&gt;</dt>
+    <dd>
+      <p>Задаёт начальную точку откуда исходит градиент. Позиция точки пишется аналогично значениям свойства <span class="attribute">background-position</span> с помощью ключевых слов или доступных единиц измерения вроде пикселей или процентов; ниже приведены возможные сочетания.</p>
+      <ul>
+        <li>top left = left top = 0% 0% (в левом верхнем углу);</li>
+        <li> top = top center = center top = 50% 0% (по центру вверху);</li>
+        <li> right top = top right = 100% 0% (в правом верхнем углу);</li>
+        <li> left = left center = center left = 0% 50% (по левому краю и по центру);</li>
+        <li> center = center center = 50% 50% (по центру) — это значение по умолчанию;</li>
+        <li> right = right center = center right = 100% 50% (по правому краю и по центру);</li>
+        <li> bottom left = left bottom = 0% 100% (в левом нижнем углу);</li>
+        <li> bottom = bottom center = center bottom = 50% 100% (по центру внизу);</li>
+        <li> bottom right = right bottom = 100% 100% (в правом нижнем углу).</li>
+      </ul>
+    </dd>   
+    <dt>&lt;цвет&gt;</dt>
+    <dd> Представляет собой значение цвета (см. <a href="color.html">цвет</a>), за которым идёт необязательная позиция цвета относительно оси градиента, она задаётся в процентах от 0% до 100% или в любых других подходящих для CSS единицах.</dd>
+    <dt>&lt;размер&gt;</dt>
+    <dd>Устанавливает размер градиента. В табл. 1 перечислены возможные значения размера с их описанием и   результатом для белого и чёрного цвета. Код и вид дан для кругового и   эллиптического градиента.    
+</dl>
+  <table class="data">
+  <caption>Табл. 1. Ключевые слова для изменения размера градиента</caption>
+  <tbody><tr>
+    <th>Значение</th>
+    <th>Код</th>
+
+    <th>Описание</th>
+    <th style="width:160px">Вид</th>
+  </tr>
+  <tr>
+    <td class="sel">closest-side</td>
+    <td><p>background: radial-gradient(circle <span class="sel">closest-side</span> at 30px 20px, #fff, #000);</p>
+    <p>background: radial-gradient(<span class="sel">closest-side</span> at 30px 20px, #fff, #000);</p></td>
+
+    <td>Градиент совпадает с ближайшей к нему стороной блока (для круга) или одновременно совпадает с ближайшими горизонтальными и вертикальными сторонами (для эллипса).</td>
+    <td><img src="../../assets/images/css/rgradient1.png" alt="contain" height="121" width="160"></td>
+  </tr>
+  <tr>
+    <td class="sel">closest-corner</td>
+    <td><p>background: radial-gradient(circle <span class="sel">closest-corner at 30px 20px</span>, #fff, #000);</p>
+
+    <p>background: radial-gradient(<span class="sel">closest-corner at 30px 20px</span>, #fff, #000);</p></td>
+    <td>Форма градиента вычисляется на основании информации о расстоянии до ближайшего угла блока.</td>
+    <td><img src="../../assets/images/css/rgradient2.png" alt="closest-corner" height="121" width="160"></td>
+  </tr>
+  <tr>
+    <td class="sel">farthest-side</td>
+
+    <td><p>background: radial-gradient(circle <span class="sel">farthest-side at 30px 20px</span>, #fff, #000);</p>
+    <p>background: radial-gradient(<span class="sel">farthest-side at 30px 20px</span>, #fff, #000);</p></td>
+    <td>Похож по своему действию на<span class="sel"> closest-side</span>, но  градиент распространяется до дальней стороны блока.</td>
+    <td><img src="../../assets/images/css/rgradient3.png" alt="farthest-side" height="121" width="160"></td>
+
+  </tr>
+  <tr>
+    <td class="sel">farthest-corner</td>
+    <td><p>background: radial-gradient(circle <span class="sel">farthest-corner at 30px 20px</span>, #fff, #000);</p>
+    <p>background: radial-gradient(<span class="sel">farthest-corner at 30px 20px</span>, #fff, #000);</p></td>
+
+    <td>Форма градиента вычисляется на основании информации о расстоянии до дальнего угла блока,</td>
+    <td><img src="../../assets/images/css/rgradient4.png" alt="cover" height="121" width="160"></td>
+  </tr>
+</tbody></table></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Градиент&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    background: radial-gradient(circle closest-side, #333 10px, 
+                        white 11px, white 30px, green 31px);
+    height: 70px;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;div&gt;&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан ниже.</p>
+<p class="fig"><img src="../../assets/images/css/radial-gradient-2.png" alt="Резкие переходы между разными цветами" width="358" height="191"></p>
+<p class="figsign">Резкие переходы между разными цветами</p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Градиент&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    background: #ffb60f;
+    background: radial-gradient(circle at 80px 40px, #f9eec7, #ffb60f, #ffb60f);
+    padding: 20px;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;Этот элемент помогает в случае, когда вы находитесь в осознании того
+   факта, что совершенно не понимаете, кто и как вам может помочь. Именно
+   в этот момент мы и подсказываем, что помочь вам никто не сможет.
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан ниже. </p>
+<p class="fig"><img src="../../assets/images/css/radial-gradient-3.png" alt="Круговой градиент" width="442" height="258"></p>
+<p class="figsign">Круговой градиент</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-images/#radial-gradients" hreflang="en" lang="en">CSS Image Values and Replaced Content Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>10</span></td>
+      <td class="yes"><span>26</span></td>
+      <td class="warn"><span>11.10</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>5.1</span></td>
+      <td class="yes"><span>6.1</span></td>
+      <td class="warn"><span>3.6</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2.1</span></td>
+		    <td class="yes"><span>4.4</span></td>
+			<td class="warn"><span>1</span></td>
+			<td class="yes"><span>16</span></td>
+			<td class="yes"><span>12</span></td>
+			<td class="yes"><span>6.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

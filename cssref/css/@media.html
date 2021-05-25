@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>@media</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>@media</h1>
+		<p>Правило <span class="attribute">@media</span> позволяет указать тип носителя,     для которого будет применяться указанный стиль. В качестве типов выступают различные устройства, например, принтер, КПК, монитор и др. В табл. 1 перечислены некоторые из них.</p>
+<table class="data">
+  <caption>
+    Табл. 1. Типы носителей и их описание
+  </caption>
+  <tr>
+    <th>Тип</th>
+    <th>Описание</th>
+  </tr>
+  <tr>
+    <td class="sel">all</td>
+    <td>Все типы. Это значение используется по умолчанию.</td>
+  </tr>
+  <tr>
+    <td class="sel">aural</td>
+    <td>Речевые синтезаторы, а также программы для воспроизведения текста вслух.         Сюда, например, можно отнести речевые браузеры.</td>
+  </tr>
+  <tr>
+    <td class="sel">braille</td>
+    <td>Устройства, основанные на системе Брайля, которые предназначены для слепых         людей.</td>
+  </tr>
+  <tr>
+    <td class="sel">handheld</td>
+    <td>Наладонные компьютеры и аналогичные им аппараты. </td>
+  </tr>
+  <tr>
+    <td class="sel">print</td>
+    <td>Печатающие устройства вроде принтера.</td>
+  </tr>
+  <tr>
+    <td class="sel">projection</td>
+    <td>Проектор.</td>
+  </tr>
+  <tr>
+    <td class="sel">screen</td>
+    <td>Экран монитора.</td>
+  </tr>
+  <tr>
+    <td class="sel">tv</td>
+    <td>Телевизор.</td>
+  </tr>
+</table>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code data-language="css">@media тип1 [, тип2] {
+  Описание стиля 
+}</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>После ключевого слова <span class="attribute">@media</span> идет один или несколько типов носителя, перечисленных в табл. 1; если их больше одного, то они разделяются между собой запятой. После чего следуют обязательные фигурные скобки, внутри которых идет обычное описание стилевых правил.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; 
+  &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+  &lt;title&gt;@media&lt;/title&gt;
+  &lt;style type=&quot;text/css&quot;&gt;
+   @media screen { /* Стиль для отображения в браузере */
+    body {
+     font-family: Arial, Verdana, sans-serif; /* Рубленый шрифт */
+     font-size: 0.9em; /* Размер шрифта */
+     color: #000080; /* Цвет текста */
+    }
+    h1 {
+     background: #faf0e6; /* Цвет фона под текстом */
+     border: 2px dashed #800000; /* Рамка вокруг заголовка */
+     color: #a0522d; /* Цвет текста */
+     padding: 7px; /* Поля вокруг текста */
+    }
+    h2 {
+     color: #556b2f; /* Цвет текста */
+     margin: 0; /* Убираем отступы */
+    }
+    p {
+     margin-top: 0.5em; /* Отступ сверху */
+    }
+   }
+   @media print { /* Стиль для печати */
+    body {
+     font-family: Times, 'Times New Roman', serif; /* Шрифт с засечками */
+    }
+    h1, h2, p {
+     color: #000; /* Черный цвет текста */
+    }
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;h1&gt;Метод ловли льва в пустыне&lt;/h1&gt;
+   &lt;h2&gt;Метод последовательного перебора&lt;/h2&gt;
+   &lt;p&gt;Пусть лев имеет габаритные размеры LxWxH, где L — длина льва от кончика носа 
+   до кисточки хвоста, W — ширина льва, а H — его высота. После чего пустыню разбиваем на 
+   ряд элементарных прямоугольников, размер которых совпадает с шириной и длиной льва. 
+   Учитывая, что лев может находиться не строго на заданном участке, а одновременно на 
+   двух из них, клетку для ловли следует делать повышенной площади, а именно 2Lx2W. 
+   Благодаря этому мы избежим ошибки, когда в клетке окажется пойманным лишь половина 
+   льва или, что хуже, только его хвост.&lt;/p&gt;
+   &lt;p&gt;Далее последовательно накрываем каждый из размеченных прямоугольников пустыни 
+   клеткой и проверяем, пойман лев или нет. Как только лев окажется в клетке, процедура 
+   поимки считается завершенной.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере вводится два стиля&nbsp;&#8212; один для изменения вида элементов при их обычном отображении в браузере, а второй&nbsp;&#8212; при выводе страницы на печать. При этом облик документа для разных носителей может сильно различаться между собой, например, как это показано на рис. 1 и рис. 2.</p>
+<p class="fig"><img src="../assets/images/css/css_media_1.png" alt="Рис. 1" width="490" height="450"></p>
+<p class="figsign">Рис. 1. Страница для отображения в окне браузера</p>
+<p class="fig"><img src="../assets/images/css/css_media_2.png" alt="Рис. 2" width="490" height="423"></p>
+<p class="figsign">Рис. 2. Страница, предназначенная для печати</p>
+<p>Просмотреть документ, у которого CSS установлен как тип <span class="value">print</span> можно, если распечатать определенную страницу. Или пойти на хитрость и временно     заменить слово <span class="value">print</span> на <span class="value">screen</span>,     чтобы отобразить итог в браузере. Именно так был получен рис. 2. </p>
+<p>Команда <span class="attribute">@media</span> применяется в основном для формирования     одного стилевого файла, который разбит на блоки по типу устройств. Иногда же     имеет смысл создать несколько разных CSS-файлов&nbsp;&#8212; один для печати, другой     для отображения в браузере&nbsp;&#8212; и подключать их к документу по мере необходимости. В подобном случае следует воспользоваться тегом <span class="tag">&lt;link&gt;</span> с атрибутом <span class="attribute">media</span>, значением которого выступают      те же типы, перечисленные в табл. 1. </p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;@media&lt;/title&gt;
+  &lt;link media=&quot;print, handheld&quot; rel=&quot;stylesheet&quot; href=&quot;print.css&quot;&gt;
+  &lt;link media=&quot;screen&quot; rel=&quot;stylesheet&quot; href=&quot;main.css&quot;&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;...&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере используются две таблицы связанных стилей, одна для отображения в браузере, а вторая&nbsp;&#8212; для печати документа и его просмотре на КПК. Хотя на страницу загружаются одновременно два разных стиля, применяются они только для определенных устройств.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css4-mediaqueries/#media" hreflang="en" lang="en">Media Queries Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-mediaqueries/#media0" hreflang="en" lang="en">Media Queries</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/media.html#at-media-rule" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>9.2</span></td>
+      <td class="yes"><span>1.3</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9</span></td>
+			<td class="yes"><span>3.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

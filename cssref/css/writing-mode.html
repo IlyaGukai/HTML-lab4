@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>writing-mode</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>writing-mode</h1>
+		<p>Устанавливает направление текста на странице. Свойство  <span class="attribute">writing-mode</span> является  универсальным и позволяет одновременно задавать значения свойств <span class="attribute">direction</span> и <span class="attribute">block-progression</span>.</p>
+
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+    <th>Значение по умолчанию </th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам и генерируемому контенту</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>writing-mode: lr-tb | rl-tb | tb-rl | bt-rl | tb-lr | bt-lr</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>lr-tb</dt>
+  <dd>Устанавливает направление текста слева направо. </dd>
+  <dt>rl-tb</dt>
+  <dd>Задает направление текста справа налево.</dd>
+  <dt>tb-rl</dt>
+  <dd>Текст располагается вертикально и выравнивается по верхнему и правому краю.</dd>
+  <dt>bt-rl</dt>
+  <dd>Текст располагается вертикально и выравнивается по нижнему и правому краю.</dd>
+  <dt>tb-lr</dt>
+  <dd>Текст располагается вертикально и выравнивается по верхнему и левому краю.</dd>
+  <dt>bt-lr</dt>
+  <dd>Текст располагается вертикально и выравнивается по нижнему и левому краю.</dd>
+</dl>
+<p>Влияние разных значений на положение текста в таблице показано на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/css_writing-mode.png" alt="Рис. 1. Положение текста при разных значениях writing-mode" width="300" height="350"></p>
+<p class="figsign">Рис. 1. Положение текста при разных значениях writing-mode</p>
+<p>В табл.&nbsp;1 показаны значения свойств <span class="attribute">direction</span> и <span class="attribute">block-progress</span>, соответствующие значениям <span class="attribute">writing-mode</span>, а также языки, где они</p>
+<table class="data">
+<caption>
+Табл. 1. Значения  writing-mode
+</caption>
+  <tr>
+    <th>writing-mode</th>
+    <th>direction</th>
+    <th>block-progress</th>
+    <th>Для каких языков</th>
+  </tr>
+  <tr>
+    <td class="sel">lr-tb</td>
+    <td>ltr</td>
+    <td>tb</td>
+    <td>Романских, греческого, кириллических</td>
+  </tr>
+  <tr>
+    <td class="sel"> rl-tb</td>
+    <td>rtl</td>
+    <td>tb</td>
+    <td>Арабского, еврейских языков</td>
+  </tr>
+  <tr>
+    <td class="sel">tb-rl</td>
+    <td>ltr</td>
+    <td>rl</td>
+    <td>Азиатских в вертикальном написании</td>
+  </tr>
+  <tr>
+    <td class="sel">bt-rl</td>
+    <td>ltr</td>
+    <td>rl</td>
+    <td>Арабского, вставленного в азиатский документ</td>
+  </tr>
+  <tr>
+    <td class="sel">tb-lr</td>
+    <td>ltr</td>
+    <td>rl</td>
+    <td>Монгольского</td>
+  </tr>
+  <tr>
+    <td class="sel">bt-lr</td>
+    <td>rtl</td>
+    <td>rl</td>
+    <td>Арабского, вставленного в монгольский документ</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;writing-mode&lt;/title&gt;
+  &lt;style&gt;
+   table { 
+    border-collapse: collapse; 
+    height: 350px; 
+    width: 300px;
+   }
+   table td { 
+    border: 1px solid #333;
+    padding: 5px; 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;table style=&quot;width: 100%&quot;&gt;
+   &lt;tr&gt;
+    &lt;td&gt;&lt;p style=&quot;writing-mode: lr-tb&quot;&gt;Текст&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;p style=&quot;writing-mode: rl-tb&quot;&gt;Текст&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;p style=&quot;writing-mode: tb-rl&quot;&gt;Текст&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;p style=&quot;writing-mode: bt-rl&quot;&gt;Текст&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;p style=&quot;writing-mode: tb-lr&quot;&gt;Текст&lt;/p&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;p style=&quot;writing-mode: bt-lr&quot;&gt;Текст&lt;/p&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;lr-tb&lt;/td&gt;
+    &lt;td&gt;rl-tb&lt;/td&gt;
+    &lt;td&gt;tb-rl&lt;/td&gt;
+    &lt;td&gt;bt-rl&lt;/td&gt;
+    &lt;td&gt;tb-lr&lt;/td&gt;
+    &lt;td&gt;bt-lr&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.writingMode</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer 6.0 поддерживает только значения <span class="value">lr-tb</span> и <span class="value">tb-rl</span>, Internet Explorer 7.0 поддерживает значения <span class="value">lr-tb</span>, <span class="value">rl-tb</span>, <span class="value">tb-rl</span>, <span class="value">bt-rl</span>.</p>
+<p>Chrome, Android и Safari поддерживают свойство <span class="attribute">-webkit-writing-mode</span>.</div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-writing-modes/#propdef-writing-mode" hreflang="en" lang="en">CSS Writing Modes Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>6</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="warn"><span>15</span></td>
+      <td class="no"><span></span></td>
+      <td class="warn"><span>8</span></td>
+      <td class="yes"><span>36</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>4</span></td>
+			<td class="yes"><span>36</span></td>
+			<td class="no"><span></span></td>
+			<td class="warn"><span>8</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>bottom</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>bottom</h1>
+		<p> Устанавливает положение нижнего края содержимого элемента без учёта толщины 
+  рамок и отступов. Отсчёт координат зависит от свойства <a href="position.html">position</a>, 
+  оно обычно принимает значение <span class="value">relative</span> (относительное 
+  положение) или <span class="value">absolute</span> (абсолютное положение). </p>
+<p> При относительном позиционировании элемента, отсчёт ведётся от нижнего края 
+  исходного положения элемента, а при абсолютном &#8212; относительно 
+  нижнего края окна браузера (рис.&nbsp;1). Если для родительского элемента задано <span class="attribute">position</span>:&nbsp;<span class="value">relative</span>, то абсолютное  позиционирование дочерних элементов определяет их положение от нижнего края родителя (рис.&nbsp;2).</p>
+  
+<p class="fig"><img src="../assets/images/css/css_bottom_1.png" alt="Рис. 1. Значение  bottom при абсолютном позиционировании элемента" width="300" height="243" /></p>
+<p class="figsign">Рис. 1. Значение  bottom при абсолютном позиционировании элемента</p>
+
+<p class="fig"><img src="../assets/images/css/css_bottom_2.png" alt="Рис. 2. Значение  bottom относительно родителя" width="300" height="243"></p>
+<p class="figsign">Рис. 2. Значение  bottom относительно родителя</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">auto</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>bottom: &lt;размер&gt; | &lt;проценты&gt; | auto</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> В качестве значений принимаются любые единицы длины, принятые в CSS &#8212; 
+  например, пиксели (px), дюймы (in), пункты (pt) и др. Значение свойства <span class="attribute">bottom</span> 
+  может быть и отрицательным, в этом случае возможны наложения разных элементов 
+  друг на друга. При задании значения в процентах, положение элемента вычисляется 
+  в зависимости от высоты родительского элемента. </p>
+<dl class="param2">
+  <dt>auto</dt>
+  <dd>Не изменяет положение элемента.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;bottom&lt;/title&gt;
+  &lt;style&gt;
+   #layer {
+    bottom: 20px; /* Расстояние от нижнего края окна браузера */
+    position: absolute; /* Абсолютное позиционирование */
+    background: #f0f0f0; /* Цвет фона */
+    padding: 7px; /* Поля вокруг текста */
+    border: solid 1px black; /* Параметры рамки */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;div id=&quot;layer&quot;&gt;
+   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+   nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+  &lt;/div&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 3.</p>
+<p class="fig"><img src="../assets/images/css/css_bottom_3.png" alt="Применение свойства bottom " width="395" height="297"></p>
+<p class="figsign">Рис. 3. Применение свойства bottom </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.bottom</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>В браузере Internet Explorer до версии 7 для абсолютно позиционированных элементов нельзя  одновременно задать свойства <span class="attribute">top</span>, <span class="attribute">left</span>, <span class="attribute">right</span>, <span class="attribute">bottom</span>. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#choose-position" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>5.5</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

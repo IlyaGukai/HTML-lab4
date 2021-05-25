@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдоэлемент ::first-letter</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдоэлемент ::first-letter</h1>
+		<p>Псевдоэлемент <span class="attribute">::first-letter</span> определяет стиль первого символа в тексте элемента, к которому добавляется. К этому псевдоэлементу могут применяться только стилевые свойства,  связанные со свойствами шрифта, полями, отступами, границами, цветом и фоном.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<table class="syntax">
+  <tr>
+    <td class="html">CSS2.1</td>
+    <td><pre><code><i>Селектор</i>:first-letter { ... }</code></pre>
+</td>
+  </tr>
+  <tr>
+    <td class="xhtml">CSS3</td>
+    <td><pre><code><i>Селектор</i>::first-letter { ... }</code></pre></td>
+  </tr>
+</table>
+<p>В CSS3 псевдоэлементы обозначаются с двумя двоеточиями, чтобы синтаксис отличался от псевдоклассов.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;first-letter&lt;/title&gt;
+  &lt;style&gt;
+   p {
+    font-family: Arial, Helvetica, sans-serif; /* Гарнитура шрифта основного текста */
+    font-size: 0.9em; /* Размер шрифта */
+   }
+   p::first-letter {
+    font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта первой буквы */
+    font-size: 2em; /* Размер шрифта первого символа */
+    color: red; /* Красный цвет текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;Луч фонарика высветил старые скрипучие ступени, по которым не далее 
+   как пять минут назад в дом поднялся Паша. Оля осторожно приоткрыла дверь и 
+   посветила внутрь дома. Луч света, словно нехотя, пробивался сквозь тугую 
+   завесу из мрака и пыли. &lt;/p&gt;
+   &lt;p&gt;Взгляд Оли опустился на пол, и она вскрикнула. В пустом помещении никого
+   не было, и лишь на полу валялась порванная туфля Паши.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <p>Результат  примера показан на рис.&nbsp;1. В данном примере изменяется шрифт, размер и цвет первой буквы каждого абзаца   текста.</p>
+  <p class="fig"><img src="../assets/images/css/css_first-letter.png" alt="Результат использования псевдоэлемента ::first-letter" width="400" height="298"></p>
+  <p class="figsign">Рис. 1. Результат использования псевдоэлемента ::first-letter</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-pseudo-4/#first-letter-pseudo" hreflang="en" lang="en">CSS Pseudo-Elements Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-text-decor-3/#text-shadow" hreflang="en" lang="en">CSS Text Decoration Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors3/#first-letter" hreflang="en" lang="en">Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/selector.html#first-letter" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#the-first-letter-pseudo-element" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>:first-letter</td>
+      <td class="yes"><span>5.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>::first-letter</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>:first-letter</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>::first-letter</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>7</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

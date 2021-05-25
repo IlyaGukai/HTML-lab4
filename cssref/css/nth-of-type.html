@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдокласс :nth-of-type</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдокласс :nth-of-type</h1>
+		<p>Псевдокласс <span class="attribute">:nth-of-type</span> используется для  добавления стиля к элементам указанного типа на основе нумерации в дереве элементов. </p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code><i>Селектор</i>:nth-of-type(odd | even | &lt;число&gt; | &lt;выражение&gt;)&nbsp;{...}</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>odd</dt>
+  <dd> Все нечётные номера элементов.</dd>
+  <dt>even</dt>
+  <dd> Все чётные номера элементов.</dd>
+  <dt>&lt;число&gt;</dt>
+  <dd> Порядковый номер указанного элемента. Нумерация начинается с 1, это будет первый элемент в списке. </dd>
+  <dt>&lt;выражение&gt;</dt>
+  <dd>    Задаётся в виде <span class="value">an+b</span>, где <span class="value">a</span> и <span class="value">b</span> целые числа,  а <span class="value">n</span> — счётчик, который автоматически принимает значение 0, 1, 2...</dd>
+</dl>
+
+  <p>Если <span class="value">a</span> равно нулю, то оно не пишется и  запись сокращается до <span class="value">b</span>. Если <span class="value">b</span> равно нулю, то оно также не указывается и  выражение записывается в форме <span class="value">an</span>. <span class="value">a</span> и <span class="value">b</span> могут быть отрицательными числами,  в этом случае знак плюс меняется на минус, например: 5n-1. </p>
+    <p>      За счёт использования отрицательных  значений <span class="value">a</span> и <span class="value">b</span> некоторые результаты могут также получиться отрицательными или  равными нулю. Однако на элементы оказывают влияние только положительные  значения из-за того, что нумерация элементов начинается с 1. </p>
+  <p>В табл.&nbsp;1 приведены некоторые  возможные выражения и ключевые слова, а также указано, какие номера элементов будут задействованы.</p>
+<table class="data">
+<caption>Табл. 1. Результат для различных значений псевдокласса</caption>
+  <tr>
+    <th>Значение</th>
+    <th>Номера элементов</th>
+    <th>Описание</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>Первый элемент.</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>5</td>
+    <td>Пятый элемент.</td>
+  </tr>
+  <tr>
+    <td>2n</td>
+    <td>2, 4, 6, 8, 10</td>
+    <td>Все чётные элементы, аналог значения <span class="value">even</span>.</td>
+  </tr>
+  <tr>
+    <td>2n+1</td>
+    <td>1, 3, 5, 7, 9</td>
+    <td>Все нечётные элементы, аналог значения <span class="value">odd</span>.</td>
+  </tr>
+  <tr>
+    <td>3n+2</td>
+    <td>2, 5, 8, 11, 14</td>
+    <td>&#8212;</td>
+  </tr>
+  <tr>
+    <td>-n+3</td>
+    <td>3, 2, 1</td>
+    <td>&#8212;</td>
+  </tr>
+  <tr>
+    <td>5n-2</td>
+    <td>3, 8, 13, 18, 23</td>
+    <td>&#8212;</td>
+  </tr>
+  <tr>
+    <td>even</td>
+    <td>2, 4, 6, 8, 10</td>
+    <td>Все чётные элементы.</td>
+  </tr>
+  <tr>
+    <td>odd</td>
+    <td>1, 3, 5, 7, 9</td>
+    <td>Все нечётные элементы.</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;nth-of-type&lt;/title&gt;
+  &lt;style&gt;
+   img:nth-of-type(2n+1) { float: left; }
+   img:nth-of-type(2n) { float: right; }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;img src=&quot;images/left.gif&quot; alt=&quot;&quot;&gt;
+   &lt;img src=&quot;images/right.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+   &lt;h1&gt;Исторический турнир&lt;/h1&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере нечётные картинки выравниваются по левому краю окна, а  чётные картинки по правому (рис.&nbsp;1).</p>
+<p class="fig"><img src="../assets/images/css/css_nth-of-type.png" alt="Применение псевдокласса :nth-of-type к изображениям" width="554" height="233"></p>
+<p class="figsign">Рис. 1. Применение псевдокласса :nth-of-type к изображениям</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors4/#nth-of-type-pseudo" lang="en">Selectors Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors3/#nth-of-type-pseudo" lang="en">Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>9.5</span></td>
+      <td class="yes"><span>3.1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9.5</span></td>
+			<td class="yes"><span>3.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

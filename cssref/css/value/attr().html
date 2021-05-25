@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Функция attr()</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Функция attr()</h1>
+		<p> Функция <span class="var">attr()</span> применяется для добавления значения атрибута HTML-элемента в стилевое свойство. Например, можно получить значение атрибута <span class="attribute">class</span>, а затем использовать его в качестве значения свойства <span class="attribute">background</span> для изменения цвета.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<table class="syntax">
+<tr>
+	<td class="html">CSS2.1</td>
+<td><pre><code class="no-buttons">attr(&lt;атрибут&gt;)</code></pre>
+  </td></tr>
+<tr>
+  <td class="xhtml">CSS3</td>
+<td><pre><code class="no-buttons">attr(&lt;атрибут&gt;, &lt;тип&gt;, &lt;значение&gt;)</code></pre></td></tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>&lt;атрибут&gt;</dt>
+  <dd>Имя атрибута элемента передаваемое в CSS. </dd>
+  <dt>&lt;тип&gt;</dt>
+  <dd>Тип значения свойства CSS. Допустимы следующие ключевые слова: <span class="var">string</span> (строки), <span class="var">color</span> (цвет), <span class="var">url</span> (веб-адрес), <span class="var">integer</span> (целое число), <span class="var">number</span> (вещественное число), <span class="var">angle</span> (угол), <span class="var">time</span> (время), <span class="var">deg</span> (градус), а также единицы CSS вроде em, px и др.</dd>
+  <dt>&lt;значение&gt;</dt>
+  <dd>Значение, которое будет использоваться в том случае, если атрибута нет или браузер не может его получить. </dd>
+</dl>
+
+<p>Между версиями CSS есть небольшая разница по прочтению некоторых особенностей <span class="attribute">attr()</span>. В CSS2.1 функция <span class="attribute">attr()</span> может использоваться только совместно со свойством <span class="attribute">content</span> и всегда возвращает строку в качестве значения. В CSS3 <span class="attribute">attr()</span> допустимо применять с любым свойством и возвращаемое значение может быть в любом корректном для CSS3 формате.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;attr()&lt;/title&gt;
+  &lt;style&gt;
+   .site::after {
+    content: ' (' attr(href) ') '; /* Выводим адрес ссылки в скобках */
+    font-size: 0.8em; /* Уменьшаем текст*/
+    background: yellow; /* Жёлтый фон */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;&lt;a href=&quot;http://htmlbook.ru&quot; class=&quot;site&quot;&gt;Полезный сайт&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере после ссылок с классом <span class="var">site</span> в скобках выводится значение атрибута <span class="attribute">href</span>, к которому применяется стилевое оформление.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-values/#attr" hreflang="en" lang="en">CSS Values and Units Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/generate.html#x18" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+ <table class="data browser">
+   <tr class="br">
+    <td><span class="ie">Internet Explorer</span></td>
+    <td><span class="cr">Chrome</span></td>
+    <td><span class="op">Opera</span></td>
+    <td><span class="sa">Safari</span></td>
+    <td><span class="fx">Firefox</span></td>
+    </tr>
+   <tr class="sp">
+    <td class="yes"><span>8</span></td>
+    <td class="yes"><span>2</span></td>
+    <td class="yes"><span>9</span></td>
+    <td class="yes"><span>3.1</span></td>
+    <td class="yes"><span>1</span></td>
+    </tr>
+ </table>
+	</div>
+	<div class="content" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>3.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

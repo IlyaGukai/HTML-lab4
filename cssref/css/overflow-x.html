@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>overflow-x</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>overflow-x</h1>
+		<p>Свойство <span class="attribute">overflow-x</span> управляет отображением содержания 
+  блочного элемента по горизонтали, если контент целиком не помещается и выходит за область справа или слева от блока. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+   <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">visible</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К блочным  элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>overflow-x: auto | hidden | scroll | visible</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>visible </dt>
+  <dd>Отображается всё содержание элемента, даже за пределами установленной  ширины. </dd>
+  <dt>hidden</dt>
+  <dd>Отображается только область внутри элемента, остальное будет скрыто.</dd>
+  <dt>scroll</dt>
+  <dd>Всегда добавляется горизонтальная полоса прокрутки.</dd>
+  <dt>auto</dt>
+  <dd>Горизонтальная полоса прокрутки добавляется только при необходимости.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;overflow-x&lt;/title&gt;
+  &lt;style&gt;
+   .layer {
+    overflow-x: scroll; /* Добавляем полосу прокрутки */
+    width: 300px; /* Ширина блока */
+    height: 150px; /* Высота блока */
+    padding: 5px; /* Поля вокруг текста */
+    border: solid 1px black; /* Параметры рамки */
+    white-space: nowrap; /* Запрещаем перенос строк */
+   } 
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;div class=&quot;layer&quot;&gt;
+   &lt;h2&gt;Duis te feugifacilisi&lt;/h2&gt;
+   &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+    nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+    Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit 
+    lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  &lt;/div&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_overflow-x.png" alt="Применение свойства overflow-x" width="410" height="257" /></p>
+<p class="figsign">Рис. 1. Применение свойства overflow-x</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.overflowX</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-box/#overflow-x" hreflang="en" lang="en">CSS Basic Box Model</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>9.5</span></td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>3.5</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>3</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

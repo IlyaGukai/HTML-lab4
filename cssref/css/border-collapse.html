@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-collapse</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-collapse</h1>
+		<p> Устанавливает, как отображать границы вокруг ячеек таблицы. Это свойство 
+  играет роль, когда для ячеек установлена рамка, тогда в месте стыка ячеек получится 
+  линия двойной толщины (рис.&nbsp;1а). Значение <span class="value">collapse</span> 
+  заставляет браузер анализировать подобные места в таблице и убирать в ней двойные 
+  линии (рис.&nbsp;1б). При этом между ячейками остаётся только одна граница, одновременно принадлежащая обеим ячейкам. То же правило соблюдается и для внешних границ, когда вокруг 
+  самой таблицы добавляется рамка.</p>
+
+<table style="margin: 0 auto; width: 440px;">
+    <tr>
+      <td class="fig"><img src="../assets/images/css/css_border-collapse_1a.png" alt="Рис. 1а" width="204" height="85"></td>
+      <td class="fig"><img src="../assets/images/css/css_border-collapse_1b.png" alt="Рис. 1б" width="204" height="85"></td>
+    </tr>
+    <tr>
+      <td class="figsign" style="text-align:center">а</td>
+      <td class="figsign" style="text-align:center">б</td>
+    </tr>
+</table>
+<p class="figsign">Рис. 1. Вид таблицы при использовании свойства border-collapse</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">separate</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К элементу <span class="tag">&lt;table&gt;</span> или к элементам, у которых значение   <span class="attribute">display</span> установлено как <span class="value">table</span> или <span class="value">inline-table</span></td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-collapse: collapse | separate</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>collapse</dt>
+  <dd>Линия между ячейками отображается только одна, также игнорируется значение атрибута <span class="attribute">cellspacing</span>.</dd>
+  <dt>separate</dt>
+  <dd>Вокруг каждой ячейки отображается своя собственная рамка, в местах соприкосновения 
+    ячеек показываются сразу две линии.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;border-collapse&lt;/title&gt;
+  &lt;style&gt;
+   table { 
+    width: 100%; /* Ширина таблицы */
+    border: 4px double black; /* Рамка вокруг таблицы */
+    border-collapse: collapse; /* Отображать только одинарные линии */
+   }
+   th { 
+    text-align: left; /* Выравнивание по левому краю */
+    background: #ccc; /* Цвет фона ячеек */
+    padding: 5px; /* Поля вокруг содержимого ячеек */
+    border: 1px solid black; /* Граница вокруг ячеек */
+   }
+   td { 
+    padding: 5px; /* Поля вокруг содержимого ячеек */
+    border: 1px solid black; /* Граница вокруг ячеек */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;   
+  &lt;table&gt;
+   &lt;tr&gt; 
+    &lt;th&gt;&amp;nbsp;&lt;/th&gt;&lt;th&gt;2013&lt;/th&gt;
+    &lt;th&gt;2014&lt;/th&gt;&lt;th&gt;2015&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;Нефть&lt;/td&gt;&lt;td&gt;43&lt;/td&gt;
+    &lt;td&gt;51&lt;/td&gt;&lt;td&gt;79&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;Золото&lt;/td&gt;&lt;td&gt;29&lt;/td&gt;
+    &lt;td&gt;34&lt;/td&gt;&lt;td&gt;48&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+    &lt;td&gt;Дерево&lt;/td&gt;&lt;td&gt;38&lt;/td&gt;
+    &lt;td&gt;57&lt;/td&gt;&lt;td&gt;36&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 2.</p>
+<p class="fig"><img src="../assets/images/css/css_border-collapse_2.png" alt="Вид таблицы при использовании свойства border-collapse " width="398" height="234"></p>
+<p class="figsign">Рис. 2. Вид таблицы при использовании свойства border-collapse </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderCollapse</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer до версии 8.0 не отменяет действие атрибута <span class="attribute">cellspacing</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/tables.html#borders" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1.2</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.3</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>11</span></td>
+			<td class="yes"><span>3</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

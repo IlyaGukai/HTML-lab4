@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>cursor</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>cursor</h1>
+		<p> Устанавливает форму курсора, когда он находится в пределах элемента. Вид курсора 
+  зависит от операционной системы и установленных параметров.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">auto</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>cursor: [url('путь к курсору'),] | [ auto | crosshair | default | e-resize | 
+  help | move | n-resize | ne-resize | nw-resize | pointer | progress | s-resize | 
+  se-resize | sw-resize | text | w-resize | wait]</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>url</dt>
+  <dd>Позволяет установить свой собственный 
+  курсор, для этого нужно указать путь к файлу с курсором. </dd>
+  <dt>auto</dt>
+  <dd>Вид курсора по умолчанию для текущего элемента.</dd>
+</dl>
+
+<p>Остальные допустимые значения приведены в табл.&nbsp;1.</p>
+
+<table style="width:450px" class="data">
+  <caption>
+  Табл. 1. Вид курсора 
+  </caption>
+  <tr> 
+    <th>Вид</th>
+    <th>Значение</th>
+    <th>Тест</th>
+    <th>Пример</th>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_default.png" width="26" alt="" /></td>
+    <td>default</td>
+    <td style="CURSOR: default"></td>
+    <td>P {cursor: default}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_crosshair.png" width="26" alt="" /></td>
+    <td>crosshair</td>
+    <td style="CURSOR: crosshair"></td>
+    <td>P {cursor: crosshair}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_help.png" width="26" alt="" /></td>
+    <td>help</td>
+    <td style="CURSOR: help"></td>
+    <td>P {cursor: help}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_move.png" width="26" alt="" /></td>
+    <td>move</td>
+    <td style="CURSOR: move"></td>
+    <td>P {cursor: move}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_pointer.png" width="26" alt="" /></td>
+    <td>pointer</td>
+    <td style="CURSOR: pointer"></td>
+    <td>P {cursor: pointer}</td>
+  </tr>
+  <tr> 
+    <td><img src="../assets/images/css/css_cursor_progress.png" width="25" height="26" alt="" /></td>
+    <td>progress</td>
+    <td style="CURSOR: progress"></td>
+    <td>P {cursor: progress}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_text.png" width="26" alt="" /></td>
+    <td>text</td>
+    <td style="CURSOR: text"></td>
+    <td>P {cursor: text}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_wait.png" width="26" alt="" /></td>
+    <td>wait</td>
+    <td style="CURSOR: wait"></td>
+    <td>P {cursor: wait}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_nresize.png" width="26" alt="" /></td>
+    <td>n-resize</td>
+    <td style="CURSOR: n-resize"></td>
+    <td>P {cursor: n-resize}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_neresize.png" width="26" alt="" /></td>
+    <td>ne-resize</td>
+    <td style="CURSOR: ne-resize"></td>
+    <td>P {cursor: ne-resize}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_eresize.png" width="26" alt="" /></td>
+    <td>e-resize</td>
+    <td style="CURSOR: e-resize"></td>
+    <td>P {cursor :e-resize}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_seresize.png" width="26" alt=" /"></td>
+    <td>se-resize</td>
+    <td style="CURSOR: se-resize"></td>
+    <td>P {cursor: se-resize}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_sresize.png" width="26" alt="" /></td>
+    <td>s-resize</td>
+    <td style="CURSOR: s-resize"></td>
+    <td>P {cursor: s-resize}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_swresize.png" width="26" alt="" /></td>
+    <td>sw-resize</td>
+    <td style="CURSOR: sw-resize"></td>
+    <td>P {cursor: sw-resize}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_wresize.png" width="26" alt="" /></td>
+    <td>w-resize</td>
+    <td style="CURSOR: w-resize"></td>
+    <td>P {cursor: w-resize}</td>
+  </tr>
+  <tr> 
+    <td><img height="26" src="/assets/images/css/css_cursor_nwresize.png" width="26" alt="" /></td>
+    <td>nw-resize</td>
+    <td style="CURSOR: nw-resize"></td>
+    <td>P {cursor :nw-resize}</td>
+  </tr>
+</table>
+  
+<p>В зависимости от операционной системы и её настроек вид курсора может отличаться 
+  от приведенных в таблице.</p>
+<p>При добавлении курсора из файла синтаксис несколько видоизменится.</p>
+<p class="example">  cursor: url('путь к курсору1'), url('путь к курсору2'), ..., &lt;ключевое слово&gt;</p>
+<p>  Через запятую допускается указывать несколько значений <span class="value">url</span>, в этом случае браузер попытается открыть первый файл с курсором и если это по каким-либо причинам не получится, перейдёт к следующему файлу. Список обязательно заканчивается ключевым словом, например, <span class="value">auto</span> или <span class="value">pointer</span>, допустимые значения перечислены выше.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;cursor&lt;/title&gt;
+  &lt;style&gt;
+   .cross { cursor: crosshair; }
+   .help { cursor: help; }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;p class=&quot;cross&quot;&gt;На этом тексте курсор мыши примет вид перекрестья.&lt;/p&gt;
+  &lt;p&gt; 
+   &lt;a href=&quot;help.html&quot; class=&quot;help&quot;&gt;СПРАВКА 1&lt;/a&gt;&lt;br /&gt;
+   &lt;a href=&quot;help.html&quot; class=&quot;help&quot;&gt;СПРАВКА 2&lt;/a&gt;&lt;br /&gt;
+   &lt;a href=&quot;help.html&quot; class=&quot;help&quot;&gt;СПРАВКА 3&lt;/a&gt;
+  &lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_cursor.png" alt="Применение свойства cursor" width="414" height="207"></p>
+<p class="figsign">Рис. 1. Применение свойства cursor </p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;cursor&lt;/title&gt;
+  &lt;style&gt;
+   a { cursor: url(images/sniper.cur), pointer; }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;p&gt;Обычный текст&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;1.html&quot;&gt;Ссылка 1&lt;/a&gt; &lt;a href=&quot;2.html&quot;&gt;Ссылка 2&lt;/a&gt;
+   &lt;a href=&quot;3.html&quot;&gt;Ссылка 3&lt;/a&gt;&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.cursor</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer в качестве формата файла курсора поддерживает CUR и ANI. Firefox, Chrome, Safari поддерживают форматы CUR, PNG, GIF, JPG.</p>
+<p> Opera не работает с файлами курсора.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-ui/#cursor" hreflang="en" lang="en">CSS Basic User Interface Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/ui.html#cursor-propsy" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>auto, crosshair, default,move, text, wait, help,
+        n-resize, e-resize, s-resize, w-resize, ne-resize, nw-resize, se-resize, sw-resize</td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1.2</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>pointer, progress</td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1.2</span></td>
+      <td class="yes"><span>1</span></td>
+    </tr>
+    <tr class="sp">
+      <td>url()</td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1.5</span></td>
+    </tr>
+    <tr class="sp">
+      <td>not-allowed, no-drop,vertical-text, all-scroll, col-resize, row-resize</td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>10.6</span></td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1.5</span></td>
+    </tr>
+    <tr class="sp">
+      <td>alias, cell, copy,
+        ew-resize, ns-resize,nesw-resize, nwse-resize</td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>10.6</span></td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1.5</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>auto, crosshair, default,move, text, wait, help,
+		      n-resize, e-resize, s-resize, w-resize, ne-resize, nw-resize, se-resize, sw-resize</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9.5</span></td>
+			<td class="yes"><span>1.2</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>pointer, progress</td>
+			    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9.5</span></td>
+			<td class="yes"><span>1.2</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>url()</td>
+			    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1.5</span></td>
+			<td class="no"><span></span></td>
+			<td class="yes"><span>3</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>not-allowed, no-drop,vertical-text, all-scroll, col-resize, row-resize</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1.5</span></td>
+			<td class="yes"><span>10.6</span></td>
+			<td class="yes"><span>3</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>alias, cell, copy,
+		      ew-resize, ns-resize,nesw-resize, nwse-resize</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1.5</span></td>
+			<td class="yes"><span>10.6</span></td>
+			<td class="yes"><span>3</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>calc()</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Функция calc()</h1>
+		<p>Используется для указания вычисляемого значения свойств, которые в качестве значений используют <a href="size.html">размер</a>, <a href="angle.html">угол</a>, <a href="time.html">время</a>, <a href="number.html">число</a>. Это позволяет задавать значения основанные на сложении или вычитании разных единиц измерений, например можно задать 100%&nbsp;-&nbsp;20px. Если значение не может быть вычислено, оно игнорируется.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code><i>Свойство</i>: calc(&lt;выражение&gt;)</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+ <p>Выражение представляет собой комбинацию значений размеров и следующих знаков математических действий. </p>
+  <ul>
+    <li>+ &#8212; сложение (width: calc(20px + 20px));</li>
+    <li>-  &#8212; вычитание (padding: calc(10% - 10px););</li>
+    <li>*  &#8212; умножение (height: calc(20%*2);) </li>
+    <li>/  &#8212; деление. На ноль делить запрещено (width: calc(100%/3);).</li>
+  </ul>
+  <p>Знаки плюс и минус должны отбиваться пробелами с двух сторон.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;calc&lt;/title&gt;
+  &lt;style&gt;		
+   div {
+    border: 1px solid #000;
+    height: 200px;
+    background: url(images/figure.jpg) no-repeat;
+    background-position: calc(100% - 20px) 0;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>В данном примере задаётся положение фонового рисунка как 20&nbsp;пикселов от правого края.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+ <p>Firefox до версии 16.0 поддерживает значение <span class="attribute">-moz-calc</span>.</p>
+  <p>Chrome до версии 26.0 поддерживает значение <span class="attribute">-webkit-calc</span>.</p>
+  <p>Safari с версии 6.0 поддерживает значение <span class="attribute">-webkit-calc</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-values/#calc-notation" hreflang="en" lang="en">CSS Values and Units Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan=2><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan=2><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="warn"><span>19</span></td>
+      <td class="yes sline"><span>26</span></td>
+      <td class="yes"><span>15</span></td>
+      <td class="warn"><span>6</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="yes sline"><span>16</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.3.6</span></td>
+			<td class="warn"><span>4</span></td>
+			<td class="yes"><span>16</span></td>
+			<td class="yes"><span>15</span></td>
+			<td class="x3"><span></span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

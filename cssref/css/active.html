@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдокласс :active</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдокласс :active</h1>
+		<p>Псевдокласс <span class="attribute">:active</span> определяет стиль активного элемента. Это такое состояние элемента, которое происходит между щелчком и отпусканием клавиши мыши. В основном применяется к ссылкам и кнопкам, но ими не ограничен.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code><i>Селектор</i>:active  { ...  }</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;active&lt;/title&gt;
+  &lt;style&gt;
+   a:link {
+    color: #0000d0; /* Цвет ссылок */
+   }
+   a:visited {
+    color: #900060; /* Цвет посещенных ссылок */
+   }
+   a:active {
+    color: #f00; /* Цвет активной ссылки */ 
+   } 
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;task1.html&quot;&gt;Вычислить число оборотов двигателя в минуту&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;Дается: линейка, часы с секундной стрелкой, лист бумаги, нитка, 
+   карандаш, ножницы.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>В данном примере задаётся цвет обычных, посещённых и активных ссылок. Результат примера показан на рис.&nbsp;1.</p>
+  <p class="fig"><img src="../assets/images/css/css_active.png" alt="Результат использования псевдокласса active " width="410" height="191"> </p>
+  <p class="figsign">Рис. 1. Результат использования псевдокласса :active </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Exporer до версии 8 и Opera до версии 7 поддерживают <span class="attribute">:active</span> только для ссылок.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Спецификация</th>
+      <th scope="col">Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors4/#active-pseudo" hreflang="en" lang="en">Selectors Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors3/#useraction-pseudos" hreflang="en" lang="en">Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/selector.html#dynamic-pseudo-classes" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#anchor-pseudo-classes" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

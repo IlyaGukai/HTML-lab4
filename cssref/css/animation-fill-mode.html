@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>animation-fill-mode</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>animation-fill-mode</h1>
+		<p>Определяет, какие стили должны применяться к элементу, когда анимация не проигрывается. Например, после её завершения или при остановке. По умолчанию, в момент окончания анимации стиль элемента возвращается к исходному, свойство <span class="attribute">animation-fill-mode</span> позволяет изменить это поведение и сделать так, чтобы стиль элемента оставался как у последнего ключевого кадра.  </p>
+<p>К примеру, если вы делаете выезжающее из-за края окна браузера сообщение, то после окончания анимации сообщение вернётся обратно за край экрана. Значение <span class="value">forwards</span> свойства <span class="attribute">animation-fill-mode</span> изменяет это поведение и оставляет стили на момент завершения движения. Таким образом, сообщение плавно выдвинется из-за края окна и останется на месте.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">none</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам, к псевдоэлементам <span class="attribute">::before</span> и <span class="attribute">::after</span></td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>animation-fill-mode: none | forwards | backwards | both</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>none</dt>
+  <dd>К элементу не применяются какие-либо стили.</dd>
+  <dt>forwards</dt>
+  <dd>К элементу по окончанию анимации применяется стиль последнего ключевого кадра. Каким будет этот кадр в последовательности анимации зависит от комбинации значений свойств <span class="attribute">animation-direction</span> и <span class="attribute">animation-iteration-count</span> (табл.&nbsp;1).</p>
+<table class="data">
+<caption>Табл. 1. Последний ключевой кадр</caption>
+  <thead>
+    <tr>
+      <th>animation-direction</th>
+      <th>animation-iteration-count</th>
+      <th>Значение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>normal</td>
+      <td>любое число</td>
+      <td>100% или to</td>
+    </tr>
+    <tr>
+      <td>reverse</td>
+      <td>любое число</td>
+      <td>0% или from</td>
+    </tr>
+    <tr>
+      <td>alternate</td>
+      <td>чётное число</td>
+      <td>0% или from</td>
+    </tr>
+    <tr>
+      <td>alternate</td>
+      <td>нечётное число</td>
+      <td>100% или to</td>
+    </tr>
+    <tr>
+      <td>alternate-reverse</td>
+      <td>чётное число</td>
+      <td>100% или to</td>
+    </tr>
+    <tr>
+      <td>alternate-reverse</td>
+      <td>нечётное число</td>
+      <td>0% или from</td>
+    </tr>
+  </tbody>
+</table></dd>
+  <dt>backwards</dt>
+  <dd><p>К элементу применяется стиль первого ключевого кадра и он остаётся на протяжении периода заданного <span class="attribute">animation-delay</span>. Первый ключевой кадр определяется на основании значения <span class="attribute">animation-direction</span> (табл.&nbsp;2). </p>
+<table class="data">
+<caption>Табл. 2. Первый ключевой кадр</caption>
+  <thead>
+    <tr>
+      <th>animation-direction</th>
+      <th>Значение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>normal или alternate</td>
+      <td>0% или from</td>
+    </tr>
+    <tr>
+      <td>reverse или alternate-reverse</td>
+      <td>100% или to</td>
+    </tr>
+  </tbody>
+</table></dd>
+  <dt>both</dt>
+  <dd>К элементу применяются оба правила, как для <span class="value">forwards</span>, так и для <span class="value">backwards</span>.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;animation-fill-mode&lt;/title&gt;
+  &lt;style&gt;
+   .wheel {				
+    animation: wheel 3s 1s;	
+	animation-fill-mode: both;
+    -webkit-animation: wheel 3s 1s;	
+	-webkit-animation-fill-mode: both;	
+   }
+   @keyframes wheel {
+    from { transform: translateX(0) rotate(0);}				
+    to { transform: translateX(450px) rotate(2turn); }
+   }
+   @-webkit-keyframes wheel {
+    from { transform: translateX(0) rotate(0);}				
+    to { transform: translateX(450px) rotate(2turn); }
+   }		
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;img src=&quot;images/12.png&quot; alt=&quot;&quot; class=&quot;wheel&quot;&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере показано изображение ожидает одну секунду, затем начинает вращаться и двигаться вправо. По окончанию анимации колесо остаётся в крайнем правом положении.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.animationFillMode</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome, Safari и Android поддерживают свойство <span class="attribute">-webkit-animation-fill-mode</span>.</p>
+<p>Opera до версии 12.10 поддерживает свойство <span class="attribute">-o-animation-fill-mode</span>.</p>
+  <p>Firefox  до версии 16 поддерживает свойство <span class="attribute">-moz-animation-fill-mode</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-animations/#animation-fill-mode" lang="en">CSS Animations</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="warn"><span>12</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td colspan="2"><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2</span></td>
+		    <td class="warn"><span>5</span></td>
+		    <td class="yes"><span>16</span></td>
+		    <td class="warn"><span>12</span></td>
+		    <td class="yes"><span>12.10</span></td>
+			<td class="warn"><span>4</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

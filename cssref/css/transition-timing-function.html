@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>transition-timing-function</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>transition-timing-function</h1>
+		<p>Устанавливает, насколько быстро должно изменяться значение стилевого свойство для которого применяется эффект перехода.  </p>
+  <p><span class="attribute">transition-timing-function</span> представляет собой математическую функцию, показывающую, как быстро по времени меняется указанное через <span class="attribute">transition-property</span> значение свойства. Начальная точка имеет координаты 0.0, 0.0, конечная&nbsp;—  1.0, 1.0, при этом функция по оси ординат может превышать эти значения в большую или меньшую сторону (рис.&nbsp;1). </p>
+  <p class="fig"><img src="../assets/images/css/css_timing-function-1.png" width="271" height="268"></p>
+  <p class="figsign">Рис. 1. Вид функции</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">ease</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам, к псевдоэлементам <span class="attribute">::before</span> и <span class="attribute">::after</span></td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+ <pre><code>transition-timing-function: ease | ease-in | ease-out | ease-in-out | linear | 
+     step-start | step-end | steps | cubic-bezier</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+    <dt>ease</dt>
+    <dd>Анимация начинается медленно, затем ускоряется и к концу движения опять замедляется. Аналогично <span class="var">cubic-bezier(0.25,0.1,0.25,1)</span>.</dd>
+    <dt>ease-in</dt>
+    <dd>Анимация медленно начинается, к концу ускоряется. Аналогично <span class="var">cubic-bezier(0.42,0,1,1)</span>.</dd>
+    <dt>ease-out</dt>
+    <dd>Анимация начинается быстро, к концу  замедляется. Аналогично <span class="var">cubic-bezier(0,0,0.58,1)</span>.</dd>
+    <dt>ease-in-out</dt>
+    <dd>Анимация начинается и заканчивается медленно. Аналогично <span class="var">cubic-bezier(0.42,0,0.58,1)</span>.</dd>
+    <dt>linear</dt>
+    <dd>Одинаковая скорость от начала и до конца. </dd>
+    <dt>step-start</dt>
+    <dd>Как таковой анимации нет. Стилевые свойства сразу же принимают конечное значение.</dd>
+    <dt>step-end</dt>
+    <dd>Как таковой анимации нет. Стилевые свойства находятся в начальном значении заданное время, затем сразу же принимают конечное значение.</dd>
+    <dt>steps</dt>
+    <dd>Ступенчатая функция, имеющая заданное число шагов.
+    <p class="example">transition-timing-function: steps(&lt;число&gt;, start | end)</p>
+    </dd>
+    <dt>&nbsp;</dt>
+    <dd>
+      Здесь: <span class="var">&lt;число&gt;</span> 
+    — целое число больше нуля; <span class="var">start</span> — задаёт <a href="http://ru.wikipedia.org/wiki/Полунепрерывная_функция" class="ext">полунепрерывную снизу функцию</a>; <span class="var">end</span> — задаёт полунепрерывную сверху функцию.</dd>
+    <dt>&nbsp;</dt>
+    <dt>cubic-bezier</dt>
+    <dd>Задаёт функцию движения в виде <a href="http://ru.wikipedia.org/wiki/Кривая_Безье" class="ext">кривой Безье</a>.</dd>
+  </dl>
+  <p>
+    <style>
+  .animated_example {
+	  border: 1px solid #ccc;
+	  font-size: 0.9em;
+	  padding: 10px;
+	  margin-left: 30px;
+	  margin-bottom: 10px;
+	  }
+  .animated_example .e {
+	  background: #fc0;
+	  -moz-box-sizing: border-box;
+  	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	  width: 190px;
+	  padding: 10px;
+	  margin: 5px 0;
+	  -moz-transition: width 3s;
+	  -o-transition: width 3s;
+	  -webkit-transition: width 3s;
+	  transition: width 3s;
+}
+  .animated_example:hover .e {
+	  width: 100%;
+}
+    </style>
+  </p>
+  <section style="margin: 0 0 0 30px">
+  <div style="width: 271px; display:inline-block; vertical-align:top;" class="fig">
+    <img src="../assets/images/css/css_timing-function-ease.png" width="271" height="268" alt="ease">
+    <p class="figsign" style="margin:0">ease</p>
+  </div>
+  <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+    <img src="../assets/images/css/css_timing-function-ease-in.png" width="271" height="268" alt="ease-in">
+    <p class="figsign">ease-in</p>
+  </div>
+  <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+    <img src="../assets/images/css/css_timing-function-ease-out.png" width="271" height="268" alt="ease-out">
+    <p class="figsign">ease-out</p>
+  </div>
+  <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+    <img src="../assets/images/css/css_timing-function-ease-in-out.png" width="271" height="268" alt="ease-in-out">
+    <p class="figsign">ease-in-out</p>
+  </div>
+  <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+    <img src="../assets/images/css/css_timing-function-linear.png" width="271" height="268" alt="linear">
+    <p class="figsign">linear</p>
+    </div>
+  <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+    <img src="../assets/images/css/css_timing-function-step-start.png" width="271" height="268" alt="step-start">
+    <p class="figsign">step-start</p>
+    </div>
+  <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+    <img src="../assets/images/css/css_timing-function-step-end.png" width="271" height="268" alt="step-start">
+    <p class="figsign">step-end</p>
+  </div>
+  <div style="width: 271px; display:inline-block; vertical-align:top" class="fig">
+    <img src="../assets/images/css/css_timing-function-steps.png" width="271" height="268" alt="steps">
+    <p class="figsign">steps(2, start)</p>
+  </div>
+  </section>
+  <p>Чтобы посмотреть результат действия разных значений, наведите курсор на поле ниже. Время эффект перехода установлено как 3s.</p>
+  <div class="animated_example">
+  <div class="e" style="transition-timing-function: ease">ease</div>
+<div class="e" style="transition-timing-function: ease-in">ease-in</div>
+<div class="e" style="transition-timing-function: ease-out">ease-out</div>
+<div class="e" style="transition-timing-function: ease-in-out">ease-in-out</div>
+<div class="e" style="transition-timing-function: linear">linear</div>
+<div class="e" style="transition-timing-function: step-start">step-start</div>
+<div class="e" style="transition-timing-function: step-end">step-end</div>
+<div class="e" style="transition-timing-function: steps(5, end)">steps(5, end)</div>
+<div class="e" style="transition-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0)">cubic-bezier(0.1, -0.6, 0.2, 0)</div>
+</div></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;transition-timing-function&lt;/title&gt;
+  &lt;style&gt;
+   .progress {
+    background: #333; /* Фон */
+    border: 2px solid #333; /* Рамка */
+    height: 20px; /* Высота */
+    position: relative; /* Относительное позиционирование */
+   }
+   .progress:hover::before{
+    width: 100%;
+   }
+   .progress::before{
+    transition-timing-function: linear;
+    transition-duration: 5s;
+    content: '';
+    position: absolute; /* Абсолютное позиционирование */
+    height: 100%; width: 0;
+    background: #FFA600; /* Фон */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;progress&quot;&gt;&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.transitionTimingFunction</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome до версии 26, Safari до версии 6.1 и Android поддерживают нестандартное свойство <span class="attribute">-webkit-transition-timing-function</span>.</p>
+<p>Opera до версии 12.10 поддерживает нестандартное свойство <span class="attribute">-o-transition-timing-function</span>.</p>
+  <p>Firefox  до версии 16 поддерживает нестандартное свойство <span class="attribute">-moz-transition-timing-function</span>.</p>
+<p>Safari поддерживает значение <span class="value">steps</span> только с версии 5.1.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#transition-timing-function" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>26</span></td>
+      <td class="warn"><span>11.6</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="yes"><span>6.1</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td colspan="2"><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2.1</span></td>
+		    <td class="warn"><span>4</span></td>
+		    <td class="yes"><span>16</span></td>
+		    <td class="warn"><span>10</span></td>
+		    <td class="yes"><span>12.10</span></td>
+			<td class="warn"><span>3.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

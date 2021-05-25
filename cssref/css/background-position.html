@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>background-position</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>background-position</h1>
+		<p> Задаёт начальное положение фонового изображения, установленного с помощью 
+  свойства <span class="attribute">background-image</span>. Допустимо указывать несколько значений для каждого фона, перечисляя значения через запятую.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">0% 0%</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К блочным элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code class="no-buttons">background-position: &lt;позиция&gt;[, &lt;позиция&gt;]*</code></pre>
+<p>Здесь:</p>
+<p> &lt;позиция&gt; = [left | center | right | &lt;проценты&gt; | &lt;размер&gt;] || 
+[top | center | bottom | &lt;проценты&gt; | &lt;размер&gt;].</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> У свойства <span class="attribute">background-position</span> два значения, положение по горизонтали (может быть &#8212; 
+  <span class="value">left</span>, <span class="value">center</span>, <span class="value">right</span>) 
+  и вертикали (может быть &#8212; <span class="value">top</span>, <span class="value">center</span>, 
+  <span class="value">bottom</span>). Кроме использования ключевых слов положение 
+  также можно задавать в процентах, пикселях или других единицах. Если применяются 
+  ключевые слова, то порядок их следования не имеет значения, при процентной записи 
+  вначале задаётся положение рисунка по горизонтали, а затем, через пробел, положение 
+  по вертикали. Отношение между используемыми ключевыми словами и процентной записью 
+  следующее.</p>
+<ul>
+  <li>top left = left top = 0% 0% (в левом верхнем углу)</li>
+  <li>    top = top center = center top = 50% 0% (по центру вверху)</li>
+  <li>    right top = top right = 100% 0% (в правом верхнем углу)</li>
+  <li>    left = left center = center left = 0% 50% (по левому краю и по центру)</li>
+  <li>    center = center center = 50% 50% (по центру)</li>
+  <li>    right = right center = center right = 100% 50% (по правому краю и по центру)</li>
+  <li>    bottom left = left bottom = 0% 100% (в левом нижнем углу)</li>
+  <li>    bottom = bottom center = center bottom = 50% 100% (по центру внизу)</li>
+  <li>    bottom right = right bottom = 100% 100% (в правом нижнем углу)</li>
+</ul>
+<p>В скобках указано, где располагается фоновый рисунок относительно контейнера.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; 
+  &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+ &lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot; /&gt;
+  &lt;title&gt;background-position&lt;/title&gt;
+  &lt;style type=&quot;text/css&quot;&gt;
+   html {
+    height: 100%; /* Высота страницы */     
+   }
+   body {
+    background-image: url(images/mybg.png); /* Путь к фоновому рисунку */
+    background-position: right bottom; /* Положение фона */
+    background-repeat: no-repeat; /* Отменяем повторение фона */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;...&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;background-position&lt;/title&gt;
+  &lt;style&gt;
+   body {
+    background-image: url(images/pattern-left.png), url(images/pattern-right.png);
+    background-repeat: repeat-y, repeat-y;
+    background-position: left, right;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div style=&quot;height:2000px&quot;&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.backgroundPosition</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#background-position" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/colors.html#propdef-background-position" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#background-position" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>один фон</td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>несколько фонов</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td class="yes"><span>1.3</span></td>
+      <td class="yes"><span>3.6</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>один фон</td>
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>3.2</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>несколько фонов</td>
+			    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>3.2</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

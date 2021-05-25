@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>min-width</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>min-width</h1>
+		<p>Устанавливает минимальную ширину элемента. Если окно браузера по ширине становится меньше заданной минимальной ширины  элемента, то  ширина элемента остается неизменной, а в окне появляется горизонтальная полоса  прокрутки.</p>
+  <p>Значение ширины элемента  будет вычисляться в зависимости от установленных значений свойств <span class="attribute">width</span>, <span class="attribute">max-width</span> и <span class="attribute">min-width</span>. В табл.&nbsp;1 показано, чем руководствуется браузер при  совместном использовании указанных стилевых свойств.</p>
+
+  <table class="data">
+    <caption>
+      Табл. 1. Ширина элемента
+    </caption>
+    <tr>
+      <th colspan="5">Значения свойств </th>
+      <th>Ширина</th>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&lt;</td>
+      <td>width</td>
+      <td>&lt;</td>
+      <td>max-width</td>
+      <td>width</td>
+    </tr>
+
+    <tr>
+      <td>min-width</td>
+      <td>&gt;</td>
+      <td>width</td>
+      <td>&gt;</td>
+      <td>max-width</td>
+      <td>min-width</td>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&gt;</td>
+      <td>width</td>
+      <td>&lt;</td>
+      <td>max-width</td>
+      <td>min-width</td>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&lt;</td>
+      <td>width</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>width</td>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&gt;</td>
+      <td>width</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>min-width</td>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&gt;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>max-width</td>
+      <td>min-width</td>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&lt;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>max-width</td>
+      <td>max-width</td>
+    </tr>
+  </table>
+  <p>Данные из таблицы следует понимать следующим образом. Если значение  ширины (<span class="attribute">width</span>) меньше  значения <span class="attribute">min-width</span>, то ширина элемента  принимается равной  <span class="attribute">min-width</span>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам, кроме строчных и таблиц </td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+ <pre><code>min-width: &lt;размер&gt; | &lt;проценты&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>В качестве значений принимаются пиксели (px), проценты (%) и другие единицы измерения, принятые в CSS. Отрицательные значения не допускаются.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+ <pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;min-width&lt;/title&gt;
+  &lt;style&gt;
+   #container {
+    min-width: 420px; /* Минимальная ширина контейнера */
+   }
+   #col1 {
+    background-color: #fc0; /* Цвет фона колонки */
+    padding: 5px; /* Поля вокруг текста */
+    float: left; /* Обтекание по правому краю */
+    width: 150px; /* Ширина левой колонки */
+   }
+   #col2  {
+    background-color: #c0c0c0; /* Цвет фона колонки */
+    padding: 5px; /* Поля вокруг текста */
+    width: 250px; /* Ширина правой колонки */
+    float: left; /* Обтекание по правому краю */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div id=&quot;container&quot;&gt;
+   &lt;div id=&quot;col1&quot;&gt;Колонка 1&lt;/div&gt;
+   &lt;div id=&quot;col2&quot;&gt;Колонка 2&lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат данного примера показан на рис.&nbsp;1. </p>
+  <p class="fig"><img src="../assets/images/css/css_min-width.png" alt="Результат использования min-width в браузере" width="456" height="201"></p>
+  <p class="figsign">Рис. 1. Результат использования min-width в браузере</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.minWidth</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-sizing/#width-height-keywords" hreflang="en" lang="en">CSS Intrinsic &amp; Extrinsic Sizing Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visudet.html#min-max-widths" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>7</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

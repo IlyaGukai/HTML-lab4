@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>box-shadow</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>box-shadow</h1>
+		<p>Добавляет тень к элементу. Допускается использовать несколько теней, указывая их параметры через запятую, при наложении теней первая тень в списке будет выше, последняя ниже. Если для элемента задается радиус скругления через свойство <span class="attribute">border-radius</span>, то тень также получится с закруглёнными уголками. Добавление тени увеличивает ширину элемента, поэтому возможно появление горизонтальной полосы прокрутки в браузере.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">none</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>box-shadow: none | &lt;тень&gt; [,&lt;тень&gt;]*</code></pre>
+<p>
+где &lt;тень&gt;:</p>
+ <p>inset &lt;сдвиг по x&gt; &lt;сдвиг по y&gt; &lt;радиус размытия&gt; &lt;растяжение&gt; &lt;цвет&gt;</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>none</dt>
+  <dd>Отменяет добавление тени. </dd>
+  <dt>inset</dt>
+  <dd> Тень выводится внутри элемента. Необязательный  параметр. </dd>
+  <dt>сдвиг по x</dt>
+  <dd> Смещение тени по горизонтали относительно элемента. Положительное  значение этого параметра задаёт сдвиг тени вправо, отрицательное&nbsp;— влево. Обязательный  параметр.</dd>
+  <dt>сдвиг по y</dt>
+  <dd> Смещение тени по вертикали относительно элемента. Положительное  значение задаёт сдвиг тени вниз, отрицательное&nbsp;&mdash; вверх. Обязательный  параметр.</dd>
+  <dt>размытие</dt>
+  <dd> Задаёт радиус размытия тени. Чем больше это значение, тем  сильнее тень сглаживается, становится шире и светлее. Если этот параметр не задан, по умолчанию  устанавливается равным 0, тень при этом будет чёткой, а не размытой.</dd>
+  <dt>растяжение</dt>
+  <dd>  Положительное значение растягивает тень, отрицательное, наоборот, её сжимает. Если этот параметр не задан, по умолчанию  устанавливается  0, при этом тень будет того же размера, что и элемент.</dd>
+  <dt>цвет</dt>
+  <dd> Цвет тени в любом доступном CSS формате, по умолчанию тень чёрная. Необязательный  параметр. </dd>
+</dl>
+<p>Допускается указывать несколько теней, разделяя их  параметры между собой запятой. Учитывается следующий порядок: первая тень в  списке размещается на самом верху, последняя в списке&nbsp;— в самом низу. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;box-shadow&lt;/title&gt;
+  &lt;style&gt;
+   .shadow {
+    background: #fc0; /* Цвет фона */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;shadow&quot;&gt;В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!&lt;/div&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат примера показан на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/css_box-shadow.png" alt="Вид тени в браузере Safari" width="413" height="217" /></p>
+<p class="figsign">Рис. 1. Вид тени в браузере Safari</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.boxShadow</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Safari до версии 5.1, Chrome до версии 10.0, Android до версии 4.0 поддерживают свойство <span class="attribute">-webkit-box-shadow</span>. </p>
+
+<p>Firefox до версии 4.0 поддерживает свойство <span class="attribute">-moz-box-shadow</span>.</p>
+<p>Internet Explorer до версии 9.0 не поддерживает свойство <span class="attribute">box-shadow</span>, взамен можно использовать нестандартное свойство <span class="attribute">filter</span>: </p>
+<pre><code>filter: progid:DXImageTransform.Microsoft.dropshadow(offX=5, offY=5, color=#000000);</code></pre>
+
+<p>Здесь: <span class="value">offX</span>&nbsp;&#8212; смещение тени по горизонтали; <span class="value">offY</span>&nbsp;&#8212; смещение тени по вертикали; <span class="value">color</span>&nbsp;&#8212; цвет тени.</p>
+<p>Применение фильтра <span class="attribute">dropshadow</span> дает чёткую резкую тень, поэтому для эффекта размытия можно использовать фильтр <span class="attribute">shadow</span>. </p>
+<pre><code>filter: progid:DXImageTransform.Microsoft.shadow(direction=120, color=#000000, strength=10);</code></pre>
+<p>Здесь: <span class="value">direction</span>&nbsp;&#8212; угол направления тени от 0 до 360&deg;; <span class="value">color</span>&nbsp;&#8212; цвет тени; <span class="value">strength</span>&nbsp;&#8212; смещение тени в пикселях.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#box-shadow" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="yes"><span>5.1</span></td>
+      <td class="warn"><span>3.5</span></td>
+      <td class="yes"><span>4</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td colspan="2"><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>1</span></td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="warn"><span>3.5</span></td>
+		    <td class="yes"><span>4</span></td>
+			<td class="yes"><span>11</span></td>
+			<td class="warn"><span>3</span></td>
+			<td class="yes"><span>5,1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

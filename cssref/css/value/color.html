@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Цвет</title>		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Цвет</h1>
+		 <p>Цвет в стилях можно задавать разными способами: по шестнадцатеричному значению, по названию, в формате RGB, RGBA, HSL, HSLA. </p>
+<h2> По шестнадцатеричному значению</h2>
+  <p>Для задания цветов используются числа в шестнадцатеричном коде.  Шестнадцатеричная система, в отличие от десятичной системы, базируется, как  следует из её названия, на числе 16. Цифры будут следующие: 0, 1, 2, 3, 4, 5,  6, 7, 8, 9, A, B, C, D, E, F. Цифры от 10 до 15 заменены латинскими буквами.  Числа больше 15 в шестнадцатеричной системе образуются объединением двух чисел  в одно. Например, числу 255 в десятичной системе соответствует число FF в  шестнадцатеричной системе. Чтобы не возникало путаницы в определении системы  счисления, перед шестнадцатеричным числом ставят символ решетки #, например  #666999. Каждый из трех цветов&nbsp;— красный, зеленый и синий&nbsp;— может  принимать значения от 00 до FF. Таким образом, обозначение цвета разбивается на  три составляющие #rrggbb, где первые два символа отмечают красную компоненту  цвета, два средних&nbsp;— зеленую, а два последних&nbsp;— синюю. Допускается  использовать сокращенную форму вида #rgb, где каждый символ следует удваивать.  Так, запись #fe0 следует расценивать как #ffee00.</p>
+<h2> По названию</h2>
+  <p>Браузеры поддерживают некоторые цвета по их названию. В табл.&nbsp;1  приведены названия, шестнадцатеричный код, значения в формате RGB, HSL и описание.</p>
+<table class="data">
+  <caption>
+    Табл. 1. Названия цветов
+  </caption>
+
+  <tr>
+    <th>Имя</th>
+    <th>Цвет</th>
+    <th>Код</th>
+    <th>RGB</th>
+    <th>HSL</th>
+
+    <th>Описание</th>
+  </tr>
+  <tr>
+    <td>white</td>
+    <td>&nbsp;</td>
+    <td>#ffffff или #fff</td>
+    <td>rgb(255,255,255)</td>
+
+    <td>hsl(0,0%,100%)</td>
+    <td>Белый</td>
+  </tr>
+  <tr>
+    <td>silver</td>
+    <td style="background: #c0c0c0">&nbsp;</td>
+    <td>#c0c0c0</td>
+
+    <td>rgb(192,192,192)</td>
+    <td>hsl(0,0%,75%)</td>
+    <td>Серый</td>
+  </tr>
+  <tr>
+    <td>gray</td>
+    <td style="background: #808080">&nbsp;</td>
+
+    <td>#808080</td>
+    <td>rgb(128,128,128)</td>
+    <td>hsl(0,0%,50%)</td>
+    <td>Темно-серый</td>
+  </tr>
+  <tr>
+    <td>black</td>
+
+    <td style="background: #000">&nbsp;</td>
+    <td>#000000 или #000</td>
+    <td>rgb(0,0,0)</td>
+    <td>hsl(0,0%,0%)</td>
+    <td>Черный</td>
+  </tr>
+  <tr>
+
+    <td>maroon</td>
+    <td style="background: #800000">&nbsp;</td>
+    <td>#800000</td>
+    <td>rgb(128,0,0)</td>
+    <td>hsl(0,100%,25%)</td>
+    <td>Темно-красный</td>
+
+  </tr>
+  <tr>
+    <td>red</td>
+    <td style="background: #f00">&nbsp;</td>
+    <td>#ff0000 или #f00</td>
+    <td>rgb(255,0,0)</td>
+    <td>hsl(0,100%,50%)</td>
+
+    <td>Красный</td>
+  </tr>
+  <tr>
+    <td>orange</td>
+    <td style="background: #ffa500">&nbsp;</td>
+    <td>#ffa500</td>
+    <td>rgb(255,165,0)</td>
+
+    <td>hsl(38.8,100%,50%)</td>
+    <td>Оранжевый</td>
+  </tr>
+  <tr>
+    <td>yellow</td>
+    <td style="background: #ff0">&nbsp;</td>
+    <td>#ffff00 или #ff0</td>
+
+    <td>rgb(255,255,0)</td>
+    <td>hsl(60,100%,50%)</td>
+    <td>Желтый</td>
+  </tr>
+  <tr>
+    <td>olive</td>
+    <td style="background: #808000">&nbsp;</td>
+
+    <td>#808000</td>
+    <td>rgb(128,128,0)</td>
+    <td>hsl(60,100%,25%)</td>
+    <td>Оливковый</td>
+  </tr>
+  <tr>
+    <td>lime</td>
+
+    <td style="background: #0f0">&nbsp;</td>
+    <td>#00ff00 или #0f0</td>
+    <td>rgb(0,255,0)</td>
+    <td>hsl(120,100%,50%)</td>
+    <td>Светло-зеленый</td>
+  </tr>
+  <tr>
+
+    <td>green</td>
+    <td style="background: #008000">&nbsp;</td>
+    <td>#008000</td>
+    <td>rgb(0,128,0)</td>
+    <td>hsl(120,100%,25%)</td>
+    <td>Зеленый</td>
+
+  </tr>
+  <tr>
+    <td>aqua</td>
+    <td style="background: #0ff">&nbsp;</td>
+    <td>#00ffff или #0ff</td>
+    <td>rgb(0,255,255)</td>
+    <td>hsl(180,100%,50%)</td>
+
+    <td>Голубой</td>
+  </tr>
+  <tr>
+    <td>blue</td>
+    <td style="background: #00f">&nbsp;</td>
+    <td>#0000ff или #00f</td>
+    <td>rgb(0,0,255)</td>
+
+    <td>hsl(240,100%,50%)</td>
+    <td>Синий</td>
+  </tr>
+  <tr>
+    <td>navy</td>
+    <td style="background: #000080">&nbsp;</td>
+    <td>#000080</td>
+
+    <td>rgb(0,0,128)</td>
+    <td>hsl(240,100%,25%)</td>
+    <td>Темно-синий</td>
+  </tr>
+  <tr>
+    <td>teal</td>
+    <td style="background: #008080">&nbsp;</td>
+
+    <td>#008080</td>
+    <td>rgb(0,128,128)</td>
+    <td>hsl(180,100%,25%)</td>
+    <td>Сине-зеленый</td>
+  </tr>
+  <tr>
+    <td>fuchsia</td>
+
+    <td style="background: #f0f">&nbsp;</td>
+    <td>#ff00ff или #f0f</td>
+    <td>rgb(255,0,255)</td>
+    <td>hsl(300,100%,50%)</td>
+    <td>Розовый</td>
+  </tr>
+  <tr>
+
+    <td>purple</td>
+    <td style="background: #800080">&nbsp;</td>
+    <td>#800080</td>
+    <td>rgb(128,0,128)</td>
+    <td>hsl(300,100%,25%)</td>
+    <td>Фиолетовый</td>
+
+  </tr>
+</table>
+<h2>С помощью RGB</h2>
+<p>Можно определить цвет, используя значения красной, зеленой и синей  составляющей в десятичном исчислении. Каждая из трех компонент цвета принимает значение от 0 до 255. Также  допустимо задавать цвет в процентном  отношении, при этом 100% будет соответствовать числу 255. 
+  Вначале указывается ключевое слово <span class="value">rgb</span>, а затем в скобках, через запятую  указываются компоненты цвета, например rgb(255, 128, 128) или rgb(100%, 50%, 50%).</p>
+<h2 id="rgba"> RGBA</h2>
+<p>Формат RGBA похож по синтаксису на RGB, но включает в себя альфа-канал, задающий прозрачность элемента. Значение 0 соответствует полной прозрачности, 1&nbsp;&#8212; непрозрачности, а промежуточное значение вроде 0.5&nbsp;&#8212; полупрозрачности.</p>
+
+<p>RGBA добавлен в CSS3, поэтому валидацию CSS-кода надо проводить именно по этой версии. Следует отметить, что стандарт CSS3 еще находится в разработке и некоторые возможности в нем могут поменяться. К примеру, цвет в формате RGB добавленный к свойству <span class="attribute">background-color</span> проходит валидацию, а добавленный к свойству <span class="attribute">background</span> уже нет. При этом браузеры вполне корректно понимают цвет для того и другого свойства. </p>
+<h2>HSL</h2>
+<p>Название формата HSL образовано от сочетания первых букв Hue (оттенок), Saturate  (насыщенность) и Lightness (светлота). Оттенок это значение цвета на цветовом  круге (рис.&nbsp;1) и задаётся в градусах. 0° соответствует красному цвету,  120°&nbsp;—  зелёному, а 240°&nbsp;— синему. Значение оттенка может изменяться от 0 до 359.</p>
+<p class="fig"><img src="../../assets/images/css/12.png" width="252" height="242" alt="Цветовой круг" /></p>
+
+<p class="figsign">Рис. 1. Цветовой круг</p>
+<p>Насыщенностью называется интенсивность цвета,  измеряется в процентах от 0% до 100%. Значение 0% обозначает отсутствие цвета и  оттенок серого, 100% максимальное значение насыщенности.</p>
+<p>Светлота задает, насколько цвет яркий и указывается в процентах от 0% до 100%. Малые значения делают цвет темнее, а высокие светлее, крайние значения 0% и 100% соответствуют чёрному и белому цвету.</p>
+<h2>HSLA</h2>
+<p>Формат HSLA похож по синтаксису на HSL, но включает в себя альфа-канал, задающий прозрачность элемента. Значение 0 соответствует полной прозрачности, 1&nbsp;&#8212; непрозрачности, а промежуточное значение вроде 0.5&nbsp;&#8212; полупрозрачности. </p>
+<p>Значения цвета в форматах RGBA, HSL и HSLA добавлены в CSS3, поэтому при использовании этих форматов проверяйте код на валидность с учётом версии.</p>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Цвета&lt;/title&gt;
+  &lt;style&gt;
+   body { background-color: #F9F2E3; }
+   h2 {
+    background-color: rgb(214,86,43);
+    color: rgba(255,255,255,.9);
+    padding: 10px;
+   } 
+   p { color: green; }
+   div {
+    background-color: hsl(60,100%,25%);
+    color: hsla(120,100%,50%,0.1);
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;h2&gt;Предупреждение&lt;/h2&gt;
+   &lt;p&gt;Все перечисленные на сайте методы ловли льва являются теоретическими 
+   и базируются на вычислительных методах. Авторы не гарантируют вашей 
+   безопасности при их использовании и снимают с себя всякую 
+   ответственность за результат. Помните, лев это хищник и 
+   опасное животное!&lt;/p&gt;
+  &lt;div&gt;Арррргх!&lt;/div&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис.&nbsp;2.</p>
+<p class="fig"><img src="../../assets/images/css/13.png" alt="Цвета на веб-странице" width="460" height="318" /></p>
+<p class="figsign">Рис. 2. Цвета на веб-странице</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-color/#colorunits" hreflang="en" lang="en">CSS Color Module Level 4</a></td>
+      <td><span class="spec-ED">Редакторский черновик</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-color/#colorunits" hreflang="en" lang="en">CSS Color Module Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/syndata.html#value-def-color" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#color-units" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td></td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>#RRGGBB | #RGB</td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>Названия</td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+    </tr>
+    <tr class="sp">
+      <td>rgb()</td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+    </tr>
+    <tr class="sp">
+      <td>hsl()</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>9.5</span></td>
+      <td class="yes"><span>3.1</span></td>
+      <td class="yes"><span>1</span></td>
+    </tr>
+    <tr class="sp">
+      <td>rgba()</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>3.1</span></td>
+      <td class="yes"><span>3</span></td>
+    </tr>
+    <tr class="sp">
+      <td>hsla()</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>3.1</span></td>
+      <td class="yes"><span>3</span></td>
+    </tr>
+    <tr class="sp">
+      <td>transparent</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>3.1</span></td>
+      <td class="yes"><span>3</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>#RRGGBB | #RGB</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>Названия</td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>1</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>rgb()</td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>1</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>hsl()</td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>1</span></td>
+		    <td class="yes"><span>10</span></td>
+		    <td class="yes"><span>4</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>rgba()</td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="yes"><span>10</span></td>
+		    <td class="yes"><span>4</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>hsla()</td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="yes"><span>10</span></td>
+		    <td class="yes"><span>4</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>transparent</td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="yes"><span>10</span></td>
+		    <td class="yes"><span>4</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Размер</title>		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Размер</h1>
+		<p>Для задания размеров различных элементов в CSS используются абсолютные и относительные     единицы измерения. Абсолютные единицы не зависят от устройства вывода, а относительные     единицы определяют размер элемента относительно значения другого размера. </p>
+<h4>Относительные единицы</h4>
+<p>Относительные единицы обычно используют для работы с текстом. В табл.&nbsp;1 перечислены     основные относительные единицы. </p>
+<table class="data">
+  <caption>
+    Табл. 1. Относительные единицы измерения
+  </caption>
+
+  <tr>
+    <th>Единица</th>
+    <th>Описание</th>
+  </tr>
+  <tr>
+    <td class="sel">em</td>
+    <td>Размер шрифта текущего элемента</td>
+
+  </tr>
+  <tr>
+    <td class="sel">ex</td>
+    <td>Высота символа x</td>
+  </tr>
+  <tr>
+    <td class="sel">ch</td>
+    <td>Ширина символа 0 текущего элемента</td>
+  </tr>
+  <tr>
+    <td class="sel">rem</td>
+    <td>Размер шрифта корневого элемента</td>
+  </tr>
+</table>
+<p>Единица <span class="value">em</span> это изменяемое значение, которое зависит от размера шрифта текущего  элемента (размер устанавливается через стилевое свойство <span class="attribute">font-size</span>). В каждом браузере  заложен размер текста, применяемый в том случае, когда этот размер явно не  задан. Поэтому изначально <span class="value">1em</span> равен размеру шрифта, заданного в браузере по  умолчанию или размеру шрифта родительского элемента. Процентная запись идентична <span class="value">em</span>, в том смысле, что значения 1em и 100% равны. </p>
+
+<p>Единица <span class="value">ex</span> определяется как высота символа &laquo;x&raquo; в нижнем  регистре. На <span class="value">ex</span> распространяются те же правила, что и для <span class="value">em</span>, а именно, он  привязан к размеру шрифта, заданного в браузере по умолчанию, или к размеру  шрифта родительского элемента.</p>
+<p>Единица <span class="value">ch</span> равна ширине символа &laquo;0&raquo; для текущего элемента и подобно <span class="value">em</span> зависит от размера шрифта.</p>
+<p>Разница между <span class="value">em</span> и <span class="value">rem</span> следующая. <span class="value">em</span> зависит от размера шрифта родителя элемента и меняется вместе с ним, а <span class="value">rem</span> привязан к корневому элементу, т.&nbsp;е. размеру шрифта заданного для элемента <span class="tag">html</span>.</p>
+<p>Также есть группа относительных единиц привязанных к размеру области просмотра браузера. В табл. 2 показан их список с описанием.</p>
+<table class="data">
+  <caption>
+    Табл. 2. Относительные единицы измерения
+  </caption>
+  <tr>
+    <th>Единица</th>
+    <th>Описание</th>
+  </tr>
+  <tr>
+    <td class="sel">vw</td>
+    <td>1% от ширины области просмотра</td>
+  </tr>
+  <tr>
+    <td class="sel">vh</td>
+    <td>1% от высоты области просмотра</td>
+  </tr>
+  <tr>
+    <td class="sel">vmin</td>
+    <td>1% от меньшего значения из ширины и высоты области просмотра</td>
+  </tr>
+  <tr>
+    <td class="sel">vmax</td>
+    <td>Определяется, что больше, значение ширины или высоты области просмотра и от него вычисляется 1%</td>
+  </tr>
+</table>
+<h4>Абсолютные единицы</h4>
+<p>Абсолютные единицы представляют собой физические размеры — дюймы, сантиметры, миллиметры, пункты, пики, а также пиксели. Для устройств с низким dpi (количество точек приходящихся на один дюйм, определяет плотность точек) привязка идёт к пикселю. В этом случае один дюйм равен 96 пикселям. Очевидно, что реальный дюйм не будет совпадать с дюймом на таком устройстве. На устройствах с высоким dpi реальный дюйм совпадает с дюймом на  экране, поэтому размер пикселя вычисляется как 1/96 от дюйма. В табл. 3 перечислены основные  абсолютные единицы. </p>
+<table class="data">
+  <caption>
+    Табл. 3. Абсолютные единицы измерения
+  </caption>
+
+  <tr>
+    <th>Единица</th>
+    <th>Описание</th>
+  </tr>
+  <tr>
+    <td class="sel">px</td>
+    <td>Пиксель</td>
+  </tr>
+  <tr>
+    <td class="sel">in</td>
+    <td>Дюйм (1 дюйм равен 2,54 см)</td>
+
+  </tr>
+  <tr>
+    <td class="sel">cm</td>
+    <td>Сантиметр</td>
+  </tr>
+  <tr>
+    <td class="sel">mm</td>
+
+    <td>Миллиметр</td>
+  </tr>
+  <tr>
+    <td class="sel">pt</td>
+    <td>Пункт (1 пункт равен 1/72 дюйма)</td>
+  </tr>
+  <tr>
+
+    <td class="sel">pc</td>
+    <td>Пика (1 пика равна 12 пунктам)</td>
+  </tr>
+</table>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Относительные единицы&lt;/title&gt;
+  &lt;style&gt;
+    h1 { font-size: 30px; }
+    p { font-size: 1.5em; }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;h1&gt;Заголовок размером 30 пикселов&lt;/h1&gt; 
+  &lt;p&gt;Размер текста 1.5 em&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Абсолютные единицы&lt;/title&gt;
+  &lt;style&gt;
+   h1 { font-size: 24pt; }
+   p { margin-left: 30mm; }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+   &lt;h1&gt;Заголовок размером 24 пункта&lt;/h1&gt; 
+   &lt;p&gt;Сдвиг текста вправо на 30 миллиметров&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>При установке размеров обязательно указывайте единицы  измерения, например <span class="attribute">width</span>:&nbsp;<span class="value">30px</span>. В противном случае  браузер не сможет показать желаемый результат, поскольку не понимает, какой размер вам требуется. Единицы не добавляются только при нулевом значении (<span class="attribute">margin</span>:&nbsp;<span class="value">0</span>).</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-values/#lengths" hreflang="en" lang="en">CSS Values and Units Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/syndata.html#length-units" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#length-units" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab role="tablist">
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+		    	<td><span class="ie">Internet Explorer</span></td>
+		    	<td><span class="cr">Chrome</span></td>
+		    	<td><span class="op">Opera</span></td>
+		    	<td><span class="sa">Safari</span></td>
+		    	<td><span class="fx">Firefox</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>px, in, cm, mm, pt, pc, em, ex</td>
+				<td class="yes"><span>3.0</span></td>
+				<td class="yes"><span>1</span></td>
+				<td class="yes"><span>3.5</span></td>
+				<td class="yes"><span>1.0</span></td>
+				<td class="yes"><span>1.0</span></td>
+			</tr>
+		  <tr class="sp">
+		    <td>ch</td>
+				<td class="yes"><span>9.0</span></td>
+				<td class="yes"><span>27</span></td>
+				<td class="yes"><span>20</span></td>
+				<td class="yes"><span>7.0</span></td>
+				<td class="yes"><span>1.0</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>rem</td>
+				<td class="yes"><span>9.0</span></td>
+				<td class="yes"><span>4</span></td>
+				<td class="yes"><span>11.6</span></td>
+				<td class="yes"><span>4.1</span></td>
+				<td class="yes"><span>3.6</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>vw, vh</td>
+				<td class="yes"><span>9.0</span></td>
+				<td class="yes"><span>20</span></td>
+				<td class="yes"><span>20</span></td>
+				<td class="yes"><span>6.0</span></td>
+				<td class="yes"><span>19</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>vmax</td>
+				<td class="no"><span></span></td>
+				<td class="yes"><span>20</span></td>
+				<td class="yes"><span>20</span></td>
+				<td class="no"><span></span></td>
+				<td class="yes"><span>19</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>vmin</td>
+				<td class="yes"><span>9.0</span></td>
+				<td class="yes"><span>26</span></td>
+				<td class="yes"><span>20</span></td>
+				<td class="yes"><span>6.0</span></td>
+				<td class="yes"><span>19</span></td>
+	      </tr>
+		</table>
+	</div>
+	<div class="content" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+		    	<td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>px, in, cm, mm, pt, pc, em, ex</td>
+				<td class="yes"><span>1.0</span></td>
+				<td class="yes"><span></span></td>
+				<td class="yes"><span></span></td>
+				<td class="yes"><span></span></td>
+			</tr>
+		  <tr class="sp">
+		    <td>ch</td>
+				<td class="no"></td>
+				<td class="yes"><span></span></td>
+				<td class="yes"><span>20</span></td>
+				<td class="yes"><span>7.1.1</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>rem</td>
+				<td class="yes"><span>2.1</span></td>
+				<td class="yes"><span></span></td>
+				<td class="yes"><span>12</span></td>
+				<td class="yes"><span>4</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>vw, vh</td>
+		    <td class="yes"><span>2.1</span></td>
+				<td class="yes"><span>19</span></td>
+				<td class="no"><span></span></td>
+				<td class="yes"><span>6.0</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>vmax</td>
+				<td class="no"><span></span></td>
+				<td class="yes"><span>19</span></td>
+				<td class="no"><span></span></td>
+				<td class="no"><span></span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>vmin</td>
+				<td class="yes"><span>2.1</span></td>
+				<td class="yes"><span>19</span></td>
+				<td class="no"><span></span></td>
+				<td class="yes"><span>6.0</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

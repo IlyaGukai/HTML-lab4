@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>hyphens</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>hyphens</h1>
+		<p> Свойство <span class="attribute">hyphens</span> сообщает браузеру, как расставлять переносы слов в блоке текста. Словарь переносов хранится в браузере и подключается только при наличии атрибута <span class="attribute">lang</span> с кодом языка. Так, для русского языка следует добавить <span class="var">lang=&quot;ru&quot;</span> к элементу <span class="tag">&lt;html&gt;</span> или непосредственно к абзацу текста.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>hyphens: none | manual | auto</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>none</dt>
+  <dd>Слова не переносятся, даже при наличии в тексте мягких переносов <span class="var">&amp;shy;</span>. </dd>
+  <dt>manual</dt>
+  <dd>Переносы слов в тексте происходят в тех местах, где добавлен <span class="var">&amp;shy;</span> или <span class="tag">&lt;wbr&gt;</span>, если их нет, то переносы не делаются.</dd>
+  <dt>auto</dt>
+  <dd>Браузер автоматически добавляет переносы слов на основе встроенного словаря переносов.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;ru&quot;&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;hyphens&lt;/title&gt;
+  &lt;style&gt;
+   p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Никотинамидадениндинуклеотидфосфат — широко 
+  распространённый в природе кофермент некоторых 
+  дегидрогеназ — ферментов, катализирующих 
+  окислительно-восстановительные реакции в 
+  живых клетках. &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат примера в браузере Internet Explorer показан на рис. 1.</p>
+  <p class="fig"><img src="../assets/images/css/css_hyphens.png" alt="Переносы слов" width="382" height="228"></p>
+  <p class="figsign">Рис. 1. Переносы слов</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.hyphens</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer поддерживает свойство <span class="attribute">-ms-hyphens</span>. </p>
+<p>Chrome, Safari и Android поддерживают свойство <span class="attribute">-webkit-hyphens</span>. </p>
+<p>Firefox поддерживает свойство <span class="attribute">-moz-hyphens</span>. </p>
+<p>Chrome не поддерживает значение <span class="value">auto</span>, поэтому переносы слов в реальности в нём не работают.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-text/#hyphens-property" hreflang="en" lang="en">CSS Text Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>10</span></td>
+      <td class="warn"><span>13</span></td>
+      <td class="no"><span></span></td>
+      <td class="warn"><span>5.1</span></td>
+      <td class="warn"><span>6</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>4</span></td>
+			<td class="warn"><span>6</span></td>
+			<td class="no"><span></span></td>
+			<td class="warn"><span>4.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

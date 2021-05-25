@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>text-decoration-style</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>text-decoration-style</h1>
+		<p> Устанавливает стиль декоративной линии, которая добавляется к тексту через свойство <a href="text-decoration.html">text-decoration</a> или <a href="text-decoration-line.html">text-decoration-line</a>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">solid</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>text-decoration-style: solid | double | dotted | dashed | wavy</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>solid</dt>
+  <dd>Одинарная линия (<span style="border-bottom: 1px solid red">пример</span>).</dd>
+  <dt>double</dt>
+  <dd>Двойная линия (<span style="border-bottom: 3px double red">пример</span>).</dd>
+  <dt>dotted</dt>
+  <dd>Точечная линия (<span style="border-bottom: 1px dotted red">пример</span>).</dd>
+  <dt>dashed</dt>
+  <dd>Пунктирная линия (<span style="border-bottom: 1px dashed red">пример</span>).</dd>
+  <dt>wavy</dt>
+  <dd>Волнистая линия.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;text-decoration-style&lt;/title&gt;
+  &lt;style&gt;
+   a {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;a href=&quot;link1.html&quot;&gt;Ссылка с подчёркиванием&lt;/a&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.textDecorationStyle</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Firefox до версии 36 поддерживает свойство <span class="attribute">-moz-text-decoration-style</span><span class="attribute"></span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-text-decor-3/#text-decoration-style" hreflang="en" lang="en">CSS Text Decoration Level 3</a></td>
+      <td><span class="spec-ED">Редакторский черновик</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="warn"><span>6</span></td>
+      <td class="yes"><span>36</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="no"><span></span></td>
+			<td class="warn"><span>6</span></td>
+			<td class="yes"><span>36</span></td>
+			<td class="no"><span></span></td>
+			<td class="no"><span></span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

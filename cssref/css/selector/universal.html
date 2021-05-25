@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Универсальный селектор</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Универсальный селектор</h1>
+		<p>Иногда требуется установить одновременно один стиль для всех элементов   веб-страницы, например, задать шрифт или начертание текста. В этом случае   поможет универсальный селектор, который соответствует любому элементу   веб-страницы. </p>
+
+<p>В CSS3 универсальный селектор применяется также в комбинации с пространством имён. </p>
+<ul>
+  <li>ns|* — все элементы в пространстве имён <span class="var">ns</span>.</li>
+  <li>*|* — все элементы во всех пространствах имён.</li>
+  <li>|* — все элементы без явного указания пространства имён.</li>
+</ul>
+
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>* { Описание правил стиля }</code></pre>
+  <p>Для обозначения универсального селектора применяется символ звёздочки (*). В некоторых случаях указывать универсальный селектор не обязательно. Так,   например, записи <span class="tag">*.class</span> и <span class="tag">.class</span> являются идентичными по своему результату.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Универсальный селектор&lt;/title&gt; 
+  &lt;style&gt; 
+   * { 
+    margin: 0;
+    padding: 0; /* Убираем отступы и поля для всех элементов */
+   } 
+  &lt;/style&gt; 
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.&lt;/p&gt; 
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre>
+<h3>Браузеры</h3>
+<p>Браузер Internet Explorer до шестой версии включительно понимает конструкцию  <span class="tag">*&nbsp;html</span>, что нелогично, поскольку тег <span class="tag">&lt;html&gt; </span>является тегом верхнего уровня  и выше него никаких элементов быть не может. Эта ошибка иногда применяется,  чтобы создать стиль только для IE6, например конструкция <span class="var">*&nbsp;html&nbsp;body  { ... }</span> будет добавлять стиль для селектора <span class="tag">body</span> только в IE6  и не работает в других браузерах.</p>
+  
+<p>В браузере Internet Explorer 7 при добавлении универсального  селектора перед именем селектора без пробелов, он воспринимается как  контекстный селектор. Так, запись <span class="tag">*body</span> работает только в IE7 и игнорируется  другими браузерами.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/css3-selectors/#universal-selector">CSS Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS21/selector.html#universal-selector">CSS 2.1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1.1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1.3</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

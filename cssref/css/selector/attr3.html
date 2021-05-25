@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>[атрибут^="значение"]</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>[атрибут^="значение"]</h1>
+		<p>Устанавливает стиль для элемента в том случае, если значение атрибута начинается с указанного текста. </p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>[атрибут^=&quot;значение&quot;] { Описание правил стиля }
+E[атрибут^=&quot;значение&quot;] { Описание правил стиля }</code></pre>
+  
+<p>В первом случае стиль применяется ко всем элементам, у которых значение атрибута начинаются с указанного текста. А во втором&nbsp;&#8212; только к определенным селекторам. Использование кавычек не обязательно.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Селекторы атрибутов&lt;/title&gt;
+  &lt;style&gt;
+   a[href^=&quot;http://&quot;] { 
+    font-weight: bold /* Жирное начертание */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;link1.html&quot;&gt;Обычная ссылка&lt;/a&gt; | 
+  &lt;a href=&quot;http://htmlbook.ru&quot; target=&quot;_blank&quot;&gt;Внешняя 
+  ссылка на сайт htmlbook.ru&lt;/a&gt;&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат примера показан ниже (рис.&nbsp;1).</p>
+
+<p class="fig"><img src="../../assets/images/css/selector_attribute_3.png" width="394" height="178" alt="Изменение стиля для внешних ссылок " /></p>
+<p class="figsign">Рис. 1. Изменение стиля для внешних ссылок </p>
+<p>В данном примере внешние ссылки выделяются жирным начертанием. Внешние ссылки характеризуются добавлением к адресу протокола, например, для доступа к гипертекстовым документам используется протокол HTTP. Поэтому внешние ссылки начинаются с ключевого слова <span class="value">http://</span>, его и добавляем к селектору <span class="tag">A</span>, 
+  как показано в примере.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/css3-selectors/#attribute-selectors" title="http://www.w3.org/TR/css3-selectors/#attribute-selectors">CSS Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS21/selector.html#attribute-selectors" title="http://www.w3.org/TR/CSS21/selector.html#attribute-selectors">CSS 2.1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#basic-concepts" title="http://www.w3.org/TR/CSS1/#basic-concepts">CSS 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9</span></td>
+			<td class="yes"><span>3</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

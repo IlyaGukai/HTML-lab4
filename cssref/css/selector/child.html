@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Дочерние селекторы</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Дочерние селекторы</h1>
+		 <p>Дочерним называется элемент, который непосредственно располагается внутри   родительского элемента. Какой элемент выступает родителем, а какой его потомком  легко выяснить с помощью дерева элементов&nbsp;— так называется структура  отношений элементов документа между собой (рис.&nbsp;1).</p>
+  <p class="fig"><img src="../../assets/images/css/selector_child1.png" alt="Дерево элементов" width="191" height="227" /></p>
+  <p class="figsign">Рис. 1. Дерево элементов</p>
+  <p>На рис. 1 в удобном виде представлена вложенность элементов и их иерархия.   Здесь дочерним элементом по отношению к <span class="tag">&lt;div&gt;</span>   выступает элемент <span class="tag">&lt;p&gt;</span>. Вместе с тем <span class="tag">&lt;strong&gt;</span> не является дочерним для элемента <span class="tag">&lt;div&gt;</span>, поскольку он расположен в контейнере <span class="tag">&lt;p&gt;</span>. </p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>E &gt; F { Описание правил стиля }</code></pre>
+  <p>Стиль применяется к элементу F, только когда он является дочерним для элемента E.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Дочерние селекторы&lt;/title&gt;
+  &lt;style&gt;
+   #menu {
+    margin: 0; padding: 0; /* Убираем отступы */
+   }
+   #menu &gt; li {
+    list-style: none; /* Убираем маркеры списка */
+    width: 100px; /* Ширина элемента в пикселах */
+    background: #b3d9d2; /* Цвет фона */
+    color: #333; /* Цвет текста */
+    padding: 5px; /* Поля вокруг текста */
+    font-family: Arial, sans-serif; /* Рубленый шрифт */
+    font-size: 90%; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    float: left; /* Располагаем элементы по горизонтали */
+   }
+   li &gt; ul {
+    list-style: none; /* Убираем маркеры списка */
+    margin: 0; padding: 0; /* Убираем отступы вокруг элементов списка */
+    border-bottom: 1px solid #666; /* Граница внизу */
+    padding-top: 5px; /* Добавляем отступ сверху */
+   }
+   li &gt; a {
+    display: block; /* Ссылки отображаются в виде блока */
+    font-weight: normal; /* Нормальное начертание текста */
+    font-size: 90%; /* Размер шрифта */
+    background: #fff; /* Цвет фона */
+    border: 1px solid #666; /* Параметры рамки */
+    border-bottom: none; /* Убираем границу снизу */
+    padding: 5px; /* Поля вокруг текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;ul id=&quot;menu&quot;&gt; 
+   &lt;li&gt;Правка 
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href=&quot;undo.html&quot;&gt;Отменить&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;cut.html&quot;&gt;Вырезать&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;copy.html&quot;&gt;Копировать&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;paste.html&quot;&gt;Вставить&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+   &lt;/li&gt; 
+   &lt;li&gt;Начертание
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href=&quot;bold.html&quot;&gt;Жирное&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;italic.html&quot;&gt;Курсивное&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;underline.html&quot;&gt;Подчеркнутое&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+   &lt;/li&gt;
+   &lt;li&gt;Размер
+    &lt;ul&gt; 
+      &lt;li&gt;&lt;a href=&quot;small.html&quot;&gt;Маленький&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;normal.html&quot;&gt;Нормальный&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;middle.html&quot;&gt;Средний&lt;/a&gt;&lt;/li&gt; 
+      &lt;li&gt;&lt;a href=&quot;big.html&quot;&gt;Большой&lt;/a&gt;&lt;/li&gt; 
+    &lt;/ul&gt; 
+   &lt;/li&gt; 
+  &lt;/ul&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>В данном примере дочерние селекторы требуются, чтобы разделить стиль элементов   списка верхнего уровня и вложенные списки, которые выполняют разные задачи,   поэтому стиль для них не должен пересекаться. Результат примера показан на рис.&nbsp;2.</p>
+<p class="fig"><img src="../../assets/images/css/selector_child2.png" alt="Использование дочерних селекторов" width="394" height="251" /></p>
+<p class="figsign">Рис. 2. Использование дочерних селекторов</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer 7 не применяет стиль, если между селекторами располагается  комментарий (<span class="var">li &gt; /* больше */ a</span>). </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/css3-selectors/#child-combinators">CSS Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS21/selector.html#child-selectors">CSS 2.1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>7</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

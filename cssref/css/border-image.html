@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-image</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-image</h1>
+		<p>Используется для отображения рисованной рамки вокруг элемента. Толщина рамки задаётся свойством <a href="border.html">border</a>, при этом если указано <span class="attribute">border:&nbsp;0</span>, то рамка не выводится. При других значениях <span class="attribute">border</span> рисунок всегда имеет приоритет. Фон, если он задан через свойство <a href="background.html">background</a>, отображается под рамкой.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">none</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам, за исключением тех, у кого <a href="border-collapse.html">border-collapse</a> задан как <span class="value">collapse</span></td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-image: none | [ &lt;URL&gt; [&lt;число&gt; | &lt;проценты&gt;]{1,4} [/ &lt;толщина&gt;{1,4}]? ] &amp;&amp; 
+  [stretch | repeat | round]{0,2}</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>none</dt>
+  <dd>Не отображает рисованную рамку, используется установленный стиль границы. </dd>
+  <dt>URL</dt>
+  <dd>Путь к графическому файлу. Обязательный параметр.</p>
+<p>Само изображение для создания рамки продемонстрировано на рис.&nbsp;1 и состоит из девяти областей: четырёх уголков, верхней, правой, нижней, левой стороны и центральной части, в которой выводится содержимое элемента. </p>
+<p class="fig"><img src="../assets/images/css/css_border-image-1.png" alt="Изображение для создания рамки" width="125" height="125"></p>
+<p class="figsign">Рис. 1. Изображение для создания рамки</p></dd>
+  <dt>&lt;число&gt;</dt>
+  <dd>
+  
+  <p>Одно, два, три или четыре значения, которые указывают размеры частей изображения в пикселях, задавая тем самым области деления. Сами единицы не пишутся, только число (10, а не 10px).На рис.&nbsp;2 красными линиями выделены необходимые для создания рамки области.</p>
+
+<p class="fig"><img src="../assets/images/css/css_border-image-2.png" alt="Деление исходного изображения на области" width="141" height="143"></p>
+<p class="figsign">Рис. 2. Деление исходного изображения на области</p>
+<p> Разрешается использовать одно, два, три или четыре значения, разделяя их между 
+  собой пробелом. Эффект зависит от количества значений и приведен в табл.&nbsp;1.</p>
+  <table class="data">
+<caption>
+Табл. 1. Зависимость от числа значений
+</caption>
+    <tr> 
+      <th>Число значений</th>
+      <th>Результат</th>
+    </tr>
+    <tr> 
+      <td class="sel">1</td>
+      <td>Устанавливает границы одинаковой толщины на каждой стороне рисунка.</td>
+    </tr>
+    <tr> 
+      <td class="sel">2</td>
+      <td>Первое значение устанавливает высоту верхней и нижней границы, второе&nbsp;&#8212; левой и правой.</td>
+    </tr>
+    <tr> 
+      <td class="sel">3</td>
+      <td>Первое значение определяет высоту верхней границы, второе&nbsp;&#8212; левой и правой, а третье&nbsp;&#8212; высоту нижней границы.</td>
+    </tr>
+    <tr> 
+      <td class="sel">4</td>
+      <td>Поочерёдно устанавливается размеры верхней, правой, нижней и левой границы.</td>
+    </tr>
+</table></dd>
+<dt>&lt;проценты&gt;</dt>
+  <dd>Аналогично <span class="value">&lt;числу&gt;</span>, но значения задаются в процентах. Тот или другой параметр обязателен.</dd>
+<dt>&lt;толщина&gt;</dt>
+  <dd>Через слэш пишется одно, два, три или четыре значения толщины границы на каждой стороне элемента. Является аналогом <a href="border-width.html">border-width</a> и использует тот же синтаксис.</dd>
+<dt>stretch</dt>
+  <dd>Растягивает рисунок границы до размеров элемента. Это значение используется по умолчанию.</dd>
+
+<dt>repeat</dt>
+  <dd>Повторяет рисунок границы.</dd>
+
+<dt>round</dt>
+  <dd>Повторяет рисунок и масштабирует его так, чтобы на стороне элемента оказалось целое число изображений.</dd>
+</dl>
+
+<p>Влияние этих параметров на вид рамки показано на рис.&nbsp;3.</p>
+<table>
+  <tr>
+    <td class="fig"><img src="../assets/images/css/css_border-image-3a.png" alt="stretch" width="200" height="200"></td>
+    <td class="fig"><img src="../assets/images/css/css_border-image-3b.png" alt="repeat" width="200" height="200"></td>
+    <td class="fig"><img src="../assets/images/css/css_border-image-3c.png" alt="round" width="200" height="200"></td>
+  </tr>
+  <tr>
+    <td class="figsign">stretch</td>
+    <td class="figsign">repeat</td>
+    <td class="figsign">round</td>
+  </tr>
+</table>
+<p class="figsign">Рис. 3. Результат использования параметров stretch, repeat и round</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;border-image&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    border: 30px solid #40c4c8;
+    padding: 20px;
+    border-image: url(images/bg-image.png) 30 round round;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;div&gt;Витраж представляет собой композицию сделанную из 
+   множества цветных стекол обрамлённых проволокой и наиболее 
+   эффектно смотрится при прохождении через него солнечного 
+   или искусственного света.&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат примера показан на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/css_border-image-4.png" alt="Вид рамки в браузере Chrome" width="416" height="350" /></p>
+<p class="figsign">Рис. 4. Вид рамки в браузере Chrome</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderImage</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Firefox до версии 15.0 поддерживает свойство <span class="attribute">-moz-border-image</span>.</p>
+<p>Safari до версии 6.0, Chrome до версии 15.0, Android до версии 4.0 поддерживают свойство <span class="attribute">-webkit-border-image</span>.</p>
+<p>Opera до версии 15.0 поддерживает свойство <span class="attribute">-o-border-image</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#border-image" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>11</span></td>
+      <td class="warn"><span>7</span></td>
+      <td class="yes"><span>16</span></td>
+      <td class="warn"><span>10.5</span></td>
+      <td class="yes"><span>15</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="yes"><span>6</span></td>
+      <td class="warn"><span>3.5</span></td>
+      <td class="yes"><span>15</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td colspan="2"><span class="op">Opera Mobile</span></td>
+		    	<td colspan="2"><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn">2.1</td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="warn"><span>3.5</span></td>
+		    <td class="yes"><span>15</span></td>
+		    <td class="warn"><span>11</span></td>
+		    <td class="yes"><span>16</span></td>
+		    <td class="warn"><span>3.2</span></td>
+		    <td class="yes"><span>6</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

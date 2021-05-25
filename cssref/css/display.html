@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>display</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>display</h1>
+		<p> Многоцелевое свойство, которое определяет, как элемент должен быть показан 
+  в документе. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">inline</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code data-language="css">display: block | inline | inline-block | inline-table | list-item | none | 
+run-in | table | table-caption | table-cell | table-column-group | table-column | 
+table-footer-group | table-header-group | table-row | table-row-group</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>block</dt>
+  <dd>Элемент показывается как блочный. Применение этого значения 
+      для строчных элементов, например <span class="tag">&lt;span&gt;</span>, 
+      заставляет его вести подобно блокам&nbsp;&#8212; происходит перенос строк в начале 
+      и в конце содержимого. </dd>
+
+    <dt>inline</dt>
+    <dd>Элемент отображается как строчный. Использование блочных 
+      элементов, таких как <span class="tag">&lt;div&gt;</span> и <span class="tag">&lt;p&gt;</span>, 
+      автоматически создаёт перенос и показывает их содержимое с новой 
+      строки. Значение <span class="value">inline</span> отменяет эту особенность, 
+      поэтому содержимое блочных элементов начинается с того места, где окончился 
+      предыдущий элемент.</dd>
+
+    <dt>inline-block</dt>
+    <dd>Это значение генерирует блочный элемент, который обтекается 
+      другими элементами веб-страницы подобно строчному элементу. Фактически 
+      такой элемент по своему действию похож на встраиваемые элементы (вроде  
+      <span class="tag">&lt;img&gt;</span>). При этом его внутренняя часть форматируется 
+      как блочный элемент, а сам элемент&nbsp;&#8212; как строчный. </dd>
+
+    <dt>inline-table</dt>
+    <dd>Определяет, что элемент является таблицей как при использовании 
+       <span class="tag">&lt;table&gt;</span>, но при этом таблица является 
+      строчным элементом и происходит её обтекание другими элементами, например, 
+      текстом. </dd>
+
+    <dt>list-item</dt>
+    <dd>Элемент выводится как блочный и добавляется маркер списка.</dd>
+
+    <dt>none</dt>
+    <dd>Временно удаляет элемент из документа. Занимаемое им место 
+      не резервируется и веб-страница формируется так, словно элемента и не было. 
+      Изменить значение  и сделать вновь видимым элемент можно с помощью 
+      скриптов, обращаясь к свойствам через объектную модель. В этом случае происходит 
+      переформатирование данных на странице с учётом вновь добавленного элемента.</dd>
+
+    <dt>run-in</dt>
+    <dd>Устанавливает элемент как блочный или строчный в зависимости 
+      от контекста. </dd>
+
+    <dt>table</dt>
+    <dd>Определяет, что элемент является блочной таблицей подобно 
+      использованию <span class="tag">&lt;table&gt;</span>. </dd>
+
+    <dt>table-caption</dt>
+    <dd>Задаёт заголовок таблицы подобно применению <span class="tag">&lt;caption&gt;</span>.</dd>
+
+    <dt>table-cell</dt>
+    <dd>Указывает, что элемент представляет собой ячейку таблицы 
+      (<span class="tag">&lt;dd&gt;</span> или <span class="tag">&lt;th&gt;</span>).</dd>
+
+    <dt>table-column</dt><br>
+    <dd>Назначает элемент колонкой таблицы, словно был добавлен  
+      <span class="tag"> &lt;col&gt;</span>.</dd>
+
+    <dt>table-column-group</dt><br>
+    <dd>Определяет, что элемент является группой одной или более 
+      колонок таблицы, как при использовании  <span class="tag">&lt;colgroup&gt;</span>.</dd>
+
+    <dt>table-footer-group</dt><br>
+    <dd>Используется для хранения одной или нескольких строк ячеек, 
+      которые отображаются в самом низу таблицы. По своему действию сходно с работой 
+       <span class="tag">&lt;tfoot&gt;</span>. </dd>
+
+    <dt>table-header-group</dt><br>
+    <dd>Элемент предназначен для хранения одной или нескольких строк 
+      ячеек, которые представлены вверху таблицы. По своему действию сходно с 
+      работой  <span class="tag">&lt;thead&gt;</span>. </dd>
+
+    <dt>table-row</dt>
+    <dd>Элемент отображается как строка таблицы (<span class="tag">&lt;tr&gt;</span>).</dd>
+
+    <dt>table-row-group</dt><br>
+    <dd>Создаёт структурный блок, состоящий из нескольких строк таблицы 
+      аналогично действию  <span class="tag">&lt;tbody&gt;</span>. </dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;display&lt;/title&gt;
+  &lt;style&gt;
+   .example {
+    border: dashed 1px #634f36; /* Параметры рамки */
+    background: #fffff5; /* Цвет фона */
+    font-family: &quot;Courier New&quot;, Courier, monospace; /* Шрифт текста */
+    padding: 7px; /* Поля вокруг текста */
+    margin: 0 0 1em; /* Отступы вокруг */
+   }
+   .exampleTitle {
+    border: 1px solid black; /* Параметры рамки */
+    border-bottom: none; /* Убираем линию снизу */
+    padding: 3px; /* Поля вокруг текста */
+    display: inline; /* Устанавливаем как строчный элемент */
+    background: #efecdf; /* Цвет фона */
+    font-weight: bold; /* Жирное начертание */
+    font-size: 90%; /* Размер текста */
+    margin: 0; /* Убираем отступы вокруг */
+    white-space: nowrap; /* Отменяем переносы текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;p class=&quot;exampleTitle&quot;&gt;Пример&lt;/p&gt;
+  &lt;p class=&quot;example&quot;&gt;
+  &amp;lt;!DOCTYPE HTML PUBLIC &amp;quot;-//W3C//DTD HTML 4.01 Transitional//EN&amp;quot;&amp;gt;&lt;br&gt;
+  &amp;lt;html&amp;gt;&lt;br&gt;
+  &amp;lt;body&amp;gt;&lt;br&gt;
+  &amp;lt;b&amp;gt;Формула серной кислоты:&amp;lt;/b&amp;gt;
+  &amp;lt;i&amp;gt;H&amp;lt;sub&amp;gt;&amp;lt;small&amp;gt;2&amp;lt;/small&amp;gt;&amp;lt;/sub&amp;gt;
+  SO&amp;lt;sub&amp;gt;&amp;lt;small&amp;gt;4&amp;lt;/small&amp;gt;
+  &amp;lt;/sub&amp;gt;&amp;lt;/i&amp;gt;&lt;br&gt;
+  &amp;lt;/body&amp;gt;&lt;br&gt;
+  &amp;lt;/html&amp;gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_display.png" alt="Применение свойства display " width="422" height="303" /></p>
+<p class="figsign">Рис. 1. Применение свойства display </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.display</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer до версии 7 включительно: </p>
+<ul>
+  <li>поддержка значений <span class="value">table-footer-group</span> и <span class="value">table-header-group</span> происходит только  для тегов <span class="tag">&lt;thead&gt;</span> и <span class="tag">&lt;tfoot&gt;</span>;</li>
+  <li>для элементов <span class="tag">&lt;li&gt;</span> понимает значение <span class="value">block</span> как <span class="value">list-item</span>;</li>
+  <li>значение <span class="value">inline-block</span> применяется  только для строчных элементов, с блочными элементами работает некорректно.</li>
+  </ul>
+<p>Opera 9.2, а также Firefox 2.0:</p>
+<ul>
+  <li>значение <span class="value">table-column</span> применяется только для <span class="tag">&lt;col&gt;</span>;</li>
+  <li>значение <span class="value">table-column-group</span> поддерживается только для <span class="tag">&lt;colgroup&gt;</span>.</li>
+  </ul>
+<p>Chrome до версии 4, а также Safari до версии 5:</p>
+<ul>
+  <li>значение <span class="value">run-in</span> поддерживают только для элементов, которые располагаются перед строчными элементами или такими, у которых значение <span class="attribute">display</span> установлено как <span class="value">inline</span>.</li>
+  </ul>
+<p>Safari 3.1</p>
+<ul>
+  <li>Значение <span class="value">table-cell</span> не работает, если нет элементов со значениями свойства <span class="attribute">display</span>: <span class="value">table</span> и <span class="value">table-row</span>.</li>
+</ul>
+<p>Chrome 32</p>
+<ul>
+  <li>Значение <span class="value">run-in</span> больше не поддерживается.</li>
+</ul></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-display/#display" hreflang="en" lang="en">CSS Display Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-ruby/#display" hreflang="en" lang="en">CSS Ruby Layout Module Level 1</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-grid/#grid-declaration0" hreflang="en" lang="en">CSS Grid Layout</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-flexbox/#flex-containers" hreflang="en" lang="en">CSS Flexible Box Layout Module</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#display-prop" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#display" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>none, inline, block</td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>inline-block</td>
+      <td class="yes"><span>5.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3</span></td>
+      </tr>
+    <tr class="sp">
+      <td>list-item</td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>run-in</td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="no"><span></span></td>
+      </tr>
+    <tr class="sp">
+      <td>inline-table</td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3</span></td>
+      </tr>
+    <tr class="sp">
+      <td>table, table-cell, table-column, table-column-group,table-header-group, table-row-group, table-footer-group, table-row, andtable-caption</td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>none, inline, block</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>inline-block</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>list-item</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>run-in</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="no"><span></span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>inline-table</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>table, table-cell, table-column, table-column-group,table-header-group, table-row-group, table-footer-group, table-row, andtable-caption</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

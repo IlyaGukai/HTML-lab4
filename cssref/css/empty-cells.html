@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>empty-cells</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>empty-cells</h1>
+		<p>Задаёт отображение границ и фона в ячейке, если она пустая. При одновременном добавлении к таблице свойства <span class="attribute">border-collapse</span> со значением <span class="value">collapse</span>, свойство <span class="attribute">empty-cells</span> игнорируется.</p>
+<p>Ячейка считается пустой в следующих случаях:</p>
+<ul>
+  <li> нет вообще никаких символов;</li>
+  <li> в ячейке содержится только перевод строки, символ  табуляции или пробел;</li>
+  <li> значение <span class="attribute">visibility</span> установлено как <span class="value">hidden</span>.</li>
+</ul>
+<p>Добавление неразрывного пробела <span class="var">&amp;nbsp;</span> воспринимается как видимое содержание,  т. е. ячейка уже будет непустой.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+  <table class="spec">
+    <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">show</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К <span class="tag">&lt;td&gt;</span>, <span class="tag">&lt;th&gt;</span> или к элементам, у которых <span class="attribute">display</span>: <span class="value">table-cell</span> </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>empty-cells: show | hide</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>show  </dt>
+  <dd>
+    Отображает границу вокруг ячейки и фон в ней.</dd>
+  <dt>hide</dt>
+  <dd>Граница и фон в пустых ячейках не отображается. Если все ячейки в строке пустые, то строка прячется целиком.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;empty-cells&lt;/title&gt;
+  &lt;style&gt;
+   table {
+    border: 4px double #399; /* Граница вокруг таблицы */
+   }
+   td {
+    background: #fc0; /* Цвет фона */
+    border: 1px solid #333; /* Граница вокруг ячеек */
+    empty-cells: hide; /* Прячем пустые ячейки */
+    padding: 5px; /* Поля в ячейках */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table width=&quot;100%&quot;&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Леонардо&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;8&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Рафаэль&lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td&gt;11&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Микеланджело&lt;/td&gt;&lt;td&gt;24&lt;/td&gt;&lt;td&gt;&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;Донателло&lt;/td&gt;&lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;13&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера в браузере Safari показан на рис. 1. Тот же пример в браузере Internet Explorer 7 продемонстрирован на рис.&nbsp;2. </p>
+<p class="fig"><img src="../assets/images/css/css_empty-cells_1.png" alt="Вид таблицы в браузере Safari" width="398" height="242"></p>
+<p class="figsign">Рис. 1. Вид таблицы в браузере Safari</p>
+<p class="fig"><img src="../assets/images/css/css_empty-cells_2.png" alt="Вид таблицы в браузере Internet Explorer 7" width="377" height="142"></p>
+<p class="figsign">Рис. 2. Вид таблицы в браузере Internet Explorer 7</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.emptyCells</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer до версии 7.0 включительно не поддерживает свойство <span class="attribute">empty-cells</span> и отображает пустые ячейки всегда так, словно для них  установлено <span class="attribute">empty-cells</span>:&nbsp;<span class="value">hide</span>.</p>
+
+<p>Firefox версии 2 и ниже не прячет строку таблицы, если для всех ячеек  задано <span class="attribute">empty-cells</span>: <span class="value">hide</span> и ячейки пусты.</p>
+<p>Браузер Opera до версии 9.27 включительно не скрывает строку таблицы и для пустых ячеек отображает  цвет фона.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/tables.html#empty-cells" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>3.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

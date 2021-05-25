@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Соседние селекторы</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Соседние селекторы</h1>
+		 <p>Соседними называются элементы веб-страницы, когда они следуют непосредственно   друг за другом в коде документа. </p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>E + F { Описание правил стиля }</code></pre>
+  <p>Для управления стилем соседних элементов используется символ плюса (+), который   устанавливается между двумя селекторами E и F. Пробелы вокруг плюса не обязательны. Стиль при такой записи применяется к   элементу F, но только в том случае, если он является соседним для элемента E и   следует сразу после него. Рассмотрим несколько примеров.</p>
+
+ <pre><code>&lt;p&gt;Lorem ipsum &lt;b&gt;dolor&lt;/b&gt; sit amet.&lt;/p&gt;</code></pre>
+  <p>Элемент <span class="tag">&lt;b&gt;</span> является дочерним по отношению к <span class="tag">&lt;p&gt;</span>, поскольку он находится внутри этого   контейнера. Соответственно <span class="tag">&lt;p&gt;</span> выступает в качестве   родителя <span class="tag">&lt;b&gt;</span>.</p>
+
+<pre><code>&lt;p&gt;Lorem ipsum &lt;b&gt;dolor&lt;/b&gt;  &lt;var&gt;sit&lt;/var&gt; amet.&lt;/p&gt;</code></pre>
+  <p>Элементы <span class="tag">&lt;var&gt;</span> и <span class="tag">&lt;b&gt;</span>   никак не перекрываются и представляют собой соседние элементы. То, что они   расположены внутри контейнера <span class="tag">&lt;p&gt;</span>,  не влияет   на их отношение. </p>
+
+<pre><code>&lt;p&gt;Lorem &lt;b&gt;ipsum &lt;/b&gt; dolor sit amet, &lt;i&gt;consectetuer&lt;/i&gt; adipiscing &lt;tt&gt;elit&lt;/tt&gt;.&lt;/p&gt;</code></pre>
+  <p>Соседними здесь являются элементы <span class="tag">&lt;b&gt;</span> и <span class="tag">&lt;i&gt;</span>, а также <span class="tag">&lt;i&gt;</span> и <span class="tag">&lt;tt&gt;</span>. При этом <span class="tag">&lt;b&gt;</span> и <span class="tag">&lt;tt&gt;</span> к соседним элементам не относятся из-за того, что   между ними расположен контейнер <span class="tag">&lt;i&gt;</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+ <pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Соседние селекторы&lt;/title&gt;
+  &lt;style&gt;
+   b + i {
+    color: red; /* Красный цвет текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;Lorem &lt;b&gt;ipsum &lt;/b&gt; dolor sit amet, &lt;i&gt;consectetuer&lt;/i&gt; adipiscing elit.&lt;/p&gt;
+   &lt;p&gt;Lorem ipsum dolor sit amet, &lt;i&gt;consectetuer&lt;/i&gt; adipiscing elit.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат данного примера показан на рис.&nbsp;1.</p>
+  <p class="fig"><img src="../../assets/images/css/selector_ajacent.png" alt="Красный цвет текста для соседних селекторов" width="394" height="201" /></p>
+<p class="figsign">Рис. 1. Красный цвет текста для соседних селекторов</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer 7 не применяет стиль, если между селекторами располагается  комментарий (<span class="var">B + /* плюс */ I</span>). </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/css3-selectors/#adjacent-sibling-combinators">CSS Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS21/selector.html#adjacent-selectors">CSS 2.1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>7</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

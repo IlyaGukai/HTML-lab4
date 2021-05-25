@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>unicode-bidi</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>unicode-bidi</h1>
+		 <p>В европейских языках чтение текста происходит слева направо,  в то время как есть языки, где текст читается справа налево. При смешении в  одном документе разных по написанию символов (русского с ивритом, к примеру) в  системе юникод, их направление определяется браузером из характеристик и  содержимого текста. Свойства <span class="attribute">unicode-bidi</span> и  <span class="attribute">direction</span> задают, как должен располагаться текст используемого языка. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам </td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+ <pre><code>unicode-bidi: normal | embed | bidi-override</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>normal</dt>
+  <dd>
+    Браузер самостоятельно определяет, как ему следует  отображать текст на основе символов юникода.</dd>
+  <dt>embed</dt>
+  <dd>Переопределяет параметры текста, располагая его, как указано в свойстве <span class="attribute">direction</span>.</dd>
+  <dt>bidi-override</dt>
+  <dd>Аналогичен  <span class="value">embed</span>, но при этом также меняется порядок символов в тексте, подчиняясь значению <span class="attribute">direction</span>.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+ <pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;unicode-bidi&lt;/title&gt;
+  &lt;style&gt;
+  .rtl p {
+   unicode-bidi: bidi-override; /* Меняются характеристики текста */
+   direction: rtl; /* Текст пишется справа налево */ 
+  }
+  &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;div class=&quot;rtl&quot;&gt;
+   &lt;p&gt;А роза упала на лапу Азора.&lt;/p&gt;
+   &lt;p&gt;У лип Леша нашел пилу.&lt;/p&gt;
+   &lt;p&gt;И городу дорог огород у дороги.&lt;/p&gt;
+   &lt;p&gt;Уж я веники не вяжу.&lt;/p&gt;
+   &lt;p&gt;Аргентина манит негра.&lt;/p&gt;
+   &lt;p&gt;Он дивен, палиндром — и ни морд, ни лап не видно.&lt;/p&gt;
+   &lt;p&gt;Но невидим архангел, мороз узором лег на храм и дивен он.&lt;/p&gt;
+   &lt;p&gt;Леша на полке клопа нашел.&lt;/p&gt;
+   &lt;p&gt;Я не стар брат Сеня.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;</code></pre>
+  
+  <p>Результат данного примера показан на рис.&nbsp;1. Поскольку используется значение <span class="value">bidi-override</span> свойства <span class="attribute">unicode-bidi</span>,  то порядок символов в тексте меняется на обратный. А именно на тот, что указан  свойством <span class="attribute">direction</span>. Заметьте,  что текст располагается по правому краю окна, точка в предложении слева от текста. </p>
+  <p class="fig"><img src="../assets/images/css/css_unicode-bidi.png" alt="Результат использования unicode-bidi и direction" width="438" height="440"></p>
+  <p class="figsign">Рис. 1. Результат использования unicode-bidi и direction </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.unicodeBidi</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-writing-modes/#unicode-bidi" lang="en">CSS Writing Modes Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#propdef-unicode-bidi" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>5.5</span></td>
+      <td class="yes"><span>2</span></td>
+      <td class="yes"><span>9.2</span></td>
+      <td class="yes"><span>1.3</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1.3</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

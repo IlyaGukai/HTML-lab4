@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>animation-name</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>animation-name</h1>
+		<p>Устанавливает одну или несколько анимаций, которые применяются к элементу. Представляет собой имя связанное с правилом <a href="value/time.html">@keyframes</a>, оно в свою очередь задаёт последовательность движения. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">none</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам, к псевдоэлементам <span class="attribute">::before</span> и <span class="attribute">::after</span></td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>animation-name: none | &lt;идентификатор&gt; [, none | &lt;идентификатор&gt;]*</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class=param2>
+  <dt>none</dt>
+  <dd>Отключает анимацию.</dd>
+  <dt>&lt;идентификатор&gt;</dt><br>
+  <dd>Текстовая строка, которая связана с анимацией. Идентификатор должен начинаться с латинской буквы или подчёркивания (_), также может содержать цифры от 0 до 9 и дефис (-). Запрещено использовать зарезервированные ключевые слова none, unset, inherit, initial.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;animation-name&lt;/title&gt;
+  &lt;style&gt;
+   .spaceOutUp {
+    -webkit-animation-name: spaceOutUp;
+    animation-name: spaceOutUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+   }
+   @-webkit-keyframes spaceOutUp {
+    from {
+     opacity: 0;
+     -webkit-transform-origin: 50% 0%;
+     -webkit-transform: scale(.2) translate(0%, -200%);
+    }
+    to {
+     opacity: 1;
+     -webkit-transform-origin: 50% 0%;
+     -webkit-transform: scale(1) translate(0%, 0%);
+    }
+   }
+   @keyframes spaceOutUp {
+    from {
+     opacity: 0;
+     transform-origin: 50% 0%;
+     transform: scale(.2) translate(0%, -200%); 
+    }
+    to {
+     opacity: 1;
+     transform-origin: 50% 0%;
+     transform: scale(1) translate(0%, 0%);
+    }
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;img src=&quot;images/thumb1.jpg&quot; alt=&quot;&quot; class=&quot;spaceOutUp&quot;&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+ <p><i>Объект</i>.style.animationName</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome, Safari и Android поддерживают свойство <span class="attribute">-webkit-animation-name</span>.</p>
+<p>Opera до версии 12.10 поддерживает свойство <span class="attribute">-o-animation-name</span>.</p>
+  <p>Firefox  до версии 16 поддерживает свойство <span class="attribute">-moz-animation-name</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-animations/#animation-name" lang="en">CSS Animations</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="warn"><span>12</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td colspan="2"><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2</span></td>
+		    <td class="warn"><span>5</span></td>
+		    <td class="yes"><span>16</span></td>
+		    <td class="warn"><span>12</span></td>
+		    <td class="yes"><span>12.10</span></td>
+			<td class="warn"><span>4</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>text-decoration</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>text-decoration</h1>
+		<p> Добавляет оформление текста в виде его подчёркивания, перечеркивания, линии 
+  над текстом и мигания. Одновременно можно применить более одного стиля, перечисляя 
+  значения через пробел. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">none</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>text-decoration: [ blink || line-through || overline || underline ] | none</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>blink</dt>
+  <dd>Устанавливает мигающий текст. Такой текст периодически, примерно раз в секунду 
+    исчезает, потом вновь появляется на прежнем месте. Это значение в настоящее время не поддерживается браузерами и осуждается в CSS3, взамен рекомендуется использовать анимацию.</dd>
+  <dt>line-through</dt>
+  <dd>Создает перечеркнутый текст (<span style="text-decoration: line-through">пример</span>).</dd>
+  <dt>overline</dt>
+  <dd>Линия проходит над текстом (<span style="text-decoration: overline">пример</span>).</dd>
+  <dt>underline</dt>
+  <dd>Устанавливает подчеркнутый текст (<span style="text-decoration: underline">пример</span>).</dd>
+  <dt>none</dt>
+  <dd>Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано 
+    по умолчанию. </dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;text-decoration&lt;/title&gt;
+  &lt;style&gt;
+   a { 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+   }
+   a:hover { 
+    text-decoration: underline; /* Добавляем подчёркивание 
+                                   при наведении курсора мыши на ссылку */
+   }
+  &lt;/style&gt; 
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;p&gt;&lt;a href=&quot;1.html&quot;&gt;Стратегическое нападение&lt;/a&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.textDecoration</p>
+<p><i>Объект</i>.style.textDecorationLineThrough</p>
+<p><i>Объект</i>.style.textDecorationNone</p>
+<p><i>Объект</i>.style.textDecorationOverLine  </p>
+<p><i>Объект</i>.style.textDecorationUnderline</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p> Линия, полученная с  помощью значения <span class="value">line-through</span>, в IE7 располагается выше чем в других браузерах; в IE8  эта ошибка исправлена. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-text-decor-3/#text-decoration-property" hreflang="en" lang="en">CSS Text Decoration Level 3</a></td>
+      <td><span class="spec-ED">Редакторский черновик</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/text.html#lining-striking-props" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#text-decoration" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Мультиклассы</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Мультиклассы</h1>
+		 <p>К любому элементу одновременно можно добавить несколько классов, перечисляя их в   атрибуте <span class="attribute">class</span> через пробел. В этом случае к   элементу применяется стиль, описанный в правилах для каждого класса. Поскольку   при добавлении нескольких классов они могут содержать одинаковые стилевые   свойства, но с разными значениями, то берётся значение у класса, который описан в коде ниже. </p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>&lt;E class=&quot;class1 class2 ...&quot;&gt;</code></pre>
+  <p>Здесь E &#8212; обозначает любой тег. </p>
+  <p>В стилях допустимо использовать запись следующего вида.</p>
+  <pre><code>.class1.class2 { Описание правил стиля }</code></pre>
+  <p>В таком случае стиль применяется только для элементов, у которых одновременно заданы классы <span class="var">class1</span> и <span class="var">class2</span>, т.&nbsp;е. в коде HTML используется конструкция <span class="var">&lt;E class=&quot;class1 class2&gt;</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Мультиклассы&lt;/title&gt;
+  &lt;style&gt;
+   .level1 { font-size: 1em; }
+   .level2 { font-size: 1.2em; }
+   .level3 { font-size: 1.4em; }
+   .level4 { font-size: 1.6em; }
+   .level5 { font-size: 1.8em; }
+   .level6 { font-size: 2em; }
+   a.tag { 
+    color: #468be1; /* Цвет ссылок */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  &lt;div&gt; 
+   &lt;a href=&quot;/term/2&quot; class=&quot;tag level6&quot;&gt;Paint.NET&lt;/a&gt; 
+   &lt;a href=&quot;/term/69&quot; class=&quot;tag level6&quot;&gt;Photoshop&lt;/a&gt; 
+   &lt;a href=&quot;/term/3&quot; class=&quot;tag level5&quot;&gt;цвет&lt;/a&gt; 
+   &lt;a href=&quot;/term/95&quot; class=&quot;tag level5&quot;&gt;фон&lt;/a&gt; 
+   &lt;a href=&quot;/term/11&quot; class=&quot;tag level4&quot;&gt;палитра&lt;/a&gt; 
+   &lt;a href=&quot;/term/43&quot; class=&quot;tag level3&quot;&gt;слои&lt;/a&gt; 
+   &lt;a href=&quot;/term/97&quot; class=&quot;tag level2&quot;&gt;свет&lt;/a&gt; 
+   &lt;a href=&quot;/term/44&quot; class=&quot;tag level2&quot;&gt;панели&lt;/a&gt; 
+   &lt;a href=&quot;/term/16&quot; class=&quot;tag level1&quot;&gt;линия&lt;/a&gt; 
+   &lt;a href=&quot;/term/33&quot; class=&quot;tag level1&quot;&gt;прямоугольник&lt;/a&gt; 
+   &lt;a href=&quot;/term/14&quot; class=&quot;tag level1&quot;&gt;пиксел&lt;/a&gt; 
+   &lt;a href=&quot;/term/27&quot; class=&quot;tag level1&quot;&gt;градиент&lt;/a&gt; 
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат данного примера показан на рис.&nbsp;1.</p>
+  <p class="fig"><img src="../../assets/images/css/selector_multiclass.png" alt="Цвет и размер ссылок, заданный через классы" width="422" height="234" /></p>
+  <p class="figsign">Рис. 1. Цвет и размер ссылок, заданный через классы</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер IE до версии 7.0 некорректно работает с мультиклассами и понимает запись <span class="tag">.a.b</span> как <span class="tag">.b</span>, т. &nbsp;е. воспринимает только имя последнего класса, что приводит к ошибкам. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/css3-selectors/#class-html">CSS Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS21/selector.html#class-html">CSS 2.1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#class-as-selector">CSS 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>3.5</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

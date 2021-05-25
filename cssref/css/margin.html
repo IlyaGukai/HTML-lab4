@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>margin</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>margin</h1>
+		<p> Устанавливает величину отступа от каждого края элемента. Отступом является 
+  пространство от границы текущего элемента до внутренней границы его родительского 
+  элемента (рис.&nbsp;1). </p>
+<p class="fig"><img src="../assets/images/css/css_margin_1.png" alt="Отступ от левого края элемента" width="235" height="233" /></p>
+  <p class="figsign">Рис. 1. Отступ от левого края элемента</p>
+  
+<p>Если у элемента нет родителя, отступом будет расстояние от края элемента до 
+  края окна браузера с учетом того, что у самого окна по умолчанию тоже установлены 
+  отступы. Чтобы от них избавиться, следует устанавливать значение <span class="attribute">margin</span> 
+  для селектора <span class="tag">&lt;body&gt;</span> равное нулю. </p>
+  <p>Свойство <span class="attribute">margin</span> позволяет задать величину отступа 
+    сразу для всех сторон элемента или определить её только для указанных сторон.  </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию</th>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>margin: [&lt;размер&gt; | &lt;проценты&gt; | auto] {1,4}</code></pre>
+</div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> Разрешается использовать одно, два, три или четыре значения, разделяя их между 
+  собой пробелом. Эффект зависит от количества значений и приведен в табл.&nbsp;1.</p>
+  <table class="data">
+<caption>
+  Табл. 1. Зависимость от числа значений 
+  </caption>
+    <tr> 
+      <th>Число значений</th>
+      <th>Результат</th>
+    </tr>
+    <tr> 
+      <td class="sel">1</td>
+      <td>Отступы будут установлены одновременно от каждого края элемента.</td>
+    </tr>
+    <tr> 
+      <td class="sel">2</td>
+      <td>Первое значение устанавливает отступ от верхнего и нижнего края, второе&nbsp;&#8212; от левого и правого.</td>
+    </tr>
+    <tr> 
+      <td class="sel">3</td>
+      
+    <td>Первое значение задает отступ от верхнего края, второе&nbsp;&#8212; одновременно 
+      от левого и правого края, а третье&nbsp;&#8212; от нижнего края.</td>
+    </tr>
+    <tr> 
+      <td class="sel">4</td>
+      <td>Поочередно устанавливается отступ от верхнего, правого, нижнего и левого края.</td>
+    </tr>
+</table>
+  
+<p>Величину отступов можно указывать в пикселях (px), процентах (%) или других 
+  допустимых для CSS единицах. Значение может быть как положительным, так и отрицательным 
+  числом.</p>
+<dl class="param2">
+  <dt>auto</dt>
+  <dd>Указывает, что размер отступов будет автоматически рассчитан браузером.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;margin&lt;/title&gt;
+  &lt;style&gt;
+   body { 
+    margin: 0; /* Убираем отступы */
+   }
+   .parent {
+    margin: 20%; /* Отступы вокруг элемента */
+    background: #fd0; /* Цвет фона */
+    padding: 10px; /* Поля вокруг текста */
+   } 
+   .child {
+    border: 3px solid #666; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin: 10px; /* Отступы вокруг */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;div class=&quot;parent&quot;&gt;
+   &lt;div class=&quot;child&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
+    euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim 
+    ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis nisl 
+    ut aliquip ex ea commodo consequat. 
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 2.</p>
+<p class="fig"><img src="../assets/images/css/css_margin_2.png" alt="Рис. 2" width="429" height="523"></p>
+<p class="figsign">Рис. 2. Применение свойства margin </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.margin</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer до версии 7 в режиме совместимости (quirk mode)  не поддерживает выравнивание блока по центру с помощью правила <span class="attribute">margin:&nbsp;0&nbsp;auto</span>.  Также в этом браузере наблюдается ошибка с удвоением значения левого или  правого отступа для плавающих элементов,  вложенных в родительские элементы. Удваивается тот отступ, который прилегает к  стороне родителя. Проблема обычно решается добавлением <span class="attribute">display:&nbsp;inline</span> для плавающего элемента.</p>
+
+<p>У блочных элементов расположенных рядом друг с другом по  вертикали наблюдается эффект схлопывания, когда отступы не суммируются, а  объединяются между собой. Само схлопывание действует на два и более блока (один  может быть вложен внутрь другого) с отступами сверху или снизу, при этом  примыкающие отступы комбинируются в один. Для отступов слева и справа  схлопывание никогда не применяется.</p>
+<p>  Схлопывание не срабатывает:</p>
+<ul>
+  <li>для элементов, у которых на стороне схлопывания задано  свойство <span class="attribute">padding</span>.</li>
+  <li>для элементов, у которых на стороне схлопывания  задана граница;</li>
+  <li>на элементах с абсолютным позиционированием,  т.&nbsp;е. таких, у которых <span class="attribute">position</span> установлено как <span class="value">absolute</span>;</li>
+  <li>на плавающих элементах (для них свойство <span class="attribute">float</span> задано как <span class="value">left</span> или <span class="value">right</span>);</li>
+  <li>для строчных элементов;</li>
+  <li>для <span class="tag">&lt;html&gt;</span>.</li>
+</ul></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-box/#margin" hreflang="en" lang="en">CSS Basic Box Model</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/box.html#margin-properties" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#margin" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

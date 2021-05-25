@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>list-style-type</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>list-style-type</h1>
+		<p> Изменяет вид маркера для каждого элемента списка. Это свойство используется 
+  только в случае, когда значение <span class="attribute">list-style-image</span> 
+  установлено как <span class="value">none</span>. Маркеры различаются для маркированного 
+  списка (элемент <span class="tag">&lt;ul&gt;</span>) и нумерованного (элемент <span class="tag">&lt;ol&gt;</span>).</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td><span class="value">disc</span> (для <span class="tag">&lt;ul&gt;</span>); <span class="value">decimal</span> (для <span class="tag">&lt;ol&gt;</span>)</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К элементам <span class="tag">&lt;li&gt;</span>, <span class="tag">&lt;ol&gt;</span> и <span class="tag">&lt;ul&gt;</span>, 
+      а также ко всем элементам, у которых указано   <span class="attribute">display</span>:&nbsp;<span class="value">list-item</span></td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>list-style-type: circle | disc | square | armenian | decimal | decimal-leading-zero | 
+   georgian | lower-alpha | lower-greek | lower-latin | lower-roman | 
+   upper-alpha | upper-latin | upper-roman | none</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>Значения зависят от того, к какому типу списка они  применяются: маркированному или нумерованному.</p>
+<h4>Маркированный список</h4>
+<dl class="param2">
+  <dt>circle</dt>
+  <dd>Маркер в виде кружка.</dd>
+  <dt>disc</dt>
+  <dd>Маркер в виде точки.</dd>
+  <dt>square</dt>
+  <dd>Маркер в виде квадрата.</dd>
+</dl>
+<h4>Нумерованный список</h4>
+<dl class="param2">
+  <dt>armenian</dt>
+  <dd>Традиционная армянская нумерация.</dd>
+  <dt>decimal</dt>
+  <dd>Арабские числа (1, 2, 3, 4,...).</dd>
+  <dt>decimal-leading-zero</dt><br>
+  <dd>Арабские числа с нулем впереди для цифр меньше десяти (01, 02, 03,...).</dd>
+  <dt>georgian</dt>
+  <dd>Традиционная грузинская нумерация.</dd>
+  <dt>lower-alpha</dt>
+  <dd>Строчные латинские буквы (a, b, c, d,...).</dd>
+  <dt>lower-greek</dt>
+  <dd>Строчные греческие буквы (&alpha;, &beta;, &gamma;, &delta;,...).</dd>
+  <dt>lower-latin</dt>
+  <dd>Это значение аналогично <span class="value">lower-alpha</span>.</dd>
+  <dt>lower-roman</dt>
+  <dd>Римские числа в нижнем регистре (i, ii, iii, iv, v,...).</dd>
+  <dt>upper-alpha</dt>
+  <dd>Заглавные латинские буквы (A, B, C, D,...).</dd>
+  <dt>upper-latin</dt>
+  <dd>Это значение аналогично <span class="value">upper-alpha</span>.</dd>
+  <dt> upper-roman</dt>
+  <dd>Римские числа в верхнем регистре (I, II, III, IV, V,...).</dd>
+  <dt>none</dt>
+  <dd>Отменяет маркеры для списка.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;list-style-type&lt;/title&gt;
+  &lt;style&gt;
+   ol {
+    list-style-type: upper-alpha; /* Заглавные буквы */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;ol&gt;
+   &lt;li&gt;Lorem ipsum dolor sit amet&lt;/li&gt;
+   &lt;li&gt;Consectetuer adipiscing elit&lt;/li&gt;
+   &lt;li&gt;Sed diem nonummy nibh euismod&lt;/li&gt;
+   &lt;li&gt;Tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis 
+    enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis 
+    nisl ut aliquip ex ea commodo consequat.&lt;/li&gt;
+   &lt;/ol&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_list-style-type.png" alt="Применение свойства list-style-type" width="400" height="258"></p>
+<p class="figsign">Рис. 1. Применение свойства list-style-type </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.listStyleType</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>В браузере Internet Explorer 6 при использовании нумерованного списка <span class="tag">&lt;ol&gt;</span> и значения <span class="value">inside</span> свойства <span class="attribute">list-style-position</span>, числа идущие с 10, начинают накладываться на текст списка.</p>
+<p>Браузер Internet Explorer до версии 7.0 включительно не поддерживает значения <span class="value">armenian</span>,  <span class="value">decimal-leading-zero</span>, <span class="value">georgian</span>, <span class="value">lower-greek</span>, <span class="value">lower-latin</span>, <span class="value">upper-latin</span>. Вместо них выводится нумерация арабскими числами. В этом браузере нумерация или маркеры не отображаются для плавающих элементов (<span class="var">ul { float: left; }</span>).</p>
+<p>Internet Explorer 8 дополнительно понимает значение <span class="value">upper-greek</span>, которое устанавливает нумерацию в виде заглавных греческих букв (&Alpha;, &Beta;, &Gamma;, &Delta;,...).</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-counter-styles-3/#extending-css2" hreflang="en" lang="en">CSS Counter Styles Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-lists/#list-style-type" hreflang="en" lang="en">CSS Lists and Counters Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/generate.html#propdef-list-style-type" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>none, disc, circle, square, decimal, lower-alpha, upper-alpha, lower-roman, upper-roman</td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>lower-latin, upper-latin, lower-greek,armenian, georgian</td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+    </tr>
+    <tr class="sp">
+      <td>decimal-leading-zero</td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>none, disc, circle, square, decimal, lower-alpha, upper-alpha, lower-roman, upper-roman</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>lower-latin, upper-latin, lower-greek,armenian, georgian</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>decimal-leading-zero</td>
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>1</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

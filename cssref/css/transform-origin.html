@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>transform-origin</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>transform-origin</h1>
+		 <p>Устанавливает координаты точки, относительно которой будет происходить трансформация элемента.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">50% 50% 0</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>К трансформируемым элементам</td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+ <pre><code>transform-origin: &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+    <dt>&lt;x&gt;</dt>
+    <dd>
+      <p style="margin-left: 0">Координата по оси X. Может принимать следующие значения:</p>
+      <p style="margin-left: 0" class="example">&lt;размер&gt; | &lt;проценты&gt; | left | center | right</p>
+    <p style="margin-left: 0">Здесь <span class="value">&lt;размер&gt;</span> &#8212; любая единица измерения CSS.</p>
+    </dd>
+    <dt>&lt;y&gt;</dt>
+    <dd>
+      <p style="margin-left: 0">Координата по оси Y. Может принимать следующие значения:</p>
+      <p style="margin-left: 0" class="example">&lt;размер&gt; | &lt;проценты&gt; | top | center | bottom</p>
+    </dd>
+    <dt>&lt;z&gt;</dt>
+    <dd>
+      <p style="margin-left: 0">Координата по оси Z. Может задаваться только в любых корректных единицах для измерения длины (исключая проценты).</p>
+    </dd>
+  </dl>
+
+<p>Оси и значения показаны на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_transform-origin-1.png" width="325" height="256" alt="transform-origin"></p>
+<p class="figsign">Рис. 1. Оси при трансформации элемента</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;transform-origin&lt;/title&gt;
+  &lt;style&gt;
+   div {
+    background: #fc0;
+    padding: 10px;
+    display: inline-block;
+    border: 1px solid #000;
+   }
+   div:hover {
+    /* Точка поворота в правом верхнем углу */
+    transform-origin: 100% 0;
+    /* Поворачиваем на 20 градусов против часовой стрелки */
+    transform: rotate(-20deg);
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div&gt;Пример&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+  <p>В данном примере при наведении курсора на элемент он поворачивается на 20 градусов против часовой стрелки относительно правого верхнего угла.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.transformOrigin</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer 9 поддерживает свойство <span class="attribute">-ms-transform-origin</span>.</p>
+  <p>Chrome до версии 36 и Android до версии 4 поддерживают свойство <span class="attribute">-webkit-transform-origin</span>.</p>
+  <p>Safari поддерживает свойство <span class="attribute">-webkit-transform-origin</span>.</p>
+  <p>Opera до версии 12.10 и с версии 15 до 23 поддерживает свойство <span class="attribute">-o-transform-origin</span>. </p>
+  <p>Firefox  до версии 16 поддерживает свойство <span class="attribute">-moz-transform-origin</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transforms/#transform-origin" hreflang="en" lang="en">CSS Transforms Level 1</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td colspan="4"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>9</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>36</span></td>
+      <td class="warn"><span>10.5</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>15</span></td>
+      <td class="yes"><span>23</span></td>
+      <td class="warn"><span>3.1</span></td>
+      <td class="warn"><span>3.5</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2.1</span></td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="warn"><span>3.5</span></td>
+		    <td class="yes"><span>16</span></td>
+			<td class="warn"><span>11.5</span></td>
+			<td class="warn"><span>3.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

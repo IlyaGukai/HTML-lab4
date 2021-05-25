@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>font-stretch</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>font-stretch</h1>
+		  <p>Устанавливает узкое, нормальное или широкое начертание шрифта, что позволяет уплотнять или расширять текст.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+  <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">normal</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам</td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>font-stretch:  ultra-condensed | extra-condensed | condensed | semi-condensed | 
+  normal | semi-expanded | expanded | extra-expanded | ultra-expanded</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>Влияние разных значений <span class="attribute">font-stretch</span> на вид букв в тексте показано на рис. 1.</p>
+  <p class="fig"><img src="../assets/images/css/css_font-stretch.png" width="576" height="96" alt="Вид букв при разных значениях font-stretch"></p>
+  <p class="figsign">Рис. 1. Вид букв при разных значениях font-stretch</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;font-stretch&lt;/title&gt;
+  &lt;style&gt;
+   p {
+    font-size: 5em;
+    font-family: 'Myriad Pro';
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;
+   &lt;span style=&quot;font-stretch: ultra-condensed&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: extra-condensed&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: condensed&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: semi-condensed&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: normal&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: semi-expanded&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: expanded&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: extra-expanded&quot;&gt;Б&lt;/span&gt;
+   &lt;span style=&quot;font-stretch: ultra-expanded&quot;&gt;Б&lt;/span&gt;
+  &lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.fontStretch</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+  <p>Браузеры применяют свойство <span class="attribute">font-stretch</span> не ко всем шрифтам, поэтому уплотнение или расширение текста может не работать с некоторыми популярными и распространёнными гарнитурами шрифтов.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-fonts/#propdef-font-stretch" hreflang="en" lang="en">CSS Fonts Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="no"><span></span></td>
+      <td class="yes"><span>9</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="no"><span></span></td>
+			<td class="yes"><span>9</span></td>
+			<td class="no"><span></span></td>
+			<td class="no"><span></span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

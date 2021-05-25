@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>text-shadow</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>text-shadow</h1>
+		<p>Добавляет тень к тексту, а также устанавливает её параметры:  цвет тени, смещение относительно надписи и радиус размытия. Свойство <span class="attribute">text-shadow</span> может работать совместно с псевдоэлементами <span class="attribute">:first-letter</span> и <span class="attribute">:first-line</span>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">none</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>text-shadow: none | &lt;тень&gt; [,&lt;тень&gt;]*</code></pre>
+<p>где &lt;тень&gt;:</p>
+<p> &lt;сдвиг по x&gt; &lt;сдвиг по y&gt; &lt;радиус размытия&gt; &lt;цвет&gt;</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>none</dt>
+  <dd>Отменяет добавление тени. </dd>
+  <dt>&lt;цвет&gt;</dt>
+  <dd> Цвет тени в любом доступном CSS формате. По умолчанию цвет тени совпадает с цветом текста. Необязательный  параметр. </dd>
+  <dt>&lt;сдвиг по x&gt;</dt>
+  <dd> Смещение тени по горизонтали относительно текста. Положительное  значение этого параметра задает сдвиг тени вправо, отрицательное&nbsp;— влево. Обязательный  параметр.</dd>
+  <dt>&lt;сдвиг по y&gt;</dt>
+  <dd> Смещение тени по вертикали относительно текста. Также допустимо  использовать отрицательное значение, которое поднимает тень выше текста. Обязательный  параметр.</dd>
+  <dt>&lt;радиус&gt;</dt>
+  <dd> Задаёт радиус размытия тени. Чем больше это значение, тем  сильнее тень сглаживается, становится шире и светлее. Если этот параметр не задан, по умолчанию  устанавливается равным 0.    Учтите, что алгоритм сглаживания в браузерах обычно разный,  поэтому вид тени может несколько различаться в зависимости от заданных  параметров сглаживания. </dd>
+</dl>
+<p>Допускается указывать несколько параметров тени, разделяя их  между собой запятой. В CSS3 учитывается следующий порядок: первая тень в  списке размещается на самом верху, последняя в списке&nbsp;— в самом низу. В CSS2  порядок наоборот: первая тень размещается в самом низу, а последняя на самом  верху.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;text-shadow&lt;/title&gt;
+  &lt;style&gt;
+   .shadowtext {
+    text-shadow: 1px 1px 2px black, 0 0 1em red; /* Параметры тени */
+    color: white; /* Белый цвет текста */
+    font-size: 2em; /* Размер надписи */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p class=&quot;shadowtext&quot;&gt;В чащах юга жил бы цитрус? Да, но фальшивый экземпляр!&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат примера показан на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/css_text-shadow.png" alt="Вид тени в браузере Safari" width="458" height="251"></p>
+<p class="figsign">Рис. 1. Вид тени в браузере Safari</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.textShadow</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Opera поддерживает максимум 6–9 параметров тени. Повышение  этого значения, а также увеличение радиуса размытия свыше 100px сказывается на  производительности браузера. Opera до версии 10.1 использует отображение нескольких теней,  как в CSS2.</p>
+<p>  Safari до версии 4.0 поддерживает только один  параметр тени, остальные игнорируются. С версии&nbsp;4.0 работает уже множество  теней.</p>
+<p>  Браузер Internet Explorer  понимает  свойство <span class="attribute">text-shadow</span> только с версии 10. До этого используется свойство <span class="attribute">filter</span>:&nbsp;<span class="value">Shadow(параметры)</span>. К примеру, следующая конструкция задает цвет тени (#666666),  её направление (45° от вертикали)  и величину смещения (4 пикселя).</p>
+<p class="example">filter: Shadow(Color=#666666, Direction=45, Strength=4);</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-text-decor-3/#text-shadow" hreflang="en" lang="en">CSS Text-decoration Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="yes"><span>2</span></td>
+      <td class="yes"><span>9.5</span></td>
+      <td class="yes"><span>1.1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9.6</span></td>
+			<td class="yes"><span>1.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

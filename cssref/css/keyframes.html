@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>@keyframes</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/highlight.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+	</head>
+	<body>
+		<div id="header">Справочник по CSS</div>
+		<div id="main">
+
+		<h1>@keyframes</h1>
+		  <p>Свойство <span class=attribute>animation-delay</span> устанавливает время ожидания перед запуском цикла анимации. Значение <span class=value>0s</span> или <span class=value>0ms</span> запускает анимацию сразу же. Отрицательное значение также  включает анимацию без задержек, но может привести к изменению вида начала анимации. </p>
+  <p>Допустимо указывать несколько значений, перечисляя их через запятую.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">0s</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам, к псевдоэлементам <span class="attribute">::before</span> и <span class="attribute">::after</span></td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>animation-delay: &lt;время&gt; [,&lt;время&gt;]*</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+ <p>См. <a href="value/time.html">время</a>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;animation-duration&lt;/title&gt;
+  &lt;style&gt;
+   .warn {
+    background: #fc0;
+    padding: 10px;
+    top: -100px;
+    position: absolute;
+    left: 0; right: 0;
+   }
+   .fadeInTop {
+    -webkit-animation-name: fadeInTop;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-delay: 2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-name: fadeInTop;
+    animation-duration: 2s; /* Продолжительность анимации */
+    animation-delay: 1s; /* Задержка */
+    animation-fill-mode: forwards;
+   }
+   @-webkit-keyframes fadeInTop {
+    from { top: -100px; }
+    to { top: 0; }
+   }
+   @keyframes fadeInTop {
+    from {  top: -100px; }
+    to {  top: 0; }
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;warn fadeInTop&quot;&gt;Вы не учли, что скалярное 
+  поле необходимо и достаточно!&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+ <p><i>Объект</i>.style.animationDelay</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome, Safari и Android поддерживают свойство <span class="attribute">-webkit-animation-delay</span>.</p>
+<p>Opera до версии 12.10 поддерживает свойство <span class="attribute">-o-animation-delay</span>.</p>
+  <p>Firefox  до версии 16 поддерживает свойство <span class="attribute">-moz-animation-delay</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-animations/#animation-delay" lang="en">CSS Animations</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="warn"><span>12</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td colspan="2"><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2</span></td>
+		    <td class="warn"><span>5</span></td>
+		    <td class="yes"><span>16</span></td>
+		    <td class="warn"><span>12</span></td>
+		    <td class="yes"><span>12.10</span></td>
+			<td class="warn"><span>4</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div>
+</div>		<div id="footer">
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</div>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

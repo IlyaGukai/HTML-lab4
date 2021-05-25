@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-radius</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-radius</h1>
+		<p>Устанавливает радиус скругления уголков рамки. Если рамка не  задана, то скругление также происходит и с фоном.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам, за исключением таблиц с <span class="attribute">border-collapse</span>:&nbsp;<span class="value">collapse</span></td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-radius: &lt;радиус&gt;{1,4} [ / &lt;радиус&gt;{1,4}]</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>Разрешается использовать одно, два, три или четыре значения,  перечисляя их через пробел (табл.&nbsp;1). Также допустимо писать два значения через слэш (/).  В качестве значений указываются числа в любом допустимом для CSS формате. В  случае применения процентов, отсчёт ведётся относительно ширины блока. </p>
+<table class="data">
+  <caption>
+    Табл. 1. Зависимость от числа значений
+  </caption>
+  <tr>
+    <th>Число значений</th>
+    <th>Результат</th>
+  </tr>
+  <tr>
+    <td class="sel">1</td>
+    <td align="left">Радиус указывается для всех четырех уголков.</td>
+  </tr>
+  <tr>
+    <td class="sel">2</td>
+    <td align="left">Первое значение задаёт радиус верхнего левого и нижнего  правого уголка, второе значение&nbsp;— верхнего правого и нижнего левого  уголка.</td>
+  </tr>
+  <tr>
+    <td class="sel">3</td>
+    <td align="left">Первое значение устанавливает радиус для верхнего левого уголка,  второе&nbsp;— одновременно для верхнего правого и нижнего левого, а  третье&nbsp;— для нижнего правого уголка.</td>
+  </tr>
+  <tr>
+    <td class="sel">4</td>
+    <td align="left">По очереди устанавливает радиус для верхнего левого,  верхнего правого, нижнего правого и нижнего левого уголка.</td>
+  </tr>
+</table>
+<p>В случае задания двух параметров через слэш, то первый  задаёт радиус по горизонтали, а второй по вертикали (эллиптические уголки). На рис.&nbsp;1 показана разница между обычным скруглённым уголком и эллиптическим уголком.</p>
+<p class="fig"><img src="../assets/images/css/css_border-radius_1.png" alt="Радиус скругления для создания разных типов уголков" width="506" height="207"></p>
+<p class="figsign">Рис. 1. Радиус скругления для создания разных типов уголков</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;border-radius&lt;/title&gt;
+  &lt;style&gt;
+   .radius {
+    background: #f0f0f0; /* Цвет фона */
+    border: 1px solid black; /* Параметры рамки */
+    padding: 15px; /* Поля вокруг текста */
+    margin-bottom: 10px; /* Отступ снизу */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;div style=&quot;border-radius: 50px 0 0 50px;&quot; class=&quot;radius&quot;&gt;
+   border-radius: 50px 0 0 50px;
+  &lt;/div&gt;
+  &lt;div style=&quot;border-radius: 40px 10px&quot; class=&quot;radius&quot;&gt;
+   border-radius: 40px 10px;
+  &lt;/div&gt;
+  &lt;div style=&quot;border-radius: 10em/1em;&quot; class=&quot;radius&quot;&gt;
+   border-radius: 13em/3em;
+  &lt;/div&gt;
+  &lt;div style=&quot;border-radius: 13em 0.5em/1em 0.5em;&quot; class=&quot;radius&quot;&gt;
+   border-radius: 13em 0.5em/1em 0.5em;
+  &lt;/div&gt;
+  &lt;div style=&quot;border-radius: 8px;&quot; class=&quot;radius&quot;&gt;
+   border-radius: 8px;
+  &lt;/div&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис.&nbsp;2.</p>
+<p class="fig"><img src="../assets/images/css/css_border-radius_2.png" alt="Радиусы скругления в браузере Safari" width="410" height="398"></p>
+<p class="figsign">Рис. 2. Радиусы скругления в браузере Safari</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderRadius</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome до версии 4.0, Safari до версии 5.0 и Android до версии 2.1 используют свойство <span class="attribute">-webkit-border-radius</span>.</p>
+<p>Firefox до версии 4.0 использует свойство <span class="attribute">-moz-border-radius</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#border-radius" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>Базовый синтаксис</td>
+      <td class="yes"><span>9</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      </tr>
+    <tr class="sp">
+      <td>Проценты</td>
+      <td class="yes"><span>9</span></td>
+      <td colspan="2" class="yes"><span>4</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td colspan="2" class="yes"><span>5</span></td>
+      <td colspan="2" class="yes"><span>4</span></td>
+    </tr>
+    <tr class="sp">
+      <td>Эллиптические уголки</td>
+      <td class="yes"><span>9</span></td>
+      <td colspan="2" class="yes"><span>1</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td colspan="2" class="yes"><span>3</span></td>
+      <td colspan="2" class="yes"><span>3.5</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td colspan="2"><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>Базовый синтаксис</td>
+		    <td class="warn"><span>1</span></td>
+		    <td class="yes"><span>2.1</span></td>
+		    <td class="warn"><span>1</span></td>
+		    <td class="yes"><span>4</span></td>
+			<td class="yes"><span>10.5</span></td>
+			<td class="warn"><span>3</span></td>
+			<td class="yes"><span>5</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>Проценты</td>
+		    <td colspan="2" class="yes"><span>2.1</span></td>
+		    <td colspan="2" class="yes"><span>4</span></td>
+		    <td class="yes"><span>10.5</span></td>
+		    <td colspan="2" class="yes"><span>5</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>Эллиптические уголки</td>
+		    <td colspan="2" class="yes"><span>2.1</span></td>
+		    <td colspan="2" class="yes"><span>3.5</span></td>
+		    <td class="yes"><span>10.5</span></td>
+		    <td colspan="2" class="yes"><span>3</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+.treeContainer {
+	padding: 5px;
+}
+
+.treeContainer P {
+	margin: 0;
+	font-size: 10pt;
+}
+
+.treeContainer DIV {
+	margin: 0;
+	font-size: 11pt;
+	font-weight: bold;
+}
+
+.treeContainer A {
+	padding: 0 1px;
+	display: block;
+	font-size: 10pt;
+	font-weight: normal;
+}
+
+.itemContainer P {
+	font-size: 10pt;
+	font-weight: bold;
+}
+
+p.head {
+	font-size: 11pt;
+	margin-top: 4px;
+	font-weight: bold;
+  color: navy; 
+}
+
+.treeItem {
+	cursor: pointer !important;
+	padding-left: 15px;
+}
+
+DIV.treeItem {
+	cursor: default !important;
+	padding-left: 0px;
+	padding-top: 0.5em;
+}
+
+* HTML BODY .treeItem {
+	width: 100%;
+}	
+
+.haveContainer {
+	background: transparent url(../img/ico_plus.gif) no-repeat 2px 4px;
+}
+
+DIV.haveContainer {
+	background: none;
+}
+
+
+.expanded P.collapsed {
+	background: transparent url(../img/ico_plus.gif) no-repeat !important;
+}
+
+.itemContainer {
+	padding-left: 15px;
+	margin-bottom: 0.5em;
+}
+
+.expanded .haveContainer, P.expanded {
+	background-image: url(../img/ico_minus.gif);
+}
+
+a.active {
+	font-weight: bold;
+	text-decoration: none;
+	color: #666;
+}

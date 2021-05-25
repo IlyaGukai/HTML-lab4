@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдокласс :first-child</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдокласс :first-child</h1>
+		  <p>Псевдокласс <span class="attribute">:first-child</span> применяет стилевое оформление к первому дочернему элементу своего родителя. </p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code><i>Селектор</i>:first-child  {  ...  }</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;first-child&lt;/title&gt;
+  &lt;style&gt;
+    B:first-child {
+     color: red; /* Красный цвет текста */
+    }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;p&gt;&lt;b&gt;Lorem ipsum&lt;/b&gt; dolor sit amet, &lt;b&gt;consectetuer&lt;/b&gt; 
+   adipiscing &lt;b&gt;elit&lt;/b&gt;, sed diem nonummy nibh euismod tincidunt ut lacreet 
+   dolore magna aliguam erat volutpat.&lt;/p&gt;
+   &lt;p&gt;&lt;b&gt;Ut wisis enim&lt;/b&gt; ad minim veniam, &lt;b&gt;quis nostrud&lt;/b&gt; 
+   exerci tution ullamcorper suscipit lobortis nisl ut aliquip ex ea &lt;b&gt;commodo 
+   consequat&lt;/b&gt;.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат  примера показан на рис.&nbsp;1. В данном примере псевдокласс <span class="attribute">:first-child</span> добавляется     к селектору <span class="tag">b</span> и устанавливает для него красный цвет     текста. Хотя контейнер <span class="tag">&lt;b&gt;</span> встречается в первом     абзаце три раза, красным цветом будет выделено лишь первое упоминание, т.&nbsp;е.     текст «Lorem ipsum». В остальных случаях содержимое контейнера <span class="tag">&lt;b&gt;</span>     отображается чёрным цветом. Со следующим абзацем всё начинается снова, поскольку     родительский элемент поменялся. Поэтому фраза «Ut wisis enim» также будет выделена   красным цветом.</p>
+  <p class="fig"><img src="../assets/images/css/css_first-child_1.png" alt="Выделение цветом первого дочернего элемента абзаца" width="400" height="251" /></p>
+  <p class="figsign">Рис. 1. Выделение цветом первого дочернего элемента абзаца </p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Меню&lt;/title&gt;
+  &lt;style&gt;
+   .links { 
+    background: #F6967D; /* Цвет фона */
+   }
+   .links a {
+    color: #FFFDEB; /* Цвет ссылок */
+    display: inline-block; /* Строчно-блочный элемент */
+    border-left: 1px solid #B62025; /* Параметры рамки слева */
+    padding: 5px 10px; /* Поля вокруг ссылок */
+   }
+   .links a:first-child {
+    border-left: none; /* Убираем первую линию слева */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;links&quot;&gt;
+    &lt;a href=&quot;1.html&quot;&gt;uno&lt;/a&gt;
+    &lt;a href=&quot;2.html&quot;&gt;dos&lt;/a&gt;
+    &lt;a href=&quot;3.html&quot;&gt;tres&lt;/a&gt;
+    &lt;a href=&quot;4.html&quot;&gt;cuatro&lt;/a&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат данного примера показан на рис.&nbsp;2. </p>
+
+  <p class="fig"><img src="../assets/images/css/css_first-child_2.png" alt="Ссылки с линией слева" width="361" height="215" /></p>
+<p class="figsign">Рис. 2. Ссылки с линией слева </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors4/#first-child-pseudo" lang="en">Selectors Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors3/#first-child-pseudo" lang="en">Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>9.5</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>3</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>3.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

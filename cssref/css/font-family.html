@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>font-family</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>font-family</h1>
+		<p> Устанавливает семейство шрифта, которое будет использоваться для оформления 
+  текста содержимого. Список шрифтов может включать одно или несколько названий, 
+  разделённых запятой. Если в имени шрифта содержатся пробелы, например, Trebuchet 
+  MS, оно должно заключаться в одинарные или двойные кавычки. </p>
+  <p> Когда браузер встречает первый шрифт в списке, он проверяет его наличие 
+    на компьютере пользователя. Если такого шрифта нет, берётся следующее имя 
+    из списка и также анализируется на присутствие. Поэтому несколько шрифтов 
+    увеличивает вероятность, что хотя бы один из них будет обнаружен на клиентском 
+    компьютере. Заканчивают список обычно ключевым словом, которое описывает тип 
+    шрифта &#8212; <span class="value">serif</span>, <span class="value">sans-serif</span>, <span class="value">cursive</span>, <span class="value">fantasy</span> или <span class="value">monospace</span>. Таким образом, 
+    последовательность шрифтов лучше начинать с экзотических типов и заканчивать 
+    обобщённым именем, которое задаёт вид начертания. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>Шрифт, установленный в браузере по умолчанию. Обычно это Times New Roman.</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code> font-family: &lt;шрифт&gt; [, &lt;шрифт&gt;[, ...]]</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> Любое количество имен шрифтов разделенных запятыми. Универсальные семейства 
+  шрифтов:</p>
+<ul>
+  <li><span class="value">serif</span> &#8212; шрифты с засечками (антиквенные), 
+    типа Times;</li>
+  <li><span class="value">sans-serif</span> &#8212; рубленные шрифты (шрифты без 
+    засечек или гротески), типичный представитель &#8212; Arial;</li>
+  <li><span class="value">cursive</span> &#8212; курсивные шрифты;</li>
+  <li><span class="value">fantasy</span> &#8212; декоративные шрифты;</li>
+  <li><span class="value">monospace</span> &#8212; моноширинные шрифты, ширина каждого 
+    символа в таком семействе одинакова (шрифт Courier).</li>
+</ul></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;font-family&lt;/title&gt;
+  &lt;style&gt;
+   h1 {
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+   } 
+   p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;h1&gt;Duis te feugifacilisi&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+  Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit 
+  lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_font-family.png" alt="Применение свойства font-family" width="424" height="282"></p>
+<p class="figsign">Рис. 1. Применение свойства font-family </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.fontFamily</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-fonts/#font-family-prop" hreflang="en" lang="en">CSS Fonts Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/fonts.html#propdef-font-family" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#font-family" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

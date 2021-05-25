@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>transform</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>transform</h1>
+		 <p>Трансформирует элемент, в частности, позволяет его масштабировать, вращать, сдвигать, наклонять, а также комбинировать виды трансформаций.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">none</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>К трансформируемым элементам</td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+ <pre><code>transform: &lt;функция&gt; [&lt;функция&gt;]* | none</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+    <dt>&lt;функция&gt;</dt>
+    <dd>Функция трансформации.</dd>
+    <dt>none</dt>
+    <dd>Отменяет действие трансформации.</dd>
+  </dl>
+<h3>Функции трансформации</h3>
+<h4>matrix</h4>
+<p>Задаёт <a href="http://htmlbook.ru/blog/matritsa-preobrazovanii" class="ext">матрицу преобразований</a>. </p>
+<h4>rotate</h4>
+<p>Поворот элемента на заданный угол относительно точки трансформации, задаваемой свойством <span class="attribute">transform-origin</span>. </p>
+<p class="example">transform: rotate(&lt;<a href="value/angle.html">угол</a>&gt;)</p>
+<h4>scale</h4>
+<p>Масштаб элемента по горизонтали и вертикали.</p>
+<p class="example">transform:  scale(sx[, sy]);</p>
+<p>Значение больше 1 увеличивает масштаб элемента, меньше 1 — уменьшает масштаб.</p>
+<h4>scaleX</h4>
+<p>Масштабирует элемент по горизонтали.</p>
+<p class="example">transform:  scaleX(sx); </p>
+<h4>scaleY</h4>
+<p>Масштабирует элемент по вертикали.</p>
+<p class="example">transform:  scaleY(sy); </p>
+
+<h4>skewX</h4>
+<p>Наклоняет элемент на заданный угол по вертикали.</p>
+<p class="example">transform:  skewX(&lt;<a href="value/angle.html">угол</a>&gt;)</p>
+<h4>skewY</h4>
+<p>Наклоняет элемент на заданный угол по горизонтали.</p>
+<p class="example">transform:  skewY(&lt;<a href="value/angle.html">угол</a>&gt;)</p>
+<h4>translate</h4>
+<p>Сдвигает элемент на заданное значение по горизонтали и вертикали. </p>
+<p class="example">transform:  translate(tx[, ty])</p>
+<h4>translateX</h4>
+<p>Сдвигает элемент по горизонтали на указанное значение. Положительное значение сдвигает вправо, отрицательное влево.</p>
+<p class="example">transform:  translateX(tx)</p>
+<h4>translateY</h4>
+<p>Сдвигает элемент по вертикали на указанное значение. Положительное значение сдвигает вниз, отрицательное вверх.</p>
+<p class="example">transform:  translateY(ty)</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;transform&lt;/title&gt;
+  &lt;style&gt;
+   .turn:hover {
+    transform: rotate(15deg);
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;img src=&quot;images/igels.png&quot; alt=&quot;Ёжик&quot; class=&quot;turn&quot;&gt;
+     &lt;img src=&quot;images/igels.png&quot; alt=&quot;Ёжик&quot; class=&quot;turn&quot;&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+  <p>В данном примере при наведении курсора на изображение оно поворачивается на 15 градусов по часовой стрелке.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.transform</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer 9 поддерживает нестандартное свойство <span class="attribute">-ms-transform</span>.</p>
+  <p>Chrome до версии 36 и Android до версии 4 поддерживают нестандартное свойство <span class="attribute">-webkit-transform</span>.</p>
+  <p>Safari поддерживает нестандартное свойство <span class="attribute">-webkit-transform</span>.</p>
+  <p>Opera до версии 12.10 и с версии 15 до 23 поддерживает нестандартное свойство <span class="attribute">-o-transform</span>. </p>
+  <p>Firefox  до версии 16 поддерживает нестандартное свойство <span class="attribute">-moz-transform</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transforms/#transform" hreflang="en" lang="en">CSS Transforms Level 1</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td colspan="4"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>9</span></td>
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>36</span></td>
+      <td class="warn"><span>10.5</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>15</span></td>
+      <td class="yes"><span>23</span></td>
+      <td class="warn"><span>3.1</span></td>
+      <td class="warn"><span>3.5</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2.1</span></td>
+		    <td class="yes"><span>4</span></td>
+		    <td class="warn"><span>3.5</span></td>
+		    <td class="yes"><span>16</span></td>
+			<td class="warn"><span>11.5</span></td>
+			<td class="warn"><span>3.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

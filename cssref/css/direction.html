@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>direction</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>direction</h1>
+		 <p><span class="attribute">direction</span>  предназначен для сайтов, в которых имеет значение направление текста. Например,  при использовании арабского алфавита чтение происходит справа налево.</p>
+  <p>Свойство <span class="attribute">direction</span> достаточно универсально и управляет следующими возможностями:</p>
+  <ul>
+    <li>способ отображения текста в блоке;</li>
+    <li>порядок колонок в таблице;</li>
+    <li>позиция полосы прокрутки в блоке;</li>
+    <li>положение последней висячей строки текстового блока при <span class="attribute">text-align</span>: <span class="value">justify</span>.</li>
+  </ul>
+  <p>Для использования со встроенными элементами, значение  свойства <span class="attribute">unicode-bidi</span> должно  быть задано как <span class="value">embed</span> или <span class="value">override</span>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">ltr</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам </td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code data-language="css">direction: ltr | rtl</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>ltr</dt>
+  <dd>Устанавливает направление слева направо.  </dd>
+  <dt>rtl</dt>
+  <dd>Задаёт направление справа налево.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;direction&lt;/title&gt;
+  &lt;style&gt;
+   div.rtl { 
+    direction: rtl; /* Направление */ 
+    width: 200px; /* Ширина блока */ 
+    height: 150px; /* Высота блока */ 
+    overflow: scroll; /* Полоса прокрутки */ 
+    text-align: left; /* Выравнивание по левому краю */ 
+    padding: 5px; /* Поля вокруг текста */ 
+    border: 1px solid #000; /* Параметры рамки */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;rtl&quot;&gt;Велосипед уже изобрели, различные приемы верстки тоже. 
+  Так что больше знакомься с мировым опытом по части верстки и тебе не придется 
+  тратить время на разработку того, что всем давно известно.&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+  <p>Результат данного примера показан на рис.&nbsp;1. Обратите внимание на положение точки в предложении, а также на то, что полоса прокрутки в браузере Internet Explorer отображается слева. </p>
+  <p class="fig"><img src="../assets/images/css/css_direction_1.png" alt="Результат использования direction в браузере Internet Explorer" width="469" height="303"></p>
+  <p class="figsign">Рис. 1. Результат использования direction в браузере Internet Explorer </p>
+
+  <pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;direction&lt;/title&gt;
+  &lt;style&gt;
+    table { 
+     direction: rtl; /* Колонки идут справа налево */
+     width: 100%; /* Ширина таблицы */
+     border-spacing: 0; /* Убираем пространство между ячейками */
+    } 
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table border=&quot;1&quot;&gt;
+   &lt;tr&gt; 
+     &lt;td&gt;&amp;nbsp;&lt;/td&gt;&lt;td&gt;1999&lt;/td&gt;&lt;td&gt;2000&lt;/td&gt;
+     &lt;td&gt;2001&lt;/td&gt;&lt;td&gt;2002&lt;/td&gt;&lt;td&gt;2003&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt; 
+     &lt;td&gt;Нефть&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;
+     &lt;td&gt;62&lt;/td&gt;&lt;td&gt;74&lt;/td&gt;&lt;td&gt;57&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;td&gt;Золото&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;69&lt;/td&gt;
+     &lt;td&gt;72&lt;/td&gt;&lt;td&gt;56&lt;/td&gt;&lt;td&gt;47&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+     &lt;td&gt;Дерево&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;73&lt;/td&gt;
+     &lt;td&gt;79&lt;/td&gt;&lt;td&gt;34&lt;/td&gt;&lt;td&gt;86&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат данного примера показан на рис.&nbsp;2. Колонки таблицы отображается справа налево. </p>
+  <p class="fig"><img src="../assets/images/css/css_direction_2.png" alt="Применение direction к таблице " width="422" height="208"> </p>
+  <p class="figsign">Рис. 2. Применение direction к таблице </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.direction</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+ <p>При добавлении свойства <span class="attribute">direction</span> со значением <span class="value">rtl</span> к блоку с полосой прокрутки (например,  <span class="tag">&lt;textarea&gt;</span>),  браузер Internet Explorer  и Firefox отображают  скроллинг слева, а Opera и  Safari&nbsp;— справа.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-writing-modes/#direction" hreflang="en" lang="en">CSS Writing Modes Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#direction" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>5.5</span></td>
+      <td class="yes"><span>2</span></td>
+      <td class="yes"><span>9.2</span></td>
+      <td class="yes"><span>1.3</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>8</span></td>
+			<td class="yes"><span>3.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

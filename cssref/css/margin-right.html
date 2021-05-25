@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>margin-right</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>margin-right</h1>
+		<p> Устанавливает величину отступа от правого края элемента. Отступом является 
+  расстояние от внешнего края правой границы текущего элемента до внутренней границы 
+  его родительского элемента (рис.&nbsp;1). </p> 
+<p class="fig"><img src="../assets/images/css/css_margin-right_1.png" alt="Рис. 1. Отступ от правого края элемента" width="235" height="238" /></p>
+<p class="figsign">Рис. 1. Отступ от правого края элемента</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>margin-right: &lt;размер&gt; | auto</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> Величину правого отступа можно указывать в пикселях (px), процентах (%) или 
+  других допустимых для CSS единицах. Значение может быть как положительным, так 
+  и отрицательным числом.</p>
+<dl class="param2">
+  <dt>auto</dt>
+  <dd>Указывает, что размер отступов будет автоматически рассчитан браузером.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;margin-right&lt;/title&gt;
+  &lt;style&gt;
+   body { 
+    margin-right: 25%; /* Отступ справа */
+    margin-left: 25%; /* Отступ слева */
+   }
+   .panel {
+    background: #007083; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 10px; /* Поля вокруг текста */
+    text-align: justify; /* Выравнивание по ширине */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;panel&quot;&gt;
+   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
+   euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. Ut wisis enim 
+   ad minim veniam, quis nostrud exerci tution ullamcorper suscipit lobortis nisl 
+   ut aliquip ex ea commodo consequat.
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 2.</p>
+<p class="fig"><img src="../assets/images/css/css_margin-right_2.png" alt="Применение свойства margin-right " width="426" height="322"></p>
+<p class="figsign">Рис. 2. Применение свойства margin-right </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.marginRight</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer до версии 7 удваивает значение левого или  правого отступа для плавающих элементов,  вложенных в родительские элементы. Удваивается тот отступ, который прилегает к  стороне родителя. Проблема обычно решается добавлением <span class="attribute">display:&nbsp;inline</span> для плавающего элемента.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-box/#margin" hreflang="en" lang="en">CSS Basic Box Model</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/box.html#margin-properties" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#margin-right" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

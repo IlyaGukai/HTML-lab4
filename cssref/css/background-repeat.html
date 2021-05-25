@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>background-repeat</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>background-repeat</h1>
+		<p> Определяет, как будет повторяться фоновое изображение, установленное с помощью 
+  свойства <a href="background-image.html">background-image</a>. Можно 
+  установить повторение рисунка только по горизонтали, по вертикали или в обе 
+  стороны. Допустимо указывать несколько значений для каждого фона, перечисляя значения через запятую.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">repeat</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code class="no-buttons">background-repeat: &lt;повторение&gt; [ , &lt;повторение&gt; ]* </code></pre>
+<p>Здесь:</p>
+<p>&lt;повторение&gt; = repeat-x | repeat-y | [repeat | space | round | no-repeat]{1,2}</p>
+<p>Допустимо указывать два значения, первое ключевое слово задаёт повторение по горизонтали, второе по вертикали.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>no-repeat</dt>
+  <dd> Устанавливает одно фоновое изображение в элементе без его повторений, положение 
+    которого определяется свойством <span class="attribute">background-position</span> 
+    (по умолчанию в левом верхнем углу).  Аналогично <span class="value">no-repeat no-repeat</span>.</dd>
+  <dt>repeat</dt>
+  <dd>Фоновое изображение повторяется по горизонтали и вертикали.  Аналогично <span class="value">repeat repeat</span>.</dd>
+  <dt>repeat-x</dt>
+  <dd>Фоновый рисунок повторяется только по горизонтали. Аналогично <span class="value">repeat no-repeat</span>.</dd>
+  <dt>repeat-y</dt>
+  <dd>Фоновый рисунок повторяется только по вертикали. Аналогично <span class="value">no-repeat repeat</span>.</dd>
+  <dt>space</dt>
+  <dd>Изображение повторяется столько раз, чтобы полностью заполнить область; если это не удаётся, между картинками добавляется пустое пространство.</dd>
+  <dt>round</dt>
+  <dd>Изображение повторяется так, чтобы в области поместилось целое число рисунков; если это не удаётся сделать, то фоновые рисунки масштабируются. </dd>    
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;background-repeat&lt;/title&gt;
+  &lt;style&gt;
+   body { 
+    background-image: url(images/bg_grey.png); /* Путь к фоновому рисунку */
+    background-position: left bottom; /* Положение фона */
+    background-repeat: repeat-x; /* Повторяем фон по горизонтали */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;Даже опытному верстальщику приходится иногда смотреть свой код
+  на наличие опечаток и ошибок. Так что не брезгуй проверять код валидатором,
+  это поможет избежать множества ляпов в будущем.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/css_background-repeat_1.png" alt="Повторение фона по горизонтали" width="413" height="256"></p>
+<p class="figsign">Рис. 1. Повторение фона по горизонтали</p>
+<p>Сама фоновая картинка приведена на рис. 2.</p>
+<p class="fig"><img src="../assets/images/css/css_background-repeat_2.png" alt="Фон для блока" width="30" height="60"></p>
+<p class="figsign">Рис. 2. Фон для блока</p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;background-repeat&lt;/title&gt;
+  &lt;style&gt;
+   body {
+    background-image: url(images/pattern-left.png), url(images/pattern-right.png);
+    background-position: left, right;
+    background-repeat: repeat-y, repeat-y;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div style=&quot;height:2000px&quot;&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.backgroundRepeat</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#the-background-repeat" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/colors.html#propdef-background-repeat" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#background-repeat" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>один фон</td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+    <tr class="sp">
+      <td>несколько фонов</td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td class="yes"><span>1.3</span></td>
+      <td class="yes"><span>3.6</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>один фон</td>
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>3.2</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>несколько фонов</td>
+			    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>10</span></td>
+			<td class="yes"><span>3.2</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

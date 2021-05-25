@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Псевдокласс :checked</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Псевдокласс :checked</h1>
+		<p>Псевдокласс <span class="attribute">:checked</span> применяется к элементам интерфейса,  таким как переключатели (checkbox), флажки (radio) и пункты списка (<span class="tag">option</span>), когда  они находятся в положение &laquo;включено&raquo;. Переключение элементов в такое состояние  происходит с помощью атрибута <span class="attribute">checked</span> элемента <span class="tag">&lt;input&gt;</span> или пользователем.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code><i>Селектор</i>:checked  { ...  }</code></pre>
+
+<p><b>Примеры использования</b></p>
+
+<pre><code data-language="css">input[type="radio"]:checked { ... }</code></pre>
+<p>Стиль применяется только ко включенным переключателям.</p>
+<pre><code data-language="css">input[type="checkbox"]:checked { ... }</code></pre>
+<p>Стиль применяется только к помеченным флажкам (чекбоксам).</p>
+<pre><code data-language="css">option:checked { ... }</code></pre>
+<p>Стиль применяется только к выбранным элементам списка.</p>
+</div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;checked&lt;/title&gt;
+  &lt;style&gt;
+   input:checked + span {
+    background: #fc0;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p&gt;&lt;strong&gt;С какими операционными системамы вы знакомы?&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;checkbox&quot; name=&quot;a1&quot;&gt;&lt;span&gt;Windows 7&lt;/span&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;a2&quot;&gt;&lt;span&gt;Windows Vista&lt;/span&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;a3&quot;&gt;&lt;span&gt;Windows XP&lt;/span&gt;&lt;br&gt;
+  &lt;input type=&quot;checkbox&quot; name=&quot;a4&quot;&gt;&lt;span&gt;System X&lt;/span&gt;&lt;br&gt; 
+  &lt;input type=&quot;checkbox&quot; name=&quot;a5&quot;&gt;&lt;span&gt;Linux&lt;/span&gt;&lt;br&gt; 
+  &lt;input type=&quot;checkbox&quot; name=&quot;a6&quot;&gt;&lt;span&gt;Mac OS&lt;/span&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;Отправить&quot;&gt;&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>В данном примере текст возле отмеченных флажков выделяется фоновым цветом. Результат примера показан на рис.&nbsp;1.</p>
+  <p class="fig"><img src="../assets/images/css/css_checked.png" alt="Результат использования псевдокласса checked" width="430" height="320"> </p>
+  <p class="figsign">Рис. 1. Результат использования псевдокласса :checked </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/#selector-checked" hreflang="en" lang="en">WHATWG HTML Living Standard</a></td>
+      <td><span class="spec-Living">Живой стандарт</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/html5/#selector-checked" hreflang="en" lang="en">HTML5</a></td>
+      <td><span class="spec-PR">Предлагаемая рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors4/#checked" hreflang="en" lang="en">Selectors Level 4</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-ui/#pseudo-checked" hreflang="en" lang="en">CSS Basic User Interface Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/selectors3/#checked" hreflang="en" lang="en">Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>3.1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9.5</span></td>
+			<td class="yes"><span>3.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

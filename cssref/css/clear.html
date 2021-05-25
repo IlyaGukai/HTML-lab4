@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>clear</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>clear</h1>
+		<p> Устанавливает, с какой стороны элемента запрещено его обтекание другими 
+  элементами. Если задано обтекание элемента с помощью свойства <a href="float.html">float</a>, 
+  то  <span class="attribute">clear</span> отменяет его действие для указанных сторон.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">none</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К блочным элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>clear: none | left | right | both</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>none</dt>
+  <dd>Отменяет действие свойства <span class="attribute">clear</span>, при этом обтекание элемента происходит, как  задано с помощью свойства <span class="attribute">float</span> или других настроек.</dd>
+  <dt>both</dt>
+  <dd>Отменяет обтекание элемента одновременно с правого и левого края. Это значение рекомендуется устанавливать, когда требуется снять обтекание элемента, но неизвестно 
+    точно с какой стороны. </dd>
+  <dt>left</dt>
+  <dd>Отменяет обтекание с левого края элемента. При этом все другие элементы 
+    на этой стороне будут опущены вниз, и располагаться под текущим элементом.  </dd>
+  <dt>right</dt>
+  <dd>Отменяет обтекание с правой стороны элемента. </dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;clear&lt;/title&gt;
+  &lt;style&gt;
+   #layer {
+    float: left; /* Обтекание блока по правому краю */
+    background: #fd0; /* Цвет фона */
+    border: 1px solid black; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    width: 40%; /* Ширина блока */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt;
+  
+  &lt;div id=&quot;layer&quot;&gt;
+  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
+  euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+  &lt;/div&gt;
+  
+  &lt;div style=&quot;clear: left&quot;&gt;&lt;/div&gt;
+  
+  &lt;p&gt;Duis autem dolor in hendrerit in vulputate velit esse molestie consequat, 
+  vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto 
+  odio dignissim qui blandit praesent luptatum zzril delenit au gue duis dolore 
+  te feugat nulla facilisi.&lt;/p&gt; 
+  
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_clear.png" alt="Применение свойства clear" width="420" height="362" /></p>
+<p class="figsign">Рис. 1. Применение свойства clear </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.clear</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>В браузере Internet Explorer до версии 6 включительно  наблюдается ошибка под  названием «эффект ку-ку», когда элементы c <span class="attribute">clear</span>, соприкасающиеся с плавающими  элементами (у которых задано свойство <span class="attribute">float</span>) могут исчезать.</p>
+<p>В браузере Internet Explorer 7 свойство <span class="attribute">clear</span> не действует  для элементов, у которых одновременно задано <span class="attribute">float</span> со значением, не совпадающим  с <span class="attribute">clear</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#flow-control" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#clear" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-width</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-width</h1>
+		<p> Задаёт толщину границы одновременно на всех сторонах элемента или индивидуально 
+  для каждой стороны. Способ изменения толщины зависит от числа значений.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">medium</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-width: [&lt;размер&gt; | thin | medium | thick] {1,4}</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> Три переменные &#8212; <span class="value">thin</span> (2 пикселя), <span class="value">medium</span> 
+  (4 пикселя) и <span class="value">thick</span> (6 пикселей) задают толщину 
+  границы. Для более точного значения, толщину можно указывать в пикселях или 
+  других единицах. <span class="value">inherit</span> наследует значение родителя.</p>
+<p>Разрешается использовать одно, два, три или четыре значения, 
+  разделяя их между собой пробелом. Эффект зависит от количества  и 
+  приведён в табл.&nbsp;1.</p>
+<table class="data">
+<caption>
+  Табл. 1. Зависимость результата от числа значений
+  </caption>
+  <tr> 
+    <th>Число значений</th>
+    <th>Результат</th>
+  </tr>
+  <tr> 
+    <td class="sel">1</td>
+    <td>Толщина границы будет установлена для всех сторон элемента.</td>
+  </tr>
+  <tr> 
+    <td class="sel">2</td>
+    <td>Первое значение устанавливает толщину верхней и нижней границы, 
+      второе&nbsp;&#8212; левой и правой.</td>
+  </tr>
+  <tr> 
+    <td class="sel">3</td>
+    <td>Первое значение задаёт толщину верхней границы, второе&nbsp;&#8212; 
+      одновременно левой и правой границы, а третье&nbsp;&#8212; нижней границы.</td>
+  </tr>
+  <tr> 
+    <td class="sel">4</td>
+    <td>Поочерёдно устанавливается толщину верхней, правой, нижней 
+      и левой границы.</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;border-width&lt;/title&gt;
+  &lt;style&gt;
+   p { 
+    border-style: double; /* Стиль рамки вокруг параграфа */
+    border-width: 3px 7px 7px 4px; /* Толщина границы */
+    padding: 7px; /* Поля вокруг текста */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_border-width.png" alt="Применение свойства border-width" width="396" height="198"></p>
+<p class="figsign">Рис. 1. Применение свойства border-width</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderWidth</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer до шестой версии включительно при толщине границы 1px отображает <span class="value">dotted</span> как <span class="value">dashed</span>. При толщине 2px и выше значение <span class="value">dotted</span> работает корректно. Эта ошибка исправлена в IE7, но только для всех  границ толщиной 1px. Если одна из границ блока имеет толщину 2px и выше, то в IE7 значение <span class="value">dotted</span> превращается в <span class="value">dashed</span>.</p>
+<p>Толщина границы при использовании ключевых слов <span class="value">thin</span>, <span class="value">medium</span> и <span class="value">thick</span> в разных браузерах может несколько различаться.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#the-border-width" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/box.html#border-width-properties" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#border-width" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>9.2</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

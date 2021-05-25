@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>font-size</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>font-size</h1>
+		 <p> Определяет размер шрифта элемента. Размер может быть установлен несколькими 
+  способами. Набор констант (<span class="value">xx-small</span>, <span class="value">x-small</span>, <span class="value">small</span>, 
+  <span class="value">medium</span>, <span class="value">large</span>, <span class="value">x-large</span>, <span class="value">xx-large</span>) задаёт размер, который называется абсолютным. 
+  По правде говоря, они не совсем абсолютны, поскольку зависят от настроек браузера 
+  и операционной системы. </p>
+  
+<p>Другой набор констант (<span class="value">larger</span>, <span class="value">smaller</span>) 
+  устанавливает относительные размеры шрифта. Поскольку размер унаследован от 
+  родительского элемента, эти относительные размеры применяются к родительскому 
+  элементу, чтобы определить размер шрифта текущего элемента. </p>
+<p> В конечном итоге, размер шрифта сильно зависит от значения свойства <span class="attribute">font-size</span> у родителя элемента. </p>
+<p>Сам размер шрифта  определяется как высота от базовой линии до верхней границы кегельной площадки, как показано на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/css_font-size_1.png" alt="Размер шрифта" width="275" height="121"></p>
+<p class="figsign">Рис. 1. Размер шрифта</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+      <td class="value">medium</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+      <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+      <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>font-size: &lt;абсолютный размер&gt; | &lt;относительный размер&gt; | &lt;размер&gt; | &lt;проценты&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> Для задания абсолютного размера используются следующие значения: <span class="value">xx-small</span>, 
+  <span class="value">x-small</span>, <span class="value">small</span>, <span class="value">medium</span>, 
+  <span class="value">large</span>, <span class="value">x-large</span>, <span class="value">xx-large</span>. 
+  Их соответствие с размером шрифта в HTML приведено в табл.&nbsp;1.</p>
+  
+<table class="data">
+<caption>
+Табл. 1. Размер шрифта в CSS и HTML
+</caption>
+  <tr>
+    <th>CSS</th>
+    <td>xx-small</td>
+    <td>x-small</td>
+    <td>small</td>
+    <td>medium</td>
+    <td>large</td>
+    <td>x-large</td>
+    <td>xx-large</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <th>HTML</th>
+    <td>1</td>
+    <td>&nbsp;</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+  </tr>
+</table>
+<p>Относительный размер шрифта задается значениями <span class="value">larger</span> и <span class="value">smaller</span>.</p>
+<p>Также разрешается использовать любые допустимые единицы CSS: <span class="value">em</span> 
+  (высота шрифта элемента), <span class="value">ex</span> (высота символа х), 
+  пункты (<span class="value">pt</span>), пикселы (<span class="value">px</span>), 
+  проценты (<span class="value">%</span>) и др. За 100% берётся размер шрифта 
+  родительского элемента. Отрицательные значения не допускаются.</p>
+<dl class="param2">
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;font-size&lt;/title&gt;
+  &lt;style&gt;
+   h1 {
+    font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */ 
+    font-size: 250%; /* Размер шрифта в процентах */ 
+   } 
+   p {
+    font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 11pt; /* Размер шрифта в пунктах */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;h1&gt;Duis te feugifacilisi&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+  Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit 
+  lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_font-size_2.png" alt="Применение свойства font-size" width="424" height="298"></p>
+<p class="figsign">Рис. 2. Применение свойства font-size </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.fontSize</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-fonts/#font-size-prop" lang="en">CSS Fonts Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/fonts.html#propdef-font-size" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#font-size" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>5.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

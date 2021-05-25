@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>linear-gradient()</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Функция linear-gradient()</h1>
+		<p>Функция <span class="var">linear-gradient()</span> добавляет линейный градиент к фону элемента. Она выступает значением свойства <span class="attribute">background-image</span> или <span class="attribute">background</span>.</p>
+
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>background-image: linear-gradient([&lt;угол&gt; | to &lt;позиция&gt; ,] &lt;цвет&gt; [, &lt;цвет&gt;]*);</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+  <dl class="param2">
+    <dt>&lt;угол&gt;</dt>
+    <dd><p>Задаёт угол наклона градиентной линии, который показывает направление градиента. Вначале пишется положительное или отрицательное значение угла, затем к нему слитно добавляется deg. </p>
+<p>Нулю градусов (или 360º) соответствует  градиент снизу вверх, далее отсчёт ведётся по часовой стрелке. Отсчёт угла наклона градиентной линии показан ниже.</p>
+<p class="fig"><img src="../../assets/images/css/linear-gradient-angle.png" width="381" height="244" alt="Угол"></p></dd>
+    <dt>&lt;цвет&gt;</dt>
+    <dd> Представляет собой значение цвета (см. <a href="color.html">цвет</a>), за которым идёт необязательная позиция цвета относительно оси градиента, она задаётся в процентах от 0% до 100% или в любых других подходящих для CSS единицах.</dd>
+    <dt>&lt;позиция&gt;</dt>
+    <dd>Для записи позиции вначале пишется <span class="value">to</span>, а затем добавляются ключевые слова <span class="value">top</span>, <span class="value">bottom</span> и <span class="value">left</span>, <span class="value">right</span>, а также их сочетания. Порядок слов не важен, можно написать <span class="value">to left&nbsp;top</span> или <span class="value">to top left</span>. В табл.&nbsp;1 приведены разные позиции и тип получаемого градиента для цветов #000 и #fff, по другому от чёрного к белому.</dd>
+  </dl>
+<table class="data">
+  <caption>
+Табл. 1. Типы градиента
+</caption>
+  <tr>
+    <th>Позиция</th>
+    <th>Угол</th>
+    <th>Описание</th>
+    <th>Вид</th>
+  </tr>
+  <tr>
+    <td>top</td>
+    <td>270deg</td>
+    <td>Сверху вниз.</td>
+    <td><img src="../../assets/images/css/lgradient1.png" width="90" height="50" alt=""></td>
+  </tr>
+  <tr>
+    <td>left</td>
+    <td>0deg</td>
+    <td>Слева направо.</td>
+    <td><img src="../../assets/images/css/lgradient2.png" width="90" height="50" alt=""></td>
+  </tr>
+  <tr>
+    <td>bottom</td>
+    <td> 90deg</td>
+    <td>Снизу вверх.</td>
+    <td><img src="../../assets/images/css/lgradient3.png" width="90" height="50" alt=""></td>
+  </tr>
+  <tr>
+    <td>right</td>
+    <td> 180deg</td>
+    <td>Справа налево.</td>
+    <td><img src="../../assets/images/css/lgradient4.png" width="90" height="50" alt=""></td>
+  </tr>
+  <tr>
+    <td>top left</td>
+    <td> -45deg</td>
+    <td>От левого верхнего угла к правому нижнему.</td>
+    <td><img src="../../assets/images/css/lgradient5.png" width="90" height="50" alt=""></td>
+  </tr>
+  <tr>
+    <td>top right</td>
+    <td>225deg</td>
+    <td>От правого верхнего угла к левому нижнему.</td>
+    <td><img src="../../assets/images/css/lgradient6.png" width="90" height="50" alt=""></td>
+  </tr>
+  <tr>
+    <td>bottom left</td>
+    <td>45deg</td>
+    <td>От левого нижнего угла к правому верхнему.</td>
+    <td><img src="../../assets/images/css/lgradient7.png" width="90" height="50" alt=""></td>
+  </tr>
+  <tr>
+    <td>bottom right</td>
+    <td>-225deg</td>
+    <td>От правого нижнего угла к левому верхнему.</td>
+    <td><img src="../../assets/images/css/lgradient8.png" width="90" height="50" alt=""></td>
+  </tr>
+</table> </div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Градиент&lt;/title&gt;
+  &lt;style&gt;
+   .gradient {
+    background: #fefcea; /* Для старых браузеров */
+    background: linear-gradient(to top, #fefcea, #f1da36);
+    padding: 10px;
+    border: 1px solid #333;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p class=&quot;gradient&quot;&gt;Здесь обсценная идиома традиционно начинает прозаический 
+  образ, но языковая игра не приводит к активно-диалогическому пониманию.&lt;/p&gt; 
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис.&nbsp;1.</p>
+<p class="fig"><img src="../../assets/images/css/linear-gradient.png" alt="Линейный градиент для абзаца" width="394" height="235"></p>
+<p class="figsign">Рис. 1. Линейный градиент для абзаца</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome до версии 26, Safari до версии 6.1 и Android до версии 4.4 поддерживают <span class="var">-webkit-linear-gradient()</span>.</p>
+<p>Opera до версии 12.10 поддерживает <span class="var">-o-linear-gradient()</span>.</p>
+<p>Firefox до версии 16 поддерживает <span class="var">-moz-linear-gradient()</span>.</p>
+<p>Все свойства с префиксами не используют ключевое слово <span class="value">to</span> при задании направления градиента.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-images/#linear-gradients" hreflang="en" lang="en">CSS Image Values and Replaced Content Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>10</span></td>
+      <td class="yes"><span>26</span></td>
+      <td class="warn"><span>11.10</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>5.1</span></td>
+      <td class="yes"><span>6.1</span></td>
+      <td class="warn"><span>3.6</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2.1</span></td>
+		    <td class="yes"><span>4</span></td>
+			<td class="warn"><span>1</span></td>
+			<td class="yes"><span>16</span></td>
+			<td class="yes"><span>12</span></td>
+			<td class="yes"><span>6.1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>max-width</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>max-width</h1>
+		 <p>Устанавливает максимальную ширину элемента. Значение ширины элемента  будет вычисляться в зависимости от значений установленных свойств <span class="attribute">width</span>, <span class="attribute">max-width</span> и <span class="attribute">min-width</span>. В табл.&nbsp;1 показано, чем руководствуется браузер при  совместном использовании указанных стилевых свойств.</p>
+
+  <table class="data">
+  <caption>Табл. 1. Ширина элемента</caption>
+    <tr>
+      <th colspan="5">Значения свойств </th>
+      <th>Ширина</th>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&lt;</td>
+      <td>width</td>
+      <td>&lt;</td>
+      <td>max-width</td>
+      <td>width</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>width</td>
+      <td>&lt;</td>
+      <td>max-width</td>
+      <td>width</td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>width</td>
+      <td>&gt;</td>
+      <td>max-width</td>
+      <td>max-width</td>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&gt;</td>
+      <td>width</td>
+      <td>&gt;</td>
+      <td>max-width</td>
+      <td>min-width</td>
+    </tr>
+    <tr>
+      <td>min-width</td>
+      <td>&gt;</td>
+      <td>width</td>
+      <td>&lt;</td>
+      <td>max-width</td>
+      <td>min-width</td>
+    </tr>
+  </table>
+  <p>Данные из таблицы следует понимать следующим образом. Если значение  ширины (<span class="attribute">width</span>) больше  значения <span class="attribute">max-width</span>, то ширина элемента  принимается равной значению <span class="attribute">max-width</span>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+  <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td class="value">none</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Нет</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>Ко всем элементам, кроме строчных и таблиц </td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+ <pre><code>max-width: &lt;размер&gt; | &lt;проценты&gt; | none</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>В качестве значений принимаются пиксели (px), проценты (%) и другие единицы измерения, принятые в CSS. Отрицательные значения не допускаются.</p>
+  <dl class="param2">
+    <dt>none</dt>
+    <dd>Отменяет действие этого свойства.</dd>
+  </dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Версия сайта для КПК&lt;/title&gt;
+  &lt;style media=&quot;handheld&quot;&gt;
+   body {
+    max-width: 320px; /* Максимальная ширина страницы в пикселах */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;Текст заголовка&lt;/h1&gt;
+  &lt;p&gt;Текст примера&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+  <p>В данном примере ширина страницы ограничена размером 320  пикселов для всех наладонных устройств. К ним относятся КПК, смартфоны и другие  устройства, способные отображать HTML-документы.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.maxWidth</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-sizing/#width-height-keywords" hreflang="en" lang="en">CSS Intrinsic &amp; Extrinsic Sizing Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visudet.html#min-max-widths" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>7</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

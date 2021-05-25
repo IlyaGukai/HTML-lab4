@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>background-origin</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>background-origin</h1>
+		<p>Свойство <span class="attribute">background-origin</span> определяет область  позиционирования фонового рисунка. Это свойство не применяется, когда значение <a href="background-attachment.html">background-attachment</a> задано как  <span class="value">fixed</span>. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">padding-box</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>background-origin: [padding-box | border-box | content-box] 
+  [, [padding-box | border-box | content-box]]*</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+  <dl class="param2">
+    <dt>padding-box</dt>
+    <dd> Фон позиционируется относительно края элемента с учетом толщины границы.</dd>
+    <dt>border-box</dt>
+    <dd> Фон позиционируется относительно границы, при этом линия границы может перекрывать изображение.</dd>
+    <dt>content-box</dt>
+    <dd>Фон позиционируется относительно содержимого элемента.</dd>
+  </dl>
+  <p>Значений может быть несколько (для каждого из множественных фоновых рисунков), при этом значения разделяются между собой запятой.</p>
+  <p>Результат использования значений свойства <span class="attribute">background-origin</span> для элемента с рамкой толщиной 20 пикселов показан на рис.&nbsp;1.</p>
+  <table style="width: 480px; margin: 0 auto">
+    <tr>
+      <td><img src="../assets/images/css/css_background-origin_1.png" width="161" height="170" alt="Рис. 1а" /></td>
+      <td><img src="../assets/images/css/css_background-origin_2.png" width="161" height="170" alt="Рис. 1а" /></td>
+      <td><img src="../assets/images/css/css_background-origin_3.png" width="161" height="170" alt="Рис. 1а" /></td>
+    </tr>
+    <tr>
+      <td class="figsign">  padding-box</td>
+      <td class="figsign"> border-box</td>
+      <td class="figsign">  content-box</td>
+    </tr>
+  </table>
+  <p class="figsign">Рис. 1. Результат применения разных значений</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;background-origin&lt;/title&gt;
+  &lt;style&gt;
+   .example {
+    border: 20px solid #fc0;
+    padding: 20px;
+    height: 200px;
+    background: url(images/figure.jpg) no-repeat;
+    background-origin: content-box;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;example&quot;&gt;...&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.backgroundOrigin</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Если фон задан один, а значений <span class="attribute">background-origin</span> несколько, то браузеры покажут разное поведение. Firefox и Opera используют первое значение, Chrome и Safari создадут несколько фоновых рисунков.</p>
+  <p>Safari до версии 5, Android до версии 3 поддерживают свойство <span class="attribute">-webkit-background-origin</span>.</p>
+  <p>Opera до версии 10.5 поддерживает свойство <span class="attribute">-o-background-origin</span>.</p>
+  <p>Firefox до версии 4 поддерживает свойство <span class="attribute">-moz-background-origin</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#the-background-origin" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="warn"><span>10.1</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td class="warn"><span>3.1</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="warn"><span>3.6</span></td>
+      <td class="yes"><span>4</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td colspan="2"><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2.1</span></td>
+		    <td class="yes"><span>3</span></td>
+		    <td class="warn"><span>3.6</span></td>
+		    <td class="yes"><span>4</span></td>
+			<td class="yes"><span>10.5</span></td>
+			<td class="warn"><span>3.2</span></td>
+			<td class="yes"><span>5</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

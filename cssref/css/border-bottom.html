@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-bottom</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-bottom</h1>
+		<p> Свойство позволяет одновременно установить толщину, стиль и цвет границы внизу 
+  элемента. Значения могут идти в любом порядке, разделяясь пробелом, браузер 
+  сам определит, какое из них соответствует нужному свойству.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>Зависит от использования</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-bottom: [<a href="border-bottom-width.html">border-bottom-width</a> || <a href="border-bottom-style.html">border-bottom-style</a> || <a href="border-bottom-color.html">border-bottom-color</a>]</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> Значение <span class="attribute">border-bottom-width</span> определяет толщину границы. 
+  Для управления её видом  предоставляется  несколько значений свойства <span class="attribute">border-bottom-style</span>. 
+  Их названия и результат действия представлен на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/border_style.png" alt="Стили рамок" width="435" height="37" /></p>
+<p class="figsign"> Рис.1. Стили рамок </p>
+  
+<p><span class="attribute">border-bottom-color</span> устанавливает цвет границы, значение 
+  может быть в любом допустимом для CSS формате.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;border-bottom&lt;/title&gt;
+  &lt;style&gt;
+   .panel {
+    background: #ccc; /* Цвет фона */
+   } 
+   .panel P.content {
+    padding: 5px; /* Добавляем поля */
+    margin: 0; /* Убираем отступы у параграфа */
+    border-top: 2px dotted white; /* Параметры линии вверху */
+   }
+   .panel P.title {
+    font-family: sans-serif; /* Рубленый шрифт */
+    font-weight: bold; /* Жирное начертание */
+    font-size: 90%; /* Размер шрифта */
+    padding: 5px; /* Добавляем поля */
+    margin: 0; /* Убираем отступы у параграфа */
+    background: maroon; /* Цвет фона */
+    color: white; /* Цвет текста */
+    border-bottom: 2px solid white; /* Параметры линии внизу */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;div class=&quot;panel&quot;&gt;
+  &lt;p class=&quot;title&quot;&gt;Lorem ipsum dolor sit amet&lt;/p&gt;
+  &lt;p class=&quot;content&quot;&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+     sed diem nonummy nibh euismod tincidunt ut lacreet dolore magna 
+     aliguam erat volutpat.&lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 2.</p>
+<p class="fig"><img src="../assets/images/css/css_border-bottom.png" alt="Применение свойства border-bottom" width="398" height="205"></p>
+<p class="figsign">Рис. 2. Применение свойства border-bottom</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderBottom</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer до шестой версии включительно при толщине границы 1px отображает <span class="value">dotted</span> как <span class="value">dashed</span>. При толщине 2px и выше значение <span class="value">dotted</span> работает корректно. Эта ошибка исправлена в IE7, но только для всех  границ толщиной 1px. Если одна из границ блока имеет толщину 2px и выше, то в IE7 значение <span class="value">dotted</span> превращается в <span class="value">dashed</span>.</p>
+
+<p>Стиль границы в разных браузерах может несколько различаться  при использовании значений <span class="value">groove</span>, <span class="value">ridge</span>, <span class="value">inset</span> или <span class="value">outset</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#border-bottom" hreflang="en" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/box.html#propdef-border-bottom" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#border-bottom" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

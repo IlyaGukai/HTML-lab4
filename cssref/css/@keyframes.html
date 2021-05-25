@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>@keyframes</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>@keyframes</h1>
+		<p>Правило <span class="attribute">@keyframes</span> устанавливает ключевые кадры при анимации элемента. Ключевой кадр это свойства элемента (прозрачность, цвет, положение и&nbsp;др.), которые должны применяться к элементу в заданный момент времени. Таким образом, анимация представляет собой плавный переход стилевых свойств от одного ключевого кадра к другому. Вычисление промежуточных значений между такими кадрами берёт на себя браузер. </p>
+		<p>Самый простой вариант, когда у нас есть только два ключевых кадра — исходное и конечное состояние (рис.&nbsp;1). </p>
+		<p class="fig"><img src="../assets/images/css/keyframes-1.png" alt="Перемещение элемента"></p>
+		<p class="figsign">Рис. 1. Перемещение элемента</p>
+		<p>В таком случае <span class="attribute">@keyframes</span> запишется в следующем виде:</p>
+
+<pre><code data-language="css">@keyframes box {
+ from { left: 0; }
+ to { left: 300px; }
+}</code></pre>
+	  
+  <p>В данном случае мы даём нашему набору имя <span class="value">box</span>, оно затем будет задействовано в свойстве <span class="attribute">animation</span> и определяем, что элемент будет изменять значение свойства <span class="attribute">left</span> от 0 до 300 пикселей. Вместо ключевых слов <span class="value">from</span> и <span class="value">to</span> можно использовать, соответственно, 0% и 100%.</p>
+  <p>Ключевые кадры не обязательно должны начинаться с 0% и заканчиваться 100%. Анимация тогда будет происходить не сразу.</p>
+  <pre><code data-language="css">@keyframes box {
+ 50% { left: 0; }
+ 90% { left: 300px; }
+}</code></pre>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>@keyframes &lt;переменная&gt; { [ from | to | &lt;проценты&gt; ] [, from | to | &lt;проценты&gt; ]* }</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>&lt;переменная&gt;</dt><br>
+  <dd>Уникальная переменная, которая связывает <span class="attribute">@keyframes</span> с <a href="../css/animation.html">animation</a>, через это свойство настраивается время анимации и другие её параметры.</dd>
+  <dt>from</dt>
+  <dd>Первый ключевой кадр, аналогичен 0%.</dd>
+  <dt>to</dt>
+  <dd>Последний ключевой кадр, аналогичен 100%.</dd>
+  <dt>&lt;проценты&gt;</dt>
+  <dd>Устанавливает ключевой кадр в процентах от времени всей анимации.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;@keyframes&lt;/title&gt;
+  &lt;style&gt;
+   .creature { 
+    width:  200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #3ac;
+    position: relative;
+   }
+   .creature::before, .creature::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 40px;
+    border-radius: 50%;
+    background: #000;
+    top: 40px;
+    animation: eye 3s ease-in-out infinite;
+    -webkit-animation: eye 3s ease-in-out infinite;
+   }
+   .creature::before { left: 55px; }
+   .creature::after { right: 55px; }
+   @keyframes eye {
+    90% { transform: none; }   
+    95% { transform: scaleY(0.1); }
+   }
+   @-webkit-keyframes eye {
+    90% { transform: none; }   
+    95% { transform: scaleY(0.1); }
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;div class=&quot;creature&quot;&gt;&lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Chrome, Safari и Android поддерживают <span class="attribute">@-webkit-keyframes</span>.</p>
+<p>Opera до версии 12.10 поддерживает <span class="attribute">@-o-keyframes</span>.</p>
+<p>Firefox  до версии 16 поддерживает <span class="attribute">@-moz-keyframes</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-animations/#keyframes" hreflang="en" lang="en">CSS Animations</a></td>
+      <td class="spec"><span class="spec-WD">Рабочий проект</span></td>
+      </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>10</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="warn"><span>12</span></td>
+      <td class="yes"><span>12.10</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="warn"><span>5</span></td>
+      <td class="yes"><span>16</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td colspan="2"><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="warn"><span>2</span></td>
+		    <td class="warn"><span>5</span></td>
+		    <td class="yes"><span>16</span></td>
+		    <td class="warn"><span>12</span></td>
+		    <td class="yes"><span>12.10</span></td>
+			<td class="warn"><span>4</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

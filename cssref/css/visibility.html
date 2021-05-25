@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>visibility</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>visibility</h1>
+		<p> Предназначен для отображения или скрытия элемента, включая рамку вокруг него 
+  и фон. При скрытии элемента, хотя он и становится не виден, место, которое элемент 
+  занимает, остается за ним. Если предполагается вывод разных элементов в одно 
+  и то же место экрана, для обхода этой особенности следует использовать абсолютное 
+  позиционирование или воспользоваться свойством <span class="attribute">display</span>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">visible</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>visibility: visible | hidden | collapse</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>visible</dt>
+  <dd>Отображает элемент как видимый.</dd>
+  <dt>hidden</dt>
+  <dd>Элемент становится невидимым или правильней сказать, полностью прозрачным, 
+    поскольку он продолжает участвовать в форматировании страницы. </dd>
+  <dt>collapse</dt>
+
+  <dd>Если это значение применяется не к строкам или колонкам таблицы, то результат 
+      его использования будет таким же, как <span class="value">hidden</span>. 
+      В случае использования <span class="value">collapse</span> для содержимого 
+      ячеек таблиц, то они реагируют, словно к ним было добавлено  
+      <span class="attribute">display: </span><span class="value">none</span>. Иными словами, заданные строки 
+      и колонки убираются, а таблица перестраивается по новой. Это значение не 
+      поддерживается браузером Internet Explorer.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;visibility&lt;/title&gt;
+  &lt;style&gt;
+   .button {
+    background: #fc0;
+    padding: 10px 20px;
+    display: inline-block;
+   }
+   .descr { visibility: hidden; }
+   .button:hover + .descr {
+    visibility: visible;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;button&quot;&gt;Кнопка&lt;/div&gt;
+  &lt;p class=&quot;descr&quot;&gt;
+   Данная эксклюзия является подмножеством астрациональных 
+   супремативных монотенных федоний кадонарного экстрафазория.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.visibility</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Internet Explorer до версии 7.0 включительно не  поддерживает значение <span class="value">collapse</span>. </p>
+<p>Браузер Safari до версии 4.0 не поддерживает значение <span class="value">collapse</span>. </p>
+<p>Opera до версии 9.5 воспринимает значение <span class="value">collapse</span> как <span class="value">hidden</span> для всех элементов.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table>
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-box/#the-visibility-property" hreflang="en" lang="en">CSS Basic Box Model</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visufx.html#visibility" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>9.5</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

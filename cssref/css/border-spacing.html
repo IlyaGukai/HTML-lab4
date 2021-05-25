@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-spacing</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-spacing</h1>
+		<p>Задаёт расстояние между границами ячеек в таблице.   <span class="attribute">border-spacing</span> не работает в случае, когда для таблицы установлено свойство <span class="attribute">border-collapse</span> со значением <span class="value">collapse</span>. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+ <table class="spec">
+    <tr>
+      <th>Значение по умолчанию </th>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Наследуется</th>
+      <td>Да</td>
+    </tr>
+    <tr>
+      <th>Применяется</th>
+      <td>К таблицам </td>
+    </tr>
+  </table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-spacing: &lt;размер&gt; [&lt;размер&gt;]</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>Одно значение устанавливает одновременно расстояние по  вертикали и горизонтали между границами ячеек. Если значений два, то первое  определяет горизонтальное расстояние, а второе&nbsp;&#8212; вертикальное.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;border-spacing&lt;/title&gt;
+  &lt;style&gt;
+   table {
+    border: 4px double #333; /* Рамка вокруг таблицы */ 
+    border-collapse: separate; /* Способ отображения границы */ 
+    width: 100%; /* Ширина таблицы */ 
+    border-spacing: 7px 11px; /* Расстояние между ячейками */ 
+   }
+   td {
+    padding: 5px; /* Поля вокруг текста */ 
+    border: 1px solid #a52a2a; /* Граница вокруг ячеек */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;table&gt;
+   &lt;tr&gt;
+    &lt;td&gt;1&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+    &lt;td&gt;3&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;
+   &lt;/tr&gt;
+  &lt;/table&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+  <p>Результат данного примера показан на рис. 1.</p>
+  <p class="fig"><img src="../assets/images/css/css_border-spacing.png" alt="Применение свойства border-spacing" width="398" height="204"></p>
+  <p class="figsign">Рис. 1. Применение свойства border-spacing</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderSpacing</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Если к элементу <span class="tag">&lt;table&gt;</span> добавлен атрибут <span class="attribute">cellspacing</span>, то при использовании  стилевого свойства <span class="attribute">border-spacing</span> атрибут <span class="attribute">cellspacing</span> не принимается во внимание и его значение игнорируется.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/tables.html#separated-borders" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Время</title>		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Время</h1>
+		<p>Задаёт время в секундах или миллисекундах. Значение состоит из целого или дробного числа, за которым сразу же следует символ <span class="value">s</span> для секунд или <span class="value">ms</span> для миллисекунд. Пробел после числа недопустим. Для преобразования единиц помните, что 1s = 1000ms. </p>
+<p>При нулевом значении единица времени не опускается и также должна быть добавлена. Всегда пишите 0s или 0ms вместо простого 0.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code><i>Свойство</i>: &lt;время&gt;</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Загрузка...&lt;/title&gt;
+  &lt;style&gt;
+   .loading {
+    width: 240px;
+    margin: auto;
+    padding: 20px 0 10px;
+    background: #333;
+    color: #fff;
+    text-align: center;
+   }
+   .spin {
+    display: inline-block;
+    width: 30px; height: 30px;
+    border: 10px solid #ccc;
+    border-right: 10px solid #000;
+    border-radius: 30px;
+    /* Анимация */
+    animation: spin 2s linear 0s infinite normal;
+   }
+   /* Задаём вращение */
+   @keyframes spin { from { transform: rotate(0deg); } 
+                     to { transform: rotate(360deg); } }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;loading&quot;&gt;
+   &lt;div class=&quot;spin&quot;&gt;&lt;/div&gt;
+   &lt;p&gt;Загружается...&lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере задаётся время вращения элемента 2 секунды, анимация начинается сразу же после загрузки страницы.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-values/#time" lang="en">CSS Values and Units Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/aural.html#times" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td class="yes"><span>3.2</span></td>
+      <td class="yes">4</td>
+      </tr>
+  </table>
+	</div>
+	<div class="content" id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>2.1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>10.5</span></td>
+			<td class="yes"><span>3.2</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

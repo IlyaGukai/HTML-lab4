@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>z-index</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>z-index</h1>
+		<p> Любые позиционированные элементы на веб-странице могут накладываться друг 
+  на друга в определенном порядке, имитируя тем самым третье измерение, перпендикулярное 
+  экрану. Каждый элемент может находиться как ниже, так и выше других объектов 
+  веб-страницы, их размещением по z-оси и управляет  <span class="attribute">z-index</span>. Это свойство работает только для элементов, у которых значение <span class="attribute">position</span> задано как <span class="value">absolute</span>, <span class="value">fixed</span> или <span class="value">relative</span>.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">auto</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К позиционированным элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>z-index: &lt;число&gt; | auto</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> В качестве значения используются целые числа (положительные, отрицательные и ноль). Чем больше значение, тем выше находится элемент по 
+  сравнению с теми элементами, у которых оно меньше. При равном значении <span class="attribute">z-index</span>, 
+  на переднем плане находится тот элемент, который в коде HTML описан ниже. Хотя 
+  спецификация и разрешает использовать отрицательные значения <span class="attribute">z-index</span>, но такие элементы не отображаются в браузере Firefox до версии 2.0 включительно.</p>
+<p>Кроме числовых значений применяется <span class="value">auto</span> &#8212; 
+  порядок элементов в этом случае строится автоматически, исходя из их положения 
+  в коде HTML и принадлежности к родителю, поскольку дочерние элементы имеют тот 
+  же номер, что их родительский элемент. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Порядок карт&lt;/title&gt;
+  &lt;style&gt;
+   .card { position: relative; }
+   .three { top: 50px; left: 55px; z-index: 5; }
+   .seven { left: -120px; top: 25px; z-index: 2;}
+   .ace { left: -295px; z-index: 1; }
+   .card:hover { z-index: 10; }
+   &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;img src=&quot;images/3.png&quot; alt=&quot;3&quot; class=&quot;card three&quot;&gt;
+   &lt;img src=&quot;images/7.png&quot; alt=&quot;7&quot; class=&quot;card seven&quot;&gt;
+   &lt;img src=&quot;images/ace.png&quot; alt=&quot;Туз&quot; class=&quot;card ace&quot;&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>В данном примере при наведении курсора на карту она выходит на передний край, частично перекрывая остальные собой остальные изображения (рис.&nbsp;1).</p>
+<p class="fig"><img src="../assets/images/css/css_z-index.png" alt="Изменение порядка карт" width="606" height="457"></p>
+<p class="figsign">Рис. 1. Изменение порядка карт</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.zIndex</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p> Список, созданный с помощью тега <span class="tag">&lt;select&gt;</span>, 
+  в браузере Internet Explorer до версии 6.0 включительно всегда отображается поверх других элементов, несмотря на значение <span class="attribute">z-index</span>. </p>
+<p>Internet Explorer до версии 7.0 включительно интерпретирует <span class="value">auto</span> как 0. </p>
+<p>В браузере Firefox  до версии 2.0 включительно отрицательное значение <span class="attribute">z-index</span> располагает элемент ниже фона веб-страницы и его контента.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#z-index" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>3</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

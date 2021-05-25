@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>float</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>float</h1>
+		<p> Определяет, по какой стороне будет выравниваться элемент, при этом остальные 
+  элементы будут обтекать его с других сторон. Когда значение свойства <span class="attribute">float</span> равно <span class=value>none</span>, элемент выводится на странице как обычно, при этом допускается, что одна строка обтекающего текста может быть на той 
+  же линии, что и сам элемент. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">none</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам (за исключением абсолютно позиционированных) </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>float: left | right | none</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>left</dt>
+  <dd>Выравнивает элемент по левому краю, а все остальные элементы, вроде текста, 
+    обтекают его по правой стороне. </dd>
+  <dt>right</dt>
+  <dd>Выравнивает элемент по правому краю, а все остальные элементы обтекают его 
+    по левой стороне.</dd>
+  <dt>none</dt>
+  <dd>Обтекание элемента не задаётся.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;float&lt;/title&gt;
+  &lt;style&gt;
+   .layer1 {
+    float: left; /* Обтекание по правому краю */
+    background: #fd0; /* Цвет фона */
+    border: 1px solid black; /* Параметры рамки */
+    padding: 10px; /* Поля вокруг текста */
+    margin-right: 20px; /* Отступ справа */
+    width: 40%; /* Ширина блока */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;div class=&quot;layer1&quot;&gt;
+   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem nonummy nibh 
+   euismod tincidunt ut lacreet dolore magna aliguam erat volutpat.
+  &lt;/div&gt;
+  &lt;div&gt;
+   Duis autem dolor in hendrerit in vulputate velit esse molestie consequat, vel 
+   illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio 
+   dignissim qui blandit praesent luptatum zzril delenit au gue duis dolore te 
+   feugat nulla facilisi.
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_float.png" alt="Применение свойства float" width="424" height="279"></p>
+<p class="figsign">Рис. 1. Применение свойства float </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.cssFloat</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>В браузере Internet Explorer 6 наблюдается ошибка с удвоением значения левого или  правого отступа для плавающих элементов,  вложенных в родительские элементы. Удваивается тот отступ, который прилегает к  стороне родителя. Проблема обычно решается добавлением <span class="attribute">display:&nbsp;inline</span> для плавающего элемента. Также в этом браузере добавляется отступ 3px (так называемый «трёхпиксельный баг») в направлении, заданном значением <span class="attribute">float</span>. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-box/#float" hreflang="en" lang="en">CSS Basic Box Model</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#float-position" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#float" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>6</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Родственные селекторы</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Родственные селекторы</h1>
+		<p>Родственные селекторы по своему поведению похожи на соседние селекторы (запись вида E + F), но в отличие от них стилевые правила применяются ко всем близлежащим элементам. К примеру, для селектора <span class="tag">h1~p</span> стиль будет применяться ко всем элементам <span class="tag">&lt;p&gt;</span>, располагающихся после заголовка <span class="tag">&lt;h1&gt;</span>. При этом <span class="tag">&lt;h1&gt;</span> и <span class="tag">&lt;p&gt;</span> должны иметь общего родителя, так что если <span class="tag">&lt;p&gt;</span> вставить внутрь <span class="tag">&lt;div&gt;</span>, то стили применяться уже не будут.</p>
+<p>Здесь красный цвет текста будет установлен для всех абзацев.</p>
+<pre><code class="no-buttons">h1 ~ p { color: red; }
+&lt;h1&gt;Заголовок&lt;/h1&gt;
+&lt;p&gt;Абзац 1&lt;/p&gt;
+&lt;p&gt;Абзац 2&lt;/p&gt;</code></pre>
+<p>Здесь красный цвет текста будет установлен для первого и третьего абзацев. Ко второму абзацу стиль не применяется, поскольку <span class="tag">&lt;h1&gt;</span> и <span class="tag">&lt;p&gt;</span> не имеют общего родителя.</p>
+<pre><code class="no-buttons">h1 ~ p { color: red; }
+&lt;h1&gt;Заголовок&lt;/h1&gt;
+&lt;p&gt;Абзац 1&lt;/p&gt;
+ &lt;div&gt;&lt;p&gt;Абзац 2&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;Абзац 3&lt;/p&gt;</code></pre>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+ <pre><code>E ~ F { Описание правил стиля }</code></pre>
+  <p>Для управления стилем родственных элементов используется символ тильды (~), он добавляется между двумя селекторами E и F. Пробелы вокруг тильды не обязательны. Стиль при такой записи применяется к элементу F в том случае, если он имеет того же родителя, что и элемент E и следует сразу после него.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Селекторы&lt;/title&gt;
+  &lt;style&gt;
+   img {
+    display: none;
+   }
+   #switch:checked ~ img {
+    display: block;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;form&gt;
+   &lt;input type=&quot;checkbox&quot; id=&quot;switch&quot;&gt; 
+   &lt;label for=&quot;switch&quot;&gt;Показать картинки&lt;/label&gt;
+    &lt;img src=&quot;images/thumb1.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;images/thumb2.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;img src=&quot;images/thumb3.jpg&quot; alt=&quot;&quot;&gt;
+  &lt;/form&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>В данном примере все изображения изначально скрыты, но отображаются если поставить в поле формы галочку.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/css3-selectors/#general-sibling-combinators">CSS Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>9</span></td>
+      <td class="yes"><span>3</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>9</span></td>
+			<td class="yes"><span>3</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-top-style</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-top-style</h1>
+		<p> Устанавливает стиль границы сверху элемента. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам </td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-top-style: none|hidden|dotted|dashed|solid|double|groove|ridge|inset|outset</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>none</dt>
+  <dd>Линия не отображается и значение её толщины обнуляется.</dd>
+  <dt>hidden</dt>
+  <dd> Имеет тот же эффект, что и <span class="value">none</span> за исключением применения <span class="attribute">border-top-style</span> к ячейкам таблицы, у которой значение свойства <a href="border-collapse.html">border-collapse</a> установлено как <span class="value">collapse</span>. В этом случае верхняя граница в ячейке не будет отображаться вообще. </dd>
+  <dt>dotted</dt>
+  <dd>Линия состоящая из набора точек.</dd>
+  <dt>dashed</dt>
+  <dd>Пунктирная линия, состоящая из серии коротких отрезков.</dd>
+  <dt>solid</dt>
+  <dd>Сплошная линия.</dd>
+  <dt>double</dt>
+  <dd>Двойная линия.</dd>
+  <dt>groove</dt>
+  <dd>Создает эффект вдавленной линии.</dd>
+  <dt>ridge</dt>
+  <dd>Создает эффект рельефной линии.</dd>
+  <dt>inset</dt>
+  <dd>Псевдотрехмерная линия.</dd>
+  <dt>outset</dt>
+  <dd>Псевдотрехмерная линия.</dd>
+</dl>
+<p>Вид указанных стилей представлен на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/border_style.png" alt="Стили рамок" width="435" height="37" /></p>
+<p class="figsign"> Рис.1. Стили границ </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot; /&gt;
+  &lt;title&gt;border-top-style&lt;/title&gt;
+  &lt;style&gt;
+   h1 {
+    border-top-color: #800000; /* Цвет линии сверху */
+    border-top-style: double; /* Стиль линии сверху */
+    border-top-width: 7px; /* Толщина линии сверху */
+    border-left-color: #bd0000; /* Цвет линии слева */
+    border-left-style: solid; /* Стиль линии */
+    border-left-width: 2px; /* Толщина линии */
+    padding: 7px; /* Поля вокруг текста */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  
+  &lt;h1&gt;Lorem ipsum dolor sit amet&lt;/h1&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diem 
+  nonummy nibh euismod tincidunt ut lacreet dolore magna aliguam erat volutpat. 
+  Ut wisis enim ad minim veniam, quis nostrud exerci tution ullamcorper suscipit 
+  lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;
+  
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 2.</p>
+<p class="fig"><img src="../assets/images/css/css_border-top-style.png" alt="Применение свойства border-top-style" width="414" height="329"></p>
+<p class="figsign">Рис. 2. Применение свойства border-top-style</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderTopStyle</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer до версии 6.0  включительно при толщине границы 1px отображает <span class="value">dotted</span> как <span class="value">dashed</span>. При толщине 2px и выше значение <span class="value">dotted</span> работает корректно. Эта ошибка исправлена в IE7, но только для всех  границ толщиной 1px. Если одна из границ блока имеет толщину 2px и выше, то в IE7 значение <span class="value">dotted</span> превращается в <span class="value">dashed</span>.</p>
+<p>Стиль границы в разных браузерах может несколько различаться  при использовании значений <span class="value">groove</span>, <span class="value">ridge</span>, <span class="value">inset</span> или <span class="value">outset</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#border-top-style" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/box.html#border-style-properties" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

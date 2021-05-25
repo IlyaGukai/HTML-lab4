@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>position</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>position</h1>
+		<p> Устанавливает способ позиционирования элемента относительно окна браузера 
+  или других объектов на веб-странице. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">static</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>position: absolute | fixed | relative | static</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>absolute</dt>
+  <dd> Указывает, что элемент абсолютно позиционирован, при этом  другие элементы отображаются на веб-странице словно абсолютно  позиционированного элемента и нет. Положение элемента задается свойствами <span class="attribute">left</span>,  <span class="attribute">top</span>, <span class="attribute">right</span> и <span class="attribute">bottom</span>, также на положение влияет значение свойства <span class="attribute">position</span> родительского элемента. Так, если у родителя значение <span class="attribute">position</span> установлено как  <span class="value">static</span> или родителя нет, то отсчет координат ведется от края окна браузера.  Если у родителя значение <span class="attribute">position</span> задано как <span class="value">fixed</span>, <span class="value">relative</span> или <span class="value">absolute</span>, то  отсчет координат ведется от края родительского элемента.</dd>
+  <dt>fixed</dt>
+  <dd>
+    По своему действию это значение близко к <span class="value">absolute</span>, 
+      но в отличие от него привязывается к указанной свойствами <span class="attribute">left</span>, 
+      <span class="attribute">top</span>, <span class="attribute">right</span> и <span class="attribute">bottom</span> точке на экране и не меняет своего положения  при прокрутке веб-страницы. 
+      Браузер Firefox вообще не отображает полосы прокрутки, 
+      если положение элемента задано фиксированным, и оно не помещается целиком 
+      в окно браузера. В браузере Opera хотя и показываются полосы прокрутки, но 
+      они никак не влияют на позицию элемента.</dd>
+  <dt>relative</dt>
+  <dd>Положение элемента устанавливается относительно его исходного места. Добавление 
+свойств <span class="attribute">left</span>, <span class="attribute">top</span>, 
+<span class="attribute">right</span> и <span class="attribute">bottom</span> изменяет 
+позицию элемента и сдвигает его в ту или иную сторону от первоначального расположения. </dd>
+  <dt>static</dt>
+  <dd>Элементы отображаются как обычно. Использование свойств <span class="attribute">left</span>, 
+    <span class="attribute">top</span>, <span class="attribute">right</span> и <span class="attribute">bottom</span> 
+    не приводит к каким-либо результатам.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;position&lt;/title&gt;
+  &lt;style&gt;
+   .layer1 {
+    position: relative; /* Относительное позиционирование */
+    background: #f0f0f0; /* Цвет фона */
+    height: 200px; /* Высота блока */
+   }
+   .layer2 {
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 15px; /* Положение от нижнего края */
+    right: 15px; /* Положение от правого края */
+    line-height: 1px;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;layer1&quot;&gt;
+   &lt;div class=&quot;layer2&quot;&gt;
+     &lt;img src=&quot;images/girl.jpg&quot; alt=&quot;Девочка&quot; /&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_position.png" alt="Применение свойства position" width="413" height="306" /></p>
+<p class="figsign">Рис. 1. Применение свойства position </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.position</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer до версии 7 значение <span class="value">fixed</span> не поддерживает.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visuren.html#propdef-position" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-position-3/#position-property" hreflang="en" lang="en">CSS Positioned Layout Module Level 3</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

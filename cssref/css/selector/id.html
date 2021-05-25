@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Идентификаторы</title>
+		<link href="../../assets/style/foundation.css" rel="stylesheet">
+		<link href="../../assets/style/style.css" rel="stylesheet">
+		<script src="../../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>Идентификаторы</h1>
+		<p>Идентификатор (называемый также «ID селектор») определяет уникальное имя   элемента, которое используется для изменения его стиля и обращения к нему через   скрипты.</p>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>#&lt;Имя идентификатора&gt; { Описание правил стиля }</code></pre>
+
+<p>При описании идентификатора вначале указывается символ решётки (#), затем   идёт имя идентификатора. Оно должно начинаться с латинского символа и может   содержать в себе символ дефиса (-) и подчеркивания (_). Использование русских   букв в именах идентификатора недопустимо. В отличие от классов идентификаторы   должны быть уникальны, иными словами, встречаться в коде документа только один   раз. </p>
+  <p>Обращение к идентификатору происходит с помощью атрибута <span class="attribute">id</span>,   значением которого выступает имя идентификатора (<span class="var">id=&quot;header&quot;</span>). Символ решётки при   этом уже не указывается. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Идентификаторы&lt;/title&gt;
+  &lt;style&gt;
+   #help {
+    position: absolute; /* Абсолютное позиционирование */
+    left: 160px; /* Положение элемента от левого края */
+    top: 50px; /* Положение от верхнего края */
+    width: 225px; /* Ширина блока */
+    padding: 5px; /* Поля вокруг текста */
+    background: #f0f0f0; /* Цвет фона */ 
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;div id=&quot;help&quot;&gt;
+   Этот элемент помогает в случае, когда вы находитесь в осознании того
+   факта, что совершенно не понимаете, кто и как вам может помочь. Именно
+   в этот момент мы и подсказываем, что помочь вам никто не сможет.
+  &lt;/div&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre>
+  <p>Результат примера показан на рис.&nbsp;1.</p>
+  <p class="fig"><img src="../../assets/images/css/selector_id.png" alt="Вид текста, оформленного с помощью идентификатора" width="425" height="339" /></p>
+  <p class="figsign">Рис. 1. Вид текста, оформленного с помощью идентификатора </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+ <p>В браузере Internet Explorer до версии 7.0 идентификаторы иногда игнорируются, если они комбинируются с селекторами тегов или классами. </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://www.w3.org/TR/css3-selectors/#id-selectors">CSS Selectors Level 3</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS21/selector.html#id-selectors">CSS 2.1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#id-as-selector">CSS 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>3.5</span></td>
+      <td class="yes"><span>7</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../../assets/js/jquery.js"></script>
+		<script src="../../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

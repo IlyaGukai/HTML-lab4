@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>text-overflow</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>text-overflow</h1>
+		<p>Определяет параметры видимости текста в блоке, если текст  целиком не помещается в заданную область. Возможны два варианта: текст  обрезается; текст обрезается и к концу строки добавляется многоточие. <span class="attribute">text-overflow</span>  работает в том случае, если для блока значение свойства <span class="attribute">overflow</span> установлено  как <span class="value">auto</span>, <span class="value">scroll</span> или <span class="value">hidden</span>. </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+   <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">clip</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К блочным элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>text-overflow: clip | ellipsis</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<dl class="param2">
+  <dt>clip</dt>
+  <dd>Текст обрезается по размеру области.</dd>
+  <dt>ellipsis</dt>
+  <dd>Текст обрезается и к концу строки добавляется многоточие.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;text-overflow&lt;/title&gt;
+  &lt;style&gt;
+   p.clip {
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+    background: #fc0; /* Цвет фона */
+    padding: 5px; /* Поля вокруг текста */
+    text-overflow: ellipsis; /* Добавляем многоточие */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;p class=&quot;clip&quot;&gt;Магнитное поле ничтожно гасит большой круг небесной сферы, 
+  в таком случае эксцентриситеты и наклоны орбит возрастают.&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+<p>Результат данного примера показан на рис.&nbsp;1.</p>
+<p class="fig"><img src="../assets/images/css/css_text-overflow.png" alt="Многоточие в конце текста" width="410" height="191"></p>
+<p class="figsign">Рис. 1. Многоточие в конце текста</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.textOverflow</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Opera до версии 11.0 использует нестандартное свойство <span class="attribute">-o-text-overflow</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-ui/#text-overflow" hreflang="en" lang="en">CSS Basic User Interface Module Level 3</a></td>
+      <td><span class="spec-ED">Редакторский черновик</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td colspan="2"><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="warn"><span>9</span></td>
+      <td class="yes"><span>11</span></td>
+      <td class="yes"><span>1.3</span></td>
+      <td class="yes"><span>7</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1.5</span></td>
+			<td class="yes"><span>7</span></td>
+			<td class="yes"><span>11</span></td>
+			<td class="yes"><span>1.3</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

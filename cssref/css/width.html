@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>width</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>width</h1>
+		<p> Устанавливает ширину блочных или заменяемых элементов (к ним, например, относится 
+  <span class="tag">&lt;img&gt;</span>). Ширина не включает толщину границ вокруг 
+  элемента, значение отступов и полей. </p>
+<p>Браузеры неодинаково работают с шириной, результат  отображения зависит от используемого <span class="tag">&lt;!DOCTYPE&gt;</span>. В табл.&nbsp;1 приведены возможные варианты <span class="tag">&lt;!DOCTYPE&gt;</span> и получаемая ширина.</p>
+
+<table class="data">
+<caption>Табл. 1. Действие width в браузерах</caption>
+  <tr>
+    <th>&lt;!DOCTYPE&gt;</th>
+    <th>Internet Explorer</th>
+    <th>Opera 10+, Firefox, Chrome, Safari</th>
+    <th>Opera 9</th>
+  </tr>
+  <tr>
+    <td class="sel">Не указан (режим совместимости)</td>
+    <td rowspan="2" valign="top">Если содержимое превышает заданную ширину, то блок    изменяет свои размеры, подстраиваясь под содержимое. В противном случае ширина    блока равна значению <span class="value">width</span>.</td>
+    <td rowspan="5" valign="top">Во всех случаях  браузер действует по спецификации CSS. А    именно, ширина блока получается сложением значений <span class="value">width</span>, <span class="value">padding</span>, <span class="value">margin</span> и <span class="value">border</span>.<br />
+      <br />
+Содержимое блока, если не помещается в заданные размеры,    отображается поверх блока.</td>
+    <td rowspan="2" valign="top">Ширина равна значению <span class="value">width</span>. <br />
+      <br />
+Содержимое блока, если не помещается в заданные размеры,    отображается поверх.</td>
+  </tr>
+  <tr>
+    <td valign="top" class="sel">Переходный HTML<br />
+      &lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;&gt;</td>
+    </tr>
+  <tr>
+    <td valign="top" class="sel">Строгий HTML<br />
+&lt;!DOCTYPE HTML PUBLIC    &quot;-//W3C//DTD HTML 4.01//EN&quot;&gt;</td>
+    <td rowspan="3" valign="top">Ширина формируется путем сложения значений <span class="value">width</span>, <span class="value">padding</span>, <span class="value">margin</span> и <span class="value">border</span>. <br />
+      <br />
+      Содержимое блока, если не помещается в заданные размеры,    отображается поверх.</td>
+    <td rowspan="3" valign="top">Ширина равна значению <span class="value">width</span> плюс <span class="value">padding</span>, <span class="value">margin</span>, и <span class="value">border</span>. <br />
+      <br />
+Содержимое блока, если не помещается в заданные размеры,    отображается поверх.</td>
+  </tr>
+  <tr>
+    <td class="sel">HTML 5<br />      
+      &lt;!DOCTYPE html&gt;<br /></td>
+    </tr>
+  <tr>
+    <td class="sel">XHTML <br />
+      &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;&gt;</td>
+    </tr>
+</table>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td class="value">auto</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>К блочным элементам, ячейкам таблицы, заменяемым элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>width: &lt;размер&gt; | &lt;проценты&gt; | auto</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p> В качестве значений принимаются любые единицы длины, принятые в CSS &#8212; 
+  например, пикселы (px), дюймы (in), пункты (pt) и др. При использовании процентной 
+  записи ширина элемента вычисляется в зависимости от ширины родительского элемента. 
+  Если родитель явно не указан, то в его качестве выступает окно браузера.  </p>
+<dl class="param2">
+  <dt>auto</dt>
+  <dd>Устанавливает ширину исходя из типа и содержимого элемента.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;width&lt;/title&gt;
+  &lt;style&gt;
+   .layer1 {
+    width: 300px; /* Ширина блока */
+    background: #fc0; /* Цвет фона */
+    padding: 7px; /* Поля вокруг текста */
+    border: 1px solid #ccc; /* Параметры рамки */
+   }
+   .layer2 {
+    width: 400px; /* Ширина текстового блока */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;div class=&quot;layer1&quot;&gt;
+   &lt;p class=&quot;layer2&quot;&gt;Lorem ipsum dolor sit amet,consectetuer 
+   adipiscing elit,seddiem nonummy nibh euismod tincidunt ut 
+   lacreet dolore magna aliguam erat volutpat.&lt;/p&gt;
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера, как он отображается в браузере Safari показан на рис. 1. </p>
+<p class="fig"><img src="../assets/images/css/css_width.png" alt="Ширина блока" width="438" height="239"></p>
+<p class="figsign">Рис. 1. Ширина блока</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.width</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Браузер Internet Explorer до версии 6 включительно некорректно определяет <span class="attribute">width</span> как <span class="attribute">min-width</span>. В режиме совместимости (quirk mode) Internet Explorer до версии  8 включительно неправильно вычисляет ширину элемента, не добавляя к ней  значения отступов, полей и границ.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-box/#the-width-and-height-properties" hreflang="en" lang="en">CSS Basic Box Model</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css-transitions/#animatable-css" hreflang="en" lang="en">CSS Transitions</a></td>
+      <td><span class="spec-WD">Рабочий проект</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/visudet.html#the-width-property" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#width" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td colspan="2"><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="warn"><span>4</span></td>
+      <td class="yes"><span>8</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>3.5</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>4</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

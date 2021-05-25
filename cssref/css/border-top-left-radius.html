@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>border-top-left-radius</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>border-top-left-radius</h1>
+		<p>Устанавливает радиус скругления левого верхнего уголка рамки. Если рамка не  задана, то скругление также происходит и с фоном.</p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>0</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Нет</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>border-top-left-radius: [&lt;размер&gt; | &lt;проценты&gt;] [&lt;размер&gt; | &lt;проценты&gt;]</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>В качестве радиуса указывается любое допустимое в CSS  значение (px, cm, in, em  и др.), а также проценты, в этом случае радиус скругления считается от ширины  блока.</p>
+<p> Необязательное второе значение предназначено для создания  эллиптического уголка, первое значение при этом устанавливает радиус по  горизонтали, а второе&nbsp;— радиус по вертикали (рис.&nbsp;1).</p>
+<p class="fig"><img src="../assets/images/css/css_border-top-left-radius_1.png" alt="Радиус скругления для создания разных типов уголков" width="505" height="194" /></p>
+<p class="figsign">Рис. 1. Радиус скругления для создания разных типов уголков</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="html">&lt;!DOCTYPE htm&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;border-top-left-radius&lt;/title&gt;
+  &lt;style&gt;
+   .title {
+    background: #000080; /* Цвет фона */
+    color: #ffe; /* Цвет текста */
+    padding: 7px; /* Поля вокруг текста */ 
+    border-top-left-radius: 10px; /* Левый верхний уголок */
+    border-top-right-radius: 10px; /* Правый верхний уголок */
+   }
+   .content {
+    border: 1px solid #000080;  /* Параметры рамки */
+    background: #f0f0f0; /* Цвет фона */
+    padding: 7px; /* Поля вокруг текста */ 
+    border-bottom-left-radius: 10px; /* Левый нижний уголок */
+    border-bottom-right-radius: 10px; /* Правый нижний уголок */
+   }
+  &lt;/style&gt;
+ &lt;/head&gt; 
+ &lt;body&gt; 
+  &lt;div class=&quot;title&quot;&gt;Буквица&lt;/div&gt;
+   &lt;div class=&quot;content&quot;&gt;
+    Буквица является художественным приемом оформления текста и 
+    представляет собой увеличенную первую букву, базовая линия 
+    которой ниже на одну или несколько строк базовой линии 
+    основного текста. 
+   &lt;/div&gt;
+ &lt;/body&gt; 
+&lt;/html&gt;</code></pre>
+  
+<p>Результат данного примера  показан на рис.&nbsp;2.</p>
+<p class="fig"><img src="../assets/images/css/css_border-top-left-radius_2.png" alt="Радиус скругления в браузере Safari" width="410" height="260" /></p>
+<p class="figsign">Рис. 2. Радиус скругления в браузере Safari</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.borderTopLeftRadius</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Примечание</h2>
+<p>Firefox до версии 4.0 использует нестандартное свойство <span class="attribute">-moz-border-radius-topleft</span>.</p>
+<p>Chrome до версии 4.0, Safari до версии 5.0 и Android до версии 2.1 используют нестандартное свойство <span class="attribute">-webkit-border-top-left-radius</span>.</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-background/#border-top-left-radius" lang="en">CSS Backgrounds and Borders Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td>&nbsp;</td>
+      <td><span class="ie">Internet Explorer</span></td>
+      <td colspan="2"><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td colspan="2"><span class="sa">Safari</span></td>
+      <td colspan="2"><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td>Базовый синтаксис</td>
+      <td class="yes"><span>9</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td class="warn"><span>3</span></td>
+      <td class="yes"><span>5</span></td>
+      <td class="warn"><span>1</span></td>
+      <td class="yes"><span>4</span></td>
+      </tr>
+    <tr class="sp">
+      <td>Проценты</td>
+      <td class="yes"><span>9</span></td>
+      <td colspan="2" class="yes"><span>4</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td colspan="2" class="yes"><span>5</span></td>
+      <td colspan="2" class="yes"><span>4</span></td>
+    </tr>
+    <tr class="sp">
+      <td>Эллиптические уголки</td>
+      <td class="yes"><span>9</span></td>
+      <td colspan="2" class="yes"><span>1</span></td>
+      <td class="yes"><span>10.5</span></td>
+      <td colspan="2" class="yes"><span>3</span></td>
+      <td colspan="2" class="yes"><span>3.5</span></td>
+    </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td>&nbsp;</td>
+			  <td colspan="2"><span class="an">Android</span></td>
+		    	<td colspan="2"><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td colspan="2"><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td>Базовый синтаксис</td>
+		    <td class="warn"><span>1</span></td>
+		    <td class="yes"><span>2.1</span></td>
+		    <td class="warn"><span>1</span></td>
+		    <td class="yes"><span>4</span></td>
+			<td class="yes"><span>10.5</span></td>
+			<td class="warn"><span>3</span></td>
+			<td class="yes"><span>5</span></td>
+		  </tr>
+		  <tr class="sp">
+		    <td>Проценты</td>
+		    <td colspan="2" class="yes"><span>2.1</span></td>
+		    <td colspan="2" class="yes"><span>4</span></td>
+		    <td class="yes"><span>10.5</span></td>
+		    <td colspan="2" class="yes"><span>5</span></td>
+	      </tr>
+		  <tr class="sp">
+		    <td>Эллиптические уголки</td>
+		    <td colspan="2" class="yes"><span>2.1</span></td>
+		    <td colspan="2" class="yes"><span>3.5</span></td>
+		    <td class="yes"><span>10.5</span></td>
+		    <td colspan="2" class="yes"><span>3</span></td>
+	      </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>

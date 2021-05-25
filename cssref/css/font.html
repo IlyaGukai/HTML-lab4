@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>font</title>
+		<link href="../assets/style/foundation.css" rel="stylesheet">
+		<link href="../assets/style/style.css" rel="stylesheet">
+		<script src="../assets/js/rainbow.min.js"></script>
+	</head>
+	<body>
+		<header>Справочник по CSS</header>
+		<main>
+
+		<h1>font</h1>
+		<p> Универсальное свойство, которое позволяет одновременно задать несколько характеристик шрифта и текста.  </p>
+<div class='block'>
+
+<h2 class='block-title'>Краткая информация</h2>
+<table class="spec">
+  <tr>
+    <th>Значение по умолчанию </th>
+    <td>Зависит от использования</td>
+  </tr>
+  <tr>
+    <th>Наследуется</th>
+    <td>Да</td>
+  </tr>
+  <tr>
+    <th>Применяется</th>
+    <td>Ко всем элементам</td>
+  </tr>
+</table></div>
+<div class='block'>
+
+<h2 class='block-title'>Синтаксис</h2>
+<pre><code>font: [font-style||font-variant||font-weight] font-size [/line-height] font-family</code></pre></div>
+<div class='block'>
+
+<h2 class='block-title'>Значения</h2>
+<p>В качестве обязательных значений свойства <span class="attribute">font</span> указывается  размер шрифта и его семейство. Остальные значения являются опциональными и  задаются при желании. Для подробного ознакомления смотрите 
+  информацию о каждом свойстве отдельно.</p>
+<p>Допускается в качестве значения использовать ключевые слова, определяющие шрифт различных элементов  операционной системы пользователя.</p>
+<dl class="param2">
+  <dt>caption</dt>
+  <dd>Шрифт для текста элементов форм вроде кнопок.</dd>
+  <dt>icon</dt>
+  <dd>Шрифт для текста под иконками.</dd>
+  <dt>menu</dt>
+  <dd>Шрифт применяемый в меню.</dd>
+  <dt>message-box</dt>
+  <dd>Шрифт для диалоговых окон.</dd>
+  <dt>small-caption</dt>
+  <dd>Шрифт для подписей к небольшим элементам управления.</dd>
+  <dt>status-bar</dt>
+  <dd>Шрифт для строки состояния окон.</dd>
+</dl></div>
+<div class='block'>
+
+<h2 class='block-title'>Пример</h2>
+<pre><code data-language="css">p { font: 12pt/10pt  sans-serif; } </code></pre>
+<p>Из типографики пошла запись указывать через слэш размер  шрифта и межстрочное расстояние (интерлиньяж). Поэтому <span class="value">12pt</span> в данном  случае означает размер основного текста в пунктах, а <span class="value">10pt</span>&nbsp;&#8212; интерлиньяж. В качестве семейства  указывается рубленый шрифт (<span class="value">sans-serif</span>).</p>
+
+<pre><code data-language="css">p { font: bold italic 110% serif; }</code></pre>
+<p>Значение <span class="value">bold</span> устанавливает жирное начертание текста, а <span class="value">italic</span>&nbsp;&#8212; курсивное. В данном случае  их порядок не важен, поэтому   <span class="value">bold</span> и <span class="value">italic</span> можно поменять местами. Размер  текста задается в процентах, а в качестве гарнитуры используется шрифт с  засечками (<span class="value">serif</span>).</p>
+
+<pre><code data-language="css">p { font: normal small-caps 12px/14px fantasy; }</code></pre>
+<p>Значение <span class="value">small-caps</span> принадлежит свойству <span class="attribute">font-variant</span>  и устанавливает текст в виде капители (заглавные буквы уменьшенного размера). Значение  <span class="value">normal</span>  применяется сразу к двум свойствам: <span class="value">font-style</span> и <span class="value">font-weight</span>. </p>
+
+<pre><code data-language="html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;font&lt;/title&gt;
+  &lt;style&gt;
+   .layer1 {
+    font: 12pt sans-serif;  
+   } 
+   h1 {
+    font: 200% serif;
+   }
+  &lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body&gt; 
+  &lt;div class=&quot;layer1&quot;&gt;
+  &lt;h1&gt;Duis te feugifacilisi&lt;/h1&gt;
+  Duis autem dolor in hendrerit in vulputate velit esse molestie consequat, vel 
+  illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio 
+  dignissim qui blandit praesent luptatum zzril delenit au gue duis dolore te 
+  feugat nulla facilisi.
+  &lt;/div&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+<p>Результат данного примера показан на рис. 1.</p>
+<p class="fig"><img src="../assets/images/css/css_font.png" alt="Применение свойства font" width="400" height="258"></p>
+<p class="figsign">Рис. 1. Применение свойства font </p></div>
+<div class='block'>
+
+<h2 class='block-title'>Объектная модель</h2>
+<p><i>Объект</i>.style.font</p></div>
+<div class='block'>
+
+<h2 class='block-title'>Спецификация</h2>
+<table class="spec">
+  <thead>
+    <tr>
+      <th>Спецификация</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="http://dev.w3.org/csswg/css3-fonts/#font" hreflang="en" lang="en">CSS Fonts Module Level 3</a></td>
+      <td><span class="spec-CR">Возможная рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS2/fonts.html#font-shorthand" hreflang="en" lang="en">CSS Level 2 (Revision 1)</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+    <tr>
+      <td><a href="http://www.w3.org/TR/CSS1/#font" hreflang="en" lang="en">CSS Level 1</a></td>
+      <td><span class="spec-REC">Рекомендация</span></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<div class='block'>
+
+<h2 class='block-title'>Браузеры</h2>
+<dl class="tabs" data-tab>
+	<dd class="active"><a href="#desctop">Настольные</a></dd>
+	<dd><a href="#mobile">Мобильные</a></dd>
+</dl>
+<div class="tabs-content">
+	<div class="content active" id="desctop">
+  <table class="data browser">
+    <tr class="br">
+      <td><span class="ie">Internet Explorer</span></td>
+      <td><span class="cr">Chrome</span></td>
+      <td><span class="op">Opera</span></td>
+      <td><span class="sa">Safari</span></td>
+      <td><span class="fx">Firefox</span></td>
+    </tr>
+    <tr class="sp">
+      <td class="yes"><span>4</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>6</span></td>
+      <td class="yes"><span>1</span></td>
+      <td class="yes"><span>1</span></td>
+      </tr>
+  </table>
+	</div>
+	<div class="content " id="mobile">
+		<table class="data browser">
+			<tr class="br">
+			  <td><span class="an">Android</span></td>
+		    	<td><span class="fx">Firefox Mobile</span></td>
+		    	<td><span class="op">Opera Mobile</span></td>
+		    	<td><span class="sa">Safari Mobile</span></td>
+    	  </tr>
+		  <tr class="sp">
+		    <td class="yes"><span>1</span></td>
+			<td class="yes"><span>1</span></td>
+			<td class="yes"><span>6</span></td>
+			<td class="yes"><span>1</span></td>
+		  </tr>
+		</table>
+	</div>
+</div></div></main>
+
+		<footer>
+			<p class="name">Справочник CSS. Версия 10.0 от 10.02.2015</p>
+			<p><a href="http://webref.ru" target="_blank">webref.ru</a></p>
+		</footer>
+		<script src="../assets/js/jquery.js"></script>
+		<script src="../assets/js/foundation.min.js"></script>
+		<script>$(document).foundation();</script>
+	</body>
+</html>
